@@ -1,0 +1,443 @@
+:root {
+  --bg: #0a0a14;
+  --bg-2: #0f0f1a;
+  --fg: #e6e6ee;
+  --muted: #8a8aa0;
+  --accent-green: #22c55e;
+  --accent-cyan: #01FFFF;
+  --accent-lavender: #8B5CF6;
+  --accent-gold: #ffd27a;
+  --surface: #14141f;
+  --surface-2: #1a1a28;
+  --border: rgba(255,255,255,0.08);
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
+
+/* ===== 100K Mission — retro pixel progress quest panel ===== */
+.mission {
+  padding: 14px 14px 12px;
+  background: #050510;
+  border: 2px solid var(--accent-green);
+  /* hard pixel-art shadow: offset blocky outline, no blur */
+  box-shadow:
+    0 0 0 2px #050510,
+    0 0 0 4px rgba(34,197,94,0.35),
+    4px 4px 0 0 rgba(34,197,94,0.2);
+  border-radius: 2px;
+  margin: 20px auto 18px;
+  max-width: 440px;
+  text-align: left;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+.mission-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.mission-label {
+  font-family: "Press Start 2P", system-ui, monospace;
+  font-size: 10px;
+  color: var(--accent-green);
+  text-shadow: 2px 2px 0 #050510;
+  letter-spacing: 0.04em;
+}
+.mission-count {
+  font-family: "Press Start 2P", system-ui, monospace;
+  font-size: 10px;
+  color: var(--accent-cyan);
+  text-shadow: 2px 2px 0 #050510;
+}
+/* The bar itself: chunky pixel blocks via repeating gradient stripes */
+.mission-bar {
+  position: relative;
+  height: 16px;
+  width: 100%;
+  background: #0f0f1a;
+  border: 2px solid #2a2a3d;
+  border-radius: 0;           /* sharp pixel corners */
+  overflow: hidden;
+  box-shadow: inset 2px 2px 0 rgba(0,0,0,0.4);
+}
+.mission-fill {
+  position: relative;
+  height: 100%;
+  /* Base colour + vertical "block" stripes + top highlight for 8-bit shading */
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,0.22) 0 25%, transparent 25% 100%),
+    repeating-linear-gradient(
+      to right,
+      var(--accent-green) 0 6px,
+      #16a34a 6px 8px
+    );
+  transition: width 0.8s steps(20, end);    /* stepped fill = arcade feel */
+  border-right: 2px solid #f0fff4;           /* bright lead edge */
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.25);
+}
+.mission-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-family: "Press Start 2P", system-ui, monospace;
+  font-size: 10px;
+  color: var(--fg);
+  letter-spacing: 0.04em;
+}
+.mission-slash {
+  color: var(--muted);
+}
+.mission-sub {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 8px 0 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ===== Hero ===== */
+.hero { text-align: center; margin-bottom: 36px; }
+.avatar {
+  display: block;
+  width: 120px; height: 120px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
+  box-shadow: 0 0 0 4px rgba(1,255,255,0.08), 0 10px 30px rgba(0,0,0,0.4);
+}
+.name {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+}
+.bio-headline {
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 480px;
+  margin: 0 auto 10px;
+  color: var(--fg);
+}
+.bio-creds {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 auto 14px;
+  max-width: 460px;
+}
+.bio-line {
+  font-size: 14px;
+  color: var(--fg);
+  margin: 4px 0;
+}
+.bio-line a { color: var(--accent-cyan); text-decoration: none; font-weight: 500; }
+.bio-line a:hover { text-decoration: underline; }
+.bio-emoji { font-style: normal; margin-right: 4px; }
+.bio-geo { color: var(--muted); }
+.bio-arrow { color: var(--accent-green); font-weight: 700; margin-left: 2px; }
+
+/* ===== Social buttons ===== */
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--fg);
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+.social-btn:hover {
+  border-color: var(--accent-cyan);
+  background: rgba(1,255,255,0.08);
+  transform: translateY(-1px);
+}
+.social-btn svg { flex-shrink: 0; }
+
+/* ===== Search ===== */
+.search { margin-top: 64px; margin-bottom: 40px; text-align: center; }
+.search-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+.search-sub {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+.search input {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  color: var(--fg);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.search input:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 3px rgba(1,255,255,0.12);
+}
+.result { margin-top: 16px; }
+.match {
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
+  border: 1px solid rgba(34,197,94,0.4);
+  border-radius: 14px;
+  padding: 20px;
+}
+.match-title { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.match-desc { color: var(--muted); margin-bottom: 16px; font-size: 14px; line-height: 1.5; }
+.match-cta {
+  display: inline-block;
+  padding: 10px 18px;
+  background: var(--accent-green);
+  color: var(--bg);
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.match-cta:hover { filter: brightness(1.1); }
+.no-match { color: var(--muted); font-size: 14px; padding: 12px; }
+
+/* ===== Funnel section ===== */
+.funnel { display: flex; flex-direction: column; gap: 14px; }
+.funnel-heading {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin: 8px 0 2px;
+  font-weight: 600;
+}
+.yt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.yt-card { display: block; text-decoration: none; color: var(--fg); }
+.yt-card img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  border: 1px solid var(--border);
+  transition: border-color 0.15s;
+}
+.yt-card:hover img { border-color: rgba(255,255,255,0.3); }
+.yt-card span {
+  display: block;
+  font-size: 12px;
+  margin-top: 6px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+.yt-card:hover span { color: var(--fg); }
+.yt-empty { color: var(--muted); font-size: 13px; font-style: italic; }
+
+/* ===== Cards (shared) ===== */
+.card {
+  display: block;
+  position: relative;
+  padding: 22px 22px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--fg);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+.card:hover { transform: translateY(-2px); }
+.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.card-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+.card-title { font-size: 22px; font-weight: 800; margin: 0 0 8px; letter-spacing: -0.015em; }
+.card-sub { color: var(--muted); font-size: 14px; line-height: 1.5; margin: 0 0 16px; }
+.card-stats { display: flex; gap: 24px; margin-bottom: 18px; }
+.stat { display: flex; flex-direction: column; }
+.stat strong { font-size: 20px; font-weight: 800; letter-spacing: -0.01em; }
+.stat small { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+.card-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+.chip {
+  font-size: 12px;
+  padding: 4px 10px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--fg);
+}
+.card-cta {
+  display: inline-block;
+  padding: 10px 18px;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 10px;
+  transition: filter 0.15s, transform 0.15s;
+}
+
+/* ===== Card variants ===== */
+
+/* Free course — green glow, FREE badge, vibrant */
+.card-free {
+  background:
+    radial-gradient(ellipse at top left, rgba(34,197,94,0.14), transparent 60%),
+    var(--surface);
+  border-color: rgba(34,197,94,0.25);
+}
+.card-free:hover {
+  border-color: rgba(34,197,94,0.55);
+  box-shadow: 0 0 0 4px rgba(34,197,94,0.08);
+}
+.card-badge-free {
+  background: rgba(34,197,94,0.15);
+  color: var(--accent-green);
+  border: 1px solid rgba(34,197,94,0.3);
+}
+.card-free .stat strong { color: var(--accent-green); }
+.card-cta-free {
+  background: var(--accent-green);
+  color: var(--bg);
+}
+.card-cta-free:hover { filter: brightness(1.1); transform: translateY(-1px); }
+
+/* Workshop — lavender gradient, premium */
+.card-workshop {
+  background:
+    linear-gradient(135deg, rgba(139,92,246,0.12) 0%, rgba(139,92,246,0.02) 60%),
+    var(--surface);
+  border-color: rgba(139,92,246,0.3);
+}
+.card-workshop:hover {
+  border-color: rgba(139,92,246,0.6);
+  box-shadow: 0 0 0 4px rgba(139,92,246,0.08);
+}
+.card-badge-workshop {
+  background: rgba(139,92,246,0.15);
+  color: #c4b5fd;
+  border: 1px solid rgba(139,92,246,0.35);
+}
+.card-workshop .chip {
+  background: rgba(139,92,246,0.08);
+  border-color: rgba(139,92,246,0.2);
+  color: #e9e5ff;
+}
+.card-cta-workshop {
+  background: var(--accent-lavender);
+  color: #fff;
+}
+.card-cta-workshop:hover { filter: brightness(1.12); transform: translateY(-1px); }
+
+/* StudioHawk — cyan border, gold badge, enterprise */
+.card-studiohawk {
+  background:
+    radial-gradient(ellipse at top right, rgba(1,255,255,0.08), transparent 55%),
+    var(--surface);
+  border-color: rgba(1,255,255,0.25);
+}
+.card-studiohawk:hover {
+  border-color: rgba(1,255,255,0.5);
+  box-shadow: 0 0 0 4px rgba(1,255,255,0.06);
+}
+.card-badge-gold {
+  background: rgba(255,210,122,0.12);
+  color: var(--accent-gold);
+  border: 1px solid rgba(255,210,122,0.3);
+}
+.card-studiohawk .stat strong { color: var(--accent-cyan); }
+.card-cta-studiohawk {
+  background: var(--accent-cyan);
+  color: var(--bg);
+}
+.card-cta-studiohawk:hover { filter: brightness(1.05); transform: translateY(-1px); }
+
+/* Slim contact card — sits below the three main cards, understated */
+.card-slim {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--fg);
+  transition: border-color 0.15s, transform 0.15s;
+}
+.card-slim:hover {
+  border-color: var(--accent-cyan);
+  transform: translateY(-1px);
+}
+.slim-left { display: flex; flex-direction: column; }
+.slim-title { font-weight: 600; font-size: 14px; }
+.slim-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.slim-arrow { color: var(--accent-cyan); font-size: 18px; font-weight: 700; }
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+}
+.footer a { color: var(--accent-cyan); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+/* ===== Responsive ===== */
+@media (max-width: 520px) {
+  main { padding: 28px 16px 50px; }
+  .avatar { width: 100px; height: 100px; }
+  .name { font-size: 26px; }
+  .bio-headline { font-size: 14px; }
+  .yt-grid { grid-template-columns: 1fr; }
+  .card { padding: 18px; }
+  .card-title { font-size: 19px; }
+  .card-stats { gap: 16px; }
+  .socials { gap: 6px; }
+  .social-btn { padding: 7px 12px; font-size: 12px; }
+
+  /* Mobile: swap "Looking for a free guide" and "100K Mission" positions.
+     Desktop natural order inside .hero: ...bio → mission → socials → search.
+     Mobile desired order:                ...bio → search → socials → mission. */
+  .hero { display: flex; flex-direction: column; }
+  .hero .search  { order: 0; margin-top: 24px; } /* sits right under bio — keep gap small */
+  .hero .socials { order: 1; }                    /* pushed after search */
+  .hero .mission { order: 2; }                    /* pushed to the end, where search used to be */
+}
