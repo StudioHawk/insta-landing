@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harry Sanders — Links</title>
+  <meta property="og:title" content="Harry Sanders" />
+  <meta property="og:description" content="Search for the word you heard in the video." />
+  <meta property="og:image" content="avatar.jpg" />
+  <link rel="icon" href="avatar.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <img class="avatar" src="avatar.jpg" alt="Harry Sanders" width="120" height="120" />
+      <h1 class="name">Harry Sanders</h1>
+      <p class="bio-headline">I grew a 120 person, $20M SEO agency from nothing. Now I teach AI Search for free.</p>
+      <p class="bio-creds">Forbes 30 Under 30</p>
+      <p class="bio-line">
+        <span class="bio-emoji" aria-hidden="true">🦅</span>
+        Founder
+        <a href="https://instagram.com/studiohawkseo" target="_blank" rel="noopener">@studiohawkseo</a>
+        <span class="bio-geo">(AU · US · UK)</span>
+      </p>
+      <p class="bio-line">
+        <span class="bio-emoji" aria-hidden="true">🎓</span>
+        Free AI Search course <span class="bio-arrow" aria-hidden="true">↓</span>
+      </p>
+      <section class="mission" aria-label="100K Mission progress">
+        <div class="mission-top">
+          <span class="mission-label">▶ 100K MISSION</span>
+          <span class="mission-count">11%</span>
+        </div>
+        <div class="mission-bar" role="progressbar" aria-valuenow="11" aria-valuemin="0" aria-valuemax="100">
+          <div class="mission-fill" style="width: 11%"></div>
+        </div>
+        <div class="mission-score">
+          <span>11,000</span>
+          <span class="mission-slash">/</span>
+          <span>100,000</span>
+        </div>
+        <p class="mission-sub">Building a community of 100,000 people crushing SEO &amp; AI Search.</p>
+      </section>
+
+      <nav class="socials">
+        <a class="social-btn" href="https://instagram.com/harrysandersseo" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <span>Instagram</span>
+        </a>
+        <a class="social-btn" href="https://www.youtube.com/@StudioHawkSEO" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1c.3-1.5.4-3 .4-4.5s-.1-3-.4-4.5zM9.6 15.5v-7l6 3.5-6 3.5z"/></svg>
+          <span>YouTube</span>
+        </a>
+        <a class="social-btn" href="https://linkedin.com/in/harry-sanders" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5V9h3v10zM6.5 7.3A1.8 1.8 0 1 1 6.5 3.7a1.8 1.8 0 0 1 0 3.6zM19 19h-3v-5.2c0-1.2-.4-2-1.5-2a1.6 1.6 0 0 0-1.5 1 2 2 0 0 0-.1.7V19h-3V9h3v1.3a3 3 0 0 1 2.7-1.5c2 0 3.4 1.3 3.4 4V19z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a class="social-btn" href="https://hawkacademy.co" target="_blank" rel="noopener" aria-label="Hawk Academy">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10l10-5 10 5-10 5z"/><path d="M6 12v5a6 6 0 0 0 12 0v-5"/><path d="M22 10v5"/></svg>
+          <span>Hawk Academy</span>
+        </a>
+      </nav>
+
+      <section class="search">
+        <h2 class="search-heading">Looking for a free guide?</h2>
+        <p class="search-sub">Type the word I said in the video.</p>
+        <input id="q" type="text" placeholder="e.g. ecom" autocomplete="off" autofocus />
+        <div id="result" class="result"></div>
+      </section>
+    </header>
+
+    <section class="funnel">
+      <h2 class="funnel-heading">Recent on YouTube</h2>
+      <div id="yt-grid" class="yt-grid">
+        <p class="yt-empty">Loading...</p>
+      </div>
+
+      <a class="card card-free" href="https://hawkacademy.co" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-badge card-badge-free">FREE FOREVER</span>
+        </div>
+        <h3 class="card-title">Hawk Academy</h3>
+        <p class="card-sub">The free course &amp; community that's trained 6,000+ people on SEO &amp; AI Search. No upsell. No lock-in.</p>
+        <div class="card-stats">
+          <div class="stat"><strong>6,000+</strong><small>members</small></div>
+          <div class="stat"><strong>22h+</strong><small>of training</small></div>
+        </div>
+        <span class="card-cta card-cta-free">Join free →</span>
+      </a>
+
+      <a class="card card-workshop" href="https://hawkacademy.co/workshop" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-badge card-badge-workshop">2-DAY INTENSIVE</span>
+        </div>
+        <h3 class="card-title">The Workshop</h3>
+        <p class="card-sub">Two days of hands-on AI Search with my team. Build real pages. Leave with them ranking before you fly home.</p>
+        <div class="card-chips">
+          <span class="chip">📍 Melbourne</span>
+          <span class="chip">Sydney</span>
+          <span class="chip">Atlanta</span>
+          <span class="chip">London</span>
+        </div>
+        <span class="card-cta card-cta-workshop">Apply →</span>
+      </a>
+
+      <a class="card card-studiohawk" href="https://studiohawk.com.au" target="_blank" rel="noopener">
+        <div class="card-top">
+          <span class="card-badge card-badge-gold">🏆 42 AWARDS</span>
+        </div>
+        <h3 class="card-title">StudioHawk</h3>
+        <p class="card-sub">One of the world's largest dedicated SEO &amp; AI Search agencies. 120+ specialists. 500+ clients. US, UK, AU. Famous for direct access to specialists — no account managers.</p>
+        <div class="card-stats">
+          <div class="stat"><strong>4.9 ★</strong><small>274 reviews</small></div>
+          <div class="stat"><strong>500+</strong><small>clients</small></div>
+        </div>
+        <span class="card-cta card-cta-studiohawk">Learn more →</span>
+      </a>
+
+      <a class="card-slim" href="https://harrysanders.com/contact" target="_blank" rel="noopener">
+        <div class="slim-left">
+          <span class="slim-title">Get in touch with me</span>
+          <span class="slim-sub">Press, Speaking, Opportunities</span>
+        </div>
+        <span class="slim-arrow" aria-hidden="true">→</span>
+      </a>
+    </section>
+  </main>
+
+  <script>
+    // Fetch data.json once on load, wire up search + render YouTube grid.
+    // data.json is written by the GitHub Action (scripts/fetch-data.mjs).
+    // If it's missing (first-ever deploy, or a stale cache) we degrade gracefully.
+    (function () {
+      function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+        });
+      }
+
+      function renderYouTube(videos) {
+        var grid = document.getElementById("yt-grid");
+        if (!videos || videos.length === 0) {
+          grid.innerHTML = '<p class="yt-empty">YouTube videos unavailable — try refreshing shortly.</p>';
+          return;
+        }
+        grid.innerHTML = videos.map(function (v) {
+          return '<a href="' + encodeURI(v.url) + '" target="_blank" rel="noopener" class="yt-card">' +
+            '<img src="' + encodeURI(v.thumbnailUrl) + '" alt="' + escapeHtml(v.title) + '" loading="lazy" />' +
+            '<span>' + escapeHtml(v.title) + '</span>' +
+            '</a>';
+        }).join("");
+      }
+
+      function wireSearch(entries) {
+        var q = document.getElementById("q");
+        var result = document.getElementById("result");
+        function render(key) {
+          var k = (key || "").trim().toLowerCase();
+          if (!k) { result.innerHTML = ""; return; }
+          var e = entries[k];
+          if (!e) {
+            result.innerHTML = '<div class="no-match">Nothing found for "<strong>' + escapeHtml(k) + '</strong>". Check the options below.</div>';
+            return;
+          }
+          result.innerHTML =
+            '<div class="match">' +
+            '<div class="match-title">' + escapeHtml(e.title) + '</div>' +
+            (e.description ? '<div class="match-desc">' + escapeHtml(e.description) + '</div>' : '') +
+            '<a class="match-cta" href="' + encodeURI(e.url) + '" target="_blank" rel="noopener">Open →</a>' +
+            '</div>';
+        }
+        q.addEventListener("input", function (e) { render(e.target.value); });
+      }
+
+      fetch("./data.json", { cache: "no-store" })
+        .then(function (r) {
+          if (!r.ok) throw new Error("data.json " + r.status);
+          return r.json();
+        })
+        .then(function (data) {
+          renderYouTube(data.youtubeVideos || []);
+          wireSearch(data.entries || {});
+        })
+        .catch(function (err) {
+          console.error("Failed to load data.json:", err);
+          document.getElementById("yt-grid").innerHTML = '<p class="yt-empty">Failed to load videos.</p>';
+          wireSearch({});
+        });
+    })();
+  </script>
+</body>
+</html>
