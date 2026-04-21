@@ -1,0 +1,13 @@
+{
+  "name": "insta-landing-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Data-refresh script for insta.harrysanders.com",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.101.1"
+  }
+}
