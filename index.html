@@ -141,6 +141,27 @@
         });
       }
 
+      // Keyword analytics — fire-and-forget beacon on successful match.
+      // Deduped per page load so typing "trust", "trus", "trust" counts once.
+      // Public Supabase anon key is safe here (RLS allows only INSERT from anon).
+      var SUPABASE_URL = "https://biiwikljmyqszoawvohj.supabase.co";
+      var SUPABASE_ANON_KEY = "sb_publishable_fCA2Px3itEpTNuJ3gXGvZA_toUBaObr";
+      var __trackedKeywords = new Set();
+      function trackKeyword(kw) {
+        if (!kw || __trackedKeywords.has(kw)) return;
+        __trackedKeywords.add(kw);
+        fetch(SUPABASE_URL + "/rest/v1/insta_keyword_searches", {
+          method: "POST",
+          headers: {
+            apikey: SUPABASE_ANON_KEY,
+            Authorization: "Bearer " + SUPABASE_ANON_KEY,
+            "Content-Type": "application/json",
+            Prefer: "return=minimal",
+          },
+          body: JSON.stringify({ keyword: kw }),
+        }).catch(function () { /* silent */ });
+      }
+
       function renderYouTube(videos) {
         var grid = document.getElementById("yt-grid");
         if (!videos || videos.length === 0) {
@@ -166,6 +187,7 @@
             result.innerHTML = '<div class="no-match">Nothing found for "<strong>' + escapeHtml(k) + '</strong>". Make sure you got the exact spelling.</div>';
             return;
           }
+          trackKeyword(k);
           result.innerHTML =
             '<div class="match">' +
             '<div class="match-title">' + escapeHtml(e.title) + '</div>' +
