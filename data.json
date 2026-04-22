@@ -1,39 +1,34 @@
 {
   "entries": {
-    "trust": {
-      "title": "Google Trust Check",
-      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
-      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
+    "chatgpt": {
+      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
+      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
+      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
     },
-    "google": {
-      "title": "Google Trust Check",
-      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
-      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
+    "perplexity": {
+      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
+      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
+      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
     },
-    "eeat": {
-      "title": "Google Trust Check",
-      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
-      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
+    "llm": {
+      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
+      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
+      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
     },
-    "authority": {
-      "title": "Google Trust Check",
-      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
-      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
+    "ai optimization": {
+      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
+      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
+      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
     },
-    "credibility": {
-      "title": "Google Trust Check",
-      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
-      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
+    "ai citations": {
+      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
+      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
+      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
     },
-    "trust signals": {
-      "title": "Google Trust Check",
-      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
-      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
-    },
-    "brand trust": {
-      "title": "Google Trust Check",
-      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
-      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
+    "llm search": {
+      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
+      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
+      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
     },
     "content gap": {
       "title": "Website Gap Finder",
@@ -100,11 +95,6 @@
       "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
       "url": "https://hawkacademy.co/resources/skills/ai-visibility-check.html"
     },
-    "chatgpt": {
-      "title": "AI Visibility Check",
-      "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
-      "url": "https://hawkacademy.co/resources/skills/ai-visibility-check.html"
-    },
     "claude": {
       "title": "AI Visibility Check",
       "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
@@ -120,17 +110,7 @@
       "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
       "url": "https://hawkacademy.co/resources/skills/ai-visibility-check.html"
     },
-    "llm": {
-      "title": "AI Visibility Check",
-      "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
-      "url": "https://hawkacademy.co/resources/skills/ai-visibility-check.html"
-    },
     "ai overviews": {
-      "title": "AI Visibility Check",
-      "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
-      "url": "https://hawkacademy.co/resources/skills/ai-visibility-check.html"
-    },
-    "perplexity": {
       "title": "AI Visibility Check",
       "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
       "url": "https://hawkacademy.co/resources/skills/ai-visibility-check.html"
@@ -395,30 +375,40 @@
       "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
       "url": "https://hawkacademy.co/resources/skills/information-gain-prompt.html"
     },
-    "title tag": {
-      "title": "Title Tag Optimizer",
-      "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
-      "url": "https://hawkacademy.co/resources/skills/title-tag-optimizer.html"
+    "trust": {
+      "title": "Google Trust Check",
+      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
+      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
     },
-    "meta title": {
-      "title": "Title Tag Optimizer",
-      "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
-      "url": "https://hawkacademy.co/resources/skills/title-tag-optimizer.html"
+    "google": {
+      "title": "Google Trust Check",
+      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
+      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
     },
-    "click through rate": {
-      "title": "Title Tag Optimizer",
-      "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
-      "url": "https://hawkacademy.co/resources/skills/title-tag-optimizer.html"
+    "eeat": {
+      "title": "Google Trust Check",
+      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
+      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
     },
-    "serp": {
-      "title": "Title Tag Optimizer",
-      "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
-      "url": "https://hawkacademy.co/resources/skills/title-tag-optimizer.html"
+    "authority": {
+      "title": "Google Trust Check",
+      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
+      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
     },
-    "title optimization": {
-      "title": "Title Tag Optimizer",
-      "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
-      "url": "https://hawkacademy.co/resources/skills/title-tag-optimizer.html"
+    "credibility": {
+      "title": "Google Trust Check",
+      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
+      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
+    },
+    "trust signals": {
+      "title": "Google Trust Check",
+      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
+      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
+    },
+    "brand trust": {
+      "title": "Google Trust Check",
+      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
+      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
     },
     "website score": {
       "title": "Website Score Check",
@@ -625,21 +615,6 @@
       "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
       "url": "https://hawkacademy.co/resources/../blog/digital-pr-link-building.html"
     },
-    "ai optimization": {
-      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
-      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
-      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
-    },
-    "ai citations": {
-      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
-      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
-      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
-    },
-    "llm search": {
-      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
-      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
-      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
-    },
     "ga4": {
       "title": "GA4 for SEO: The Metrics That Actually Matter",
       "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
@@ -679,6 +654,31 @@
       "title": "Ad Spend Calculator",
       "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
       "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
+    },
+    "title tag": {
+      "title": "Title Tag Optimizer",
+      "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
+      "url": "https://hawkacademy.co/resources/skills/title-tag-optimizer.html"
+    },
+    "meta title": {
+      "title": "Title Tag Optimizer",
+      "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
+      "url": "https://hawkacademy.co/resources/skills/title-tag-optimizer.html"
+    },
+    "click through rate": {
+      "title": "Title Tag Optimizer",
+      "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
+      "url": "https://hawkacademy.co/resources/skills/title-tag-optimizer.html"
+    },
+    "serp": {
+      "title": "Title Tag Optimizer",
+      "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
+      "url": "https://hawkacademy.co/resources/skills/title-tag-optimizer.html"
+    },
+    "title optimization": {
+      "title": "Title Tag Optimizer",
+      "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
+      "url": "https://hawkacademy.co/resources/skills/title-tag-optimizer.html"
     }
   },
   "youtubeVideos": [
@@ -701,5 +701,5 @@
       "url": "https://youtu.be/H2rCPbfN3jQ"
     }
   ],
-  "generatedAt": "2026-04-22T00:33:52.009Z"
+  "generatedAt": "2026-04-22T20:45:34.775Z"
 }
