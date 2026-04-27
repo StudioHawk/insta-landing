@@ -1,159 +1,34 @@
 {
   "entries": {
-    "chatgpt": {
-      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
-      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
-      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
+    "workshop": {
+      "title": "Hawk Academy Workshop",
+      "description": "Hawk Academy Workshop — live SEO workshop sessions.",
+      "url": "https://hawkacademy.co/workshop"
     },
-    "perplexity": {
-      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
-      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
-      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
+    "hawk academy workshop": {
+      "title": "Hawk Academy Workshop",
+      "description": "Hawk Academy Workshop — live SEO workshop sessions.",
+      "url": "https://hawkacademy.co/workshop"
     },
-    "llm": {
-      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
-      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
-      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
+    "academy workshop": {
+      "title": "Hawk Academy Workshop",
+      "description": "Hawk Academy Workshop — live SEO workshop sessions.",
+      "url": "https://hawkacademy.co/workshop"
     },
-    "ai optimization": {
-      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
-      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
-      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
+    "academy": {
+      "title": "Hawk Academy",
+      "description": "Hawk Academy — free SEO learning hub, courses, skills, and tools.",
+      "url": "https://hawkacademy.co"
     },
-    "ai citations": {
-      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
-      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
-      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
+    "hawk academy": {
+      "title": "Hawk Academy",
+      "description": "Hawk Academy — free SEO learning hub, courses, skills, and tools.",
+      "url": "https://hawkacademy.co"
     },
-    "llm search": {
-      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
-      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
-      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
-    },
-    "local seo": {
-      "title": "Local SEO Audit",
-      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
-      "url": "https://hawkacademy.co/resources/skills/local.html"
-    },
-    "google business": {
-      "title": "Local SEO Audit",
-      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
-      "url": "https://hawkacademy.co/resources/skills/local.html"
-    },
-    "gbp": {
-      "title": "Local SEO Audit",
-      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
-      "url": "https://hawkacademy.co/resources/skills/local.html"
-    },
-    "local search": {
-      "title": "Local SEO Audit",
-      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
-      "url": "https://hawkacademy.co/resources/skills/local.html"
-    },
-    "map pack": {
-      "title": "Local SEO Audit",
-      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
-      "url": "https://hawkacademy.co/resources/skills/local.html"
-    },
-    "service area": {
-      "title": "Local SEO Audit",
-      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
-      "url": "https://hawkacademy.co/resources/skills/local.html"
-    },
-    "location pages": {
-      "title": "Local SEO Audit",
-      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
-      "url": "https://hawkacademy.co/resources/skills/local.html"
-    },
-    "restaurant": {
-      "title": "Restaurant SEO Audit",
-      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
-      "url": "https://hawkacademy.co/resources/skills/restaurant.html"
-    },
-    "hospitality": {
-      "title": "Restaurant SEO Audit",
-      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
-      "url": "https://hawkacademy.co/resources/skills/restaurant.html"
-    },
-    "menu": {
-      "title": "Restaurant SEO Audit",
-      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
-      "url": "https://hawkacademy.co/resources/skills/restaurant.html"
-    },
-    "booking": {
-      "title": "Restaurant SEO Audit",
-      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
-      "url": "https://hawkacademy.co/resources/skills/restaurant.html"
-    },
-    "reviews": {
-      "title": "Restaurant SEO Audit",
-      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
-      "url": "https://hawkacademy.co/resources/skills/restaurant.html"
-    },
-    "food": {
-      "title": "Restaurant SEO Audit",
-      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
-      "url": "https://hawkacademy.co/resources/skills/restaurant.html"
-    },
-    "dining": {
-      "title": "Restaurant SEO Audit",
-      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
-      "url": "https://hawkacademy.co/resources/skills/restaurant.html"
-    },
-    "b2b": {
-      "title": "B2B SEO Audit",
-      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
-      "url": "https://hawkacademy.co/resources/skills/b2b.html"
-    },
-    "lead generation": {
-      "title": "B2B SEO Audit",
-      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
-      "url": "https://hawkacademy.co/resources/skills/b2b.html"
-    },
-    "case studies": {
-      "title": "B2B SEO Audit",
-      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
-      "url": "https://hawkacademy.co/resources/skills/b2b.html"
-    },
-    "thought leadership": {
-      "title": "B2B SEO Audit",
-      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
-      "url": "https://hawkacademy.co/resources/skills/b2b.html"
-    },
-    "service pages": {
-      "title": "B2B SEO Audit",
-      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
-      "url": "https://hawkacademy.co/resources/skills/b2b.html"
-    },
-    "saas": {
-      "title": "B2B SEO Audit",
-      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
-      "url": "https://hawkacademy.co/resources/skills/b2b.html"
-    },
-    "software": {
-      "title": "SaaS SEO Audit",
-      "description": "Audit for SaaS companies covering feature pages, use-case pages, comparison pages, and product-led content.",
-      "url": "https://hawkacademy.co/resources/skills/saas.html"
-    },
-    "feature pages": {
-      "title": "SaaS SEO Audit",
-      "description": "Audit for SaaS companies covering feature pages, use-case pages, comparison pages, and product-led content.",
-      "url": "https://hawkacademy.co/resources/skills/saas.html"
-    },
-    "comparison": {
-      "title": "SaaS SEO Audit",
-      "description": "Audit for SaaS companies covering feature pages, use-case pages, comparison pages, and product-led content.",
-      "url": "https://hawkacademy.co/resources/skills/saas.html"
-    },
-    "use case": {
-      "title": "SaaS SEO Audit",
-      "description": "Audit for SaaS companies covering feature pages, use-case pages, comparison pages, and product-led content.",
-      "url": "https://hawkacademy.co/resources/skills/saas.html"
-    },
-    "product led": {
-      "title": "SaaS SEO Audit",
-      "description": "Audit for SaaS companies covering feature pages, use-case pages, comparison pages, and product-led content.",
-      "url": "https://hawkacademy.co/resources/skills/saas.html"
+    "hawkacademy": {
+      "title": "Hawk Academy",
+      "description": "Hawk Academy — free SEO learning hub, courses, skills, and tools.",
+      "url": "https://hawkacademy.co"
     },
     "information gain": {
       "title": "Information Gain Finder",
@@ -184,6 +59,66 @@
       "title": "Information Gain Finder",
       "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
       "url": "https://hawkacademy.co/resources/skills/information-gain-prompt.html"
+    },
+    "chatgpt": {
+      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
+      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
+      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
+    },
+    "perplexity": {
+      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
+      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
+      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
+    },
+    "llm": {
+      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
+      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
+      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
+    },
+    "ai optimization": {
+      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
+      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
+      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
+    },
+    "ai citations": {
+      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
+      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
+      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
+    },
+    "llm search": {
+      "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
+      "description": "Getting your brand cited by AI assistants and large language model search experiences.",
+      "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
+    },
+    "saas": {
+      "title": "SaaS SEO Audit",
+      "description": "Audit for SaaS companies covering feature pages, use-case pages, comparison pages, and product-led content.",
+      "url": "https://hawkacademy.co/resources/skills/saas.html"
+    },
+    "software": {
+      "title": "SaaS SEO Audit",
+      "description": "Audit for SaaS companies covering feature pages, use-case pages, comparison pages, and product-led content.",
+      "url": "https://hawkacademy.co/resources/skills/saas.html"
+    },
+    "feature pages": {
+      "title": "SaaS SEO Audit",
+      "description": "Audit for SaaS companies covering feature pages, use-case pages, comparison pages, and product-led content.",
+      "url": "https://hawkacademy.co/resources/skills/saas.html"
+    },
+    "comparison": {
+      "title": "SaaS SEO Audit",
+      "description": "Audit for SaaS companies covering feature pages, use-case pages, comparison pages, and product-led content.",
+      "url": "https://hawkacademy.co/resources/skills/saas.html"
+    },
+    "use case": {
+      "title": "SaaS SEO Audit",
+      "description": "Audit for SaaS companies covering feature pages, use-case pages, comparison pages, and product-led content.",
+      "url": "https://hawkacademy.co/resources/skills/saas.html"
+    },
+    "product led": {
+      "title": "SaaS SEO Audit",
+      "description": "Audit for SaaS companies covering feature pages, use-case pages, comparison pages, and product-led content.",
+      "url": "https://hawkacademy.co/resources/skills/saas.html"
     },
     "title tag": {
       "title": "Title Tag Optimizer",
@@ -270,6 +205,41 @@
       "description": "Everything needed for ranking in search engines, from keyword research through on-page optimization.",
       "url": "https://hawkacademy.co/resources/../blog/beginners-guide-to-seo-2026.html"
     },
+    "core web vitals": {
+      "title": "Core Web Vitals: A Practical Optimisation Checklist",
+      "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
+      "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
+    },
+    "page speed": {
+      "title": "Core Web Vitals: A Practical Optimisation Checklist",
+      "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
+      "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
+    },
+    "lcp": {
+      "title": "Core Web Vitals: A Practical Optimisation Checklist",
+      "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
+      "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
+    },
+    "cls": {
+      "title": "Core Web Vitals: A Practical Optimisation Checklist",
+      "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
+      "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
+    },
+    "inp": {
+      "title": "Core Web Vitals: A Practical Optimisation Checklist",
+      "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
+      "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
+    },
+    "performance": {
+      "title": "Core Web Vitals: A Practical Optimisation Checklist",
+      "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
+      "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
+    },
+    "site speed": {
+      "title": "Core Web Vitals: A Practical Optimisation Checklist",
+      "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
+      "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
+    },
     "trust": {
       "title": "Google Trust Check",
       "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
@@ -304,36 +274,6 @@
       "title": "Google Trust Check",
       "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
       "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
-    },
-    "ai overviews": {
-      "title": "How AI Overviews Are Changing the SEO Landscape",
-      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
-      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
-    },
-    "sge": {
-      "title": "How AI Overviews Are Changing the SEO Landscape",
-      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
-      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
-    },
-    "google ai": {
-      "title": "How AI Overviews Are Changing the SEO Landscape",
-      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
-      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
-    },
-    "zero click": {
-      "title": "How AI Overviews Are Changing the SEO Landscape",
-      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
-      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
-    },
-    "featured snippets": {
-      "title": "How AI Overviews Are Changing the SEO Landscape",
-      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
-      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
-    },
-    "ai search": {
-      "title": "How AI Overviews Are Changing the SEO Landscape",
-      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
-      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
     },
     "content hub": {
       "title": "Building a Content Hub: Topic Clusters That Rank",
@@ -510,40 +450,35 @@
       "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
       "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
     },
-    "core web vitals": {
-      "title": "Core Web Vitals: A Practical Optimisation Checklist",
-      "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
-      "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
+    "ai overviews": {
+      "title": "How AI Overviews Are Changing the SEO Landscape",
+      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
+      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
     },
-    "page speed": {
-      "title": "Core Web Vitals: A Practical Optimisation Checklist",
-      "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
-      "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
+    "sge": {
+      "title": "How AI Overviews Are Changing the SEO Landscape",
+      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
+      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
     },
-    "lcp": {
-      "title": "Core Web Vitals: A Practical Optimisation Checklist",
-      "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
-      "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
+    "google ai": {
+      "title": "How AI Overviews Are Changing the SEO Landscape",
+      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
+      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
     },
-    "cls": {
-      "title": "Core Web Vitals: A Practical Optimisation Checklist",
-      "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
-      "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
+    "zero click": {
+      "title": "How AI Overviews Are Changing the SEO Landscape",
+      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
+      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
     },
-    "inp": {
-      "title": "Core Web Vitals: A Practical Optimisation Checklist",
-      "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
-      "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
+    "featured snippets": {
+      "title": "How AI Overviews Are Changing the SEO Landscape",
+      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
+      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
     },
-    "performance": {
-      "title": "Core Web Vitals: A Practical Optimisation Checklist",
-      "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
-      "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
-    },
-    "site speed": {
-      "title": "Core Web Vitals: A Practical Optimisation Checklist",
-      "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
-      "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
+    "ai search": {
+      "title": "How AI Overviews Are Changing the SEO Landscape",
+      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
+      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
     },
     "content gap": {
       "title": "Website Gap Finder",
@@ -679,6 +614,101 @@
       "title": "Ecommerce SEO Audit",
       "description": "Full on-page audit for online stores covering category pages, product pages, internal linking, and AI search readiness.",
       "url": "https://hawkacademy.co/resources/skills/ecommerce.html"
+    },
+    "local seo": {
+      "title": "Local SEO Audit",
+      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
+      "url": "https://hawkacademy.co/resources/skills/local.html"
+    },
+    "google business": {
+      "title": "Local SEO Audit",
+      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
+      "url": "https://hawkacademy.co/resources/skills/local.html"
+    },
+    "gbp": {
+      "title": "Local SEO Audit",
+      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
+      "url": "https://hawkacademy.co/resources/skills/local.html"
+    },
+    "local search": {
+      "title": "Local SEO Audit",
+      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
+      "url": "https://hawkacademy.co/resources/skills/local.html"
+    },
+    "map pack": {
+      "title": "Local SEO Audit",
+      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
+      "url": "https://hawkacademy.co/resources/skills/local.html"
+    },
+    "service area": {
+      "title": "Local SEO Audit",
+      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
+      "url": "https://hawkacademy.co/resources/skills/local.html"
+    },
+    "location pages": {
+      "title": "Local SEO Audit",
+      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
+      "url": "https://hawkacademy.co/resources/skills/local.html"
+    },
+    "restaurant": {
+      "title": "Restaurant SEO Audit",
+      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
+      "url": "https://hawkacademy.co/resources/skills/restaurant.html"
+    },
+    "hospitality": {
+      "title": "Restaurant SEO Audit",
+      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
+      "url": "https://hawkacademy.co/resources/skills/restaurant.html"
+    },
+    "menu": {
+      "title": "Restaurant SEO Audit",
+      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
+      "url": "https://hawkacademy.co/resources/skills/restaurant.html"
+    },
+    "booking": {
+      "title": "Restaurant SEO Audit",
+      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
+      "url": "https://hawkacademy.co/resources/skills/restaurant.html"
+    },
+    "reviews": {
+      "title": "Restaurant SEO Audit",
+      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
+      "url": "https://hawkacademy.co/resources/skills/restaurant.html"
+    },
+    "food": {
+      "title": "Restaurant SEO Audit",
+      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
+      "url": "https://hawkacademy.co/resources/skills/restaurant.html"
+    },
+    "dining": {
+      "title": "Restaurant SEO Audit",
+      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
+      "url": "https://hawkacademy.co/resources/skills/restaurant.html"
+    },
+    "b2b": {
+      "title": "B2B SEO Audit",
+      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
+      "url": "https://hawkacademy.co/resources/skills/b2b.html"
+    },
+    "lead generation": {
+      "title": "B2B SEO Audit",
+      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
+      "url": "https://hawkacademy.co/resources/skills/b2b.html"
+    },
+    "case studies": {
+      "title": "B2B SEO Audit",
+      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
+      "url": "https://hawkacademy.co/resources/skills/b2b.html"
+    },
+    "thought leadership": {
+      "title": "B2B SEO Audit",
+      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
+      "url": "https://hawkacademy.co/resources/skills/b2b.html"
+    },
+    "service pages": {
+      "title": "B2B SEO Audit",
+      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
+      "url": "https://hawkacademy.co/resources/skills/b2b.html"
     }
   },
   "youtubeVideos": [
@@ -701,5 +731,5 @@
       "url": "https://youtu.be/H2rCPbfN3jQ"
     }
   ],
-  "generatedAt": "2026-04-26T20:31:46.767Z"
+  "generatedAt": "2026-04-27T20:54:48.419Z"
 }
