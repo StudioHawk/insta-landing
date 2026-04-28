@@ -713,6 +713,12 @@
   },
   "youtubeVideos": [
     {
+      "id": "UyWZRvGKI4A",
+      "title": "How AI Search Now Decides Who Gets B2B Leads (And How I Got On The List)",
+      "thumbnailUrl": "https://i.ytimg.com/vi/UyWZRvGKI4A/maxresdefault.jpg",
+      "url": "https://youtu.be/UyWZRvGKI4A"
+    },
+    {
       "id": "VFRGQNDziMM",
       "title": "8 AI SEO Predictions for 2026 (If Half Come True, You'll Dominate)",
       "thumbnailUrl": "https://i.ytimg.com/vi/VFRGQNDziMM/maxresdefault.jpg",
@@ -723,13 +729,7 @@
       "title": "If I Had to Learn SEO From Scratch in 2026, I'd Do This",
       "thumbnailUrl": "https://i.ytimg.com/vi/HbIYPu3RqaQ/maxresdefault.jpg",
       "url": "https://youtu.be/HbIYPu3RqaQ"
-    },
-    {
-      "id": "H2rCPbfN3jQ",
-      "title": "Keywords No Longer Work the Way You Think in 2026",
-      "thumbnailUrl": "https://i.ytimg.com/vi/H2rCPbfN3jQ/maxresdefault.jpg",
-      "url": "https://youtu.be/H2rCPbfN3jQ"
     }
   ],
-  "generatedAt": "2026-04-27T20:54:48.419Z"
+  "generatedAt": "2026-04-28T21:01:35.772Z"
 }
