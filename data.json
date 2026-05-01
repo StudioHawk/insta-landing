@@ -1,5 +1,35 @@
 {
   "entries": {
+    "information gain": {
+      "title": "Information Gain Finder",
+      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
+      "url": "https://hawkacademy.co/resources/skills/information-gain-prompt.html"
+    },
+    "unique content": {
+      "title": "Information Gain Finder",
+      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
+      "url": "https://hawkacademy.co/resources/skills/information-gain-prompt.html"
+    },
+    "original": {
+      "title": "Information Gain Finder",
+      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
+      "url": "https://hawkacademy.co/resources/skills/information-gain-prompt.html"
+    },
+    "duplicate content": {
+      "title": "Information Gain Finder",
+      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
+      "url": "https://hawkacademy.co/resources/skills/information-gain-prompt.html"
+    },
+    "thin content": {
+      "title": "Information Gain Finder",
+      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
+      "url": "https://hawkacademy.co/resources/skills/information-gain-prompt.html"
+    },
+    "content quality": {
+      "title": "Information Gain Finder",
+      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
+      "url": "https://hawkacademy.co/resources/skills/information-gain-prompt.html"
+    },
     "title tag": {
       "title": "Title Tag Optimizer",
       "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
@@ -149,36 +179,6 @@
       "title": "Hawk Academy Workshop",
       "description": "Hawk Academy Workshop — live SEO workshop sessions.",
       "url": "https://hawkacademy.co/workshop"
-    },
-    "information gain": {
-      "title": "Information Gain Finder",
-      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
-      "url": "https://hawkacademy.co/resources/skills/information-gain-prompt.html"
-    },
-    "unique content": {
-      "title": "Information Gain Finder",
-      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
-      "url": "https://hawkacademy.co/resources/skills/information-gain-prompt.html"
-    },
-    "original": {
-      "title": "Information Gain Finder",
-      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
-      "url": "https://hawkacademy.co/resources/skills/information-gain-prompt.html"
-    },
-    "duplicate content": {
-      "title": "Information Gain Finder",
-      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
-      "url": "https://hawkacademy.co/resources/skills/information-gain-prompt.html"
-    },
-    "thin content": {
-      "title": "Information Gain Finder",
-      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
-      "url": "https://hawkacademy.co/resources/skills/information-gain-prompt.html"
-    },
-    "content quality": {
-      "title": "Information Gain Finder",
-      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
-      "url": "https://hawkacademy.co/resources/skills/information-gain-prompt.html"
     },
     "chatgpt": {
       "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
@@ -731,5 +731,5 @@
       "url": "https://youtu.be/HbIYPu3RqaQ"
     }
   ],
-  "generatedAt": "2026-04-30T20:53:20.090Z"
+  "generatedAt": "2026-05-01T20:42:55.066Z"
 }
