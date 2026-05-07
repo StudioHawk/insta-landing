@@ -1,5 +1,35 @@
 {
   "entries": {
+    "b2b": {
+      "title": "B2B SEO Audit",
+      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
+      "url": "https://hawkacademy.co/resources/skills/b2b.html"
+    },
+    "lead generation": {
+      "title": "B2B SEO Audit",
+      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
+      "url": "https://hawkacademy.co/resources/skills/b2b.html"
+    },
+    "case studies": {
+      "title": "B2B SEO Audit",
+      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
+      "url": "https://hawkacademy.co/resources/skills/b2b.html"
+    },
+    "thought leadership": {
+      "title": "B2B SEO Audit",
+      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
+      "url": "https://hawkacademy.co/resources/skills/b2b.html"
+    },
+    "service pages": {
+      "title": "B2B SEO Audit",
+      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
+      "url": "https://hawkacademy.co/resources/skills/b2b.html"
+    },
+    "saas": {
+      "title": "B2B SEO Audit",
+      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
+      "url": "https://hawkacademy.co/resources/skills/b2b.html"
+    },
     "information gain": {
       "title": "Information Gain Finder",
       "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
@@ -209,71 +239,6 @@
       "title": "Optimising for ChatGPT, Perplexity, and LLM-Powered Search",
       "description": "Getting your brand cited by AI assistants and large language model search experiences.",
       "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
-    },
-    "digital pr": {
-      "title": "Digital PR for Link Building: Strategies That Scale",
-      "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
-      "url": "https://hawkacademy.co/resources/../blog/digital-pr-link-building.html"
-    },
-    "link building": {
-      "title": "Digital PR for Link Building: Strategies That Scale",
-      "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
-      "url": "https://hawkacademy.co/resources/../blog/digital-pr-link-building.html"
-    },
-    "backlinks": {
-      "title": "Digital PR for Link Building: Strategies That Scale",
-      "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
-      "url": "https://hawkacademy.co/resources/../blog/digital-pr-link-building.html"
-    },
-    "outreach": {
-      "title": "Digital PR for Link Building: Strategies That Scale",
-      "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
-      "url": "https://hawkacademy.co/resources/../blog/digital-pr-link-building.html"
-    },
-    "pr": {
-      "title": "Digital PR for Link Building: Strategies That Scale",
-      "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
-      "url": "https://hawkacademy.co/resources/../blog/digital-pr-link-building.html"
-    },
-    "links": {
-      "title": "Digital PR for Link Building: Strategies That Scale",
-      "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
-      "url": "https://hawkacademy.co/resources/../blog/digital-pr-link-building.html"
-    },
-    "authority": {
-      "title": "Digital PR for Link Building: Strategies That Scale",
-      "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
-      "url": "https://hawkacademy.co/resources/../blog/digital-pr-link-building.html"
-    },
-    "ga4": {
-      "title": "GA4 for SEO: The Metrics That Actually Matter",
-      "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
-      "url": "https://hawkacademy.co/resources/../blog/ga4-seo-metrics.html"
-    },
-    "google analytics": {
-      "title": "GA4 for SEO: The Metrics That Actually Matter",
-      "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
-      "url": "https://hawkacademy.co/resources/../blog/ga4-seo-metrics.html"
-    },
-    "analytics": {
-      "title": "GA4 for SEO: The Metrics That Actually Matter",
-      "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
-      "url": "https://hawkacademy.co/resources/../blog/ga4-seo-metrics.html"
-    },
-    "metrics": {
-      "title": "GA4 for SEO: The Metrics That Actually Matter",
-      "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
-      "url": "https://hawkacademy.co/resources/../blog/ga4-seo-metrics.html"
-    },
-    "reporting": {
-      "title": "GA4 for SEO: The Metrics That Actually Matter",
-      "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
-      "url": "https://hawkacademy.co/resources/../blog/ga4-seo-metrics.html"
-    },
-    "organic traffic": {
-      "title": "GA4 for SEO: The Metrics That Actually Matter",
-      "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
-      "url": "https://hawkacademy.co/resources/../blog/ga4-seo-metrics.html"
     },
     "ads": {
       "title": "Ad Spend Calculator",
@@ -495,36 +460,6 @@
       "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
       "url": "https://hawkacademy.co/resources/skills/restaurant.html"
     },
-    "b2b": {
-      "title": "B2B SEO Audit",
-      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
-      "url": "https://hawkacademy.co/resources/skills/b2b.html"
-    },
-    "lead generation": {
-      "title": "B2B SEO Audit",
-      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
-      "url": "https://hawkacademy.co/resources/skills/b2b.html"
-    },
-    "case studies": {
-      "title": "B2B SEO Audit",
-      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
-      "url": "https://hawkacademy.co/resources/skills/b2b.html"
-    },
-    "thought leadership": {
-      "title": "B2B SEO Audit",
-      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
-      "url": "https://hawkacademy.co/resources/skills/b2b.html"
-    },
-    "service pages": {
-      "title": "B2B SEO Audit",
-      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
-      "url": "https://hawkacademy.co/resources/skills/b2b.html"
-    },
-    "saas": {
-      "title": "B2B SEO Audit",
-      "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
-      "url": "https://hawkacademy.co/resources/skills/b2b.html"
-    },
     "software": {
       "title": "SaaS SEO Audit",
       "description": "Audit for SaaS companies covering feature pages, use-case pages, comparison pages, and product-led content.",
@@ -630,6 +565,11 @@
       "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
       "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
     },
+    "authority": {
+      "title": "Google Trust Check",
+      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
+      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
+    },
     "credibility": {
       "title": "Google Trust Check",
       "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
@@ -709,6 +649,66 @@
       "title": "Site Architecture and Crawl Budget",
       "description": "Why site internal structure matters and ensuring search engines efficiently discover key pages.",
       "url": "https://hawkacademy.co/resources/../blog/site-architecture-crawl-budget.html"
+    },
+    "digital pr": {
+      "title": "Digital PR for Link Building: Strategies That Scale",
+      "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
+      "url": "https://hawkacademy.co/resources/../blog/digital-pr-link-building.html"
+    },
+    "link building": {
+      "title": "Digital PR for Link Building: Strategies That Scale",
+      "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
+      "url": "https://hawkacademy.co/resources/../blog/digital-pr-link-building.html"
+    },
+    "backlinks": {
+      "title": "Digital PR for Link Building: Strategies That Scale",
+      "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
+      "url": "https://hawkacademy.co/resources/../blog/digital-pr-link-building.html"
+    },
+    "outreach": {
+      "title": "Digital PR for Link Building: Strategies That Scale",
+      "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
+      "url": "https://hawkacademy.co/resources/../blog/digital-pr-link-building.html"
+    },
+    "pr": {
+      "title": "Digital PR for Link Building: Strategies That Scale",
+      "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
+      "url": "https://hawkacademy.co/resources/../blog/digital-pr-link-building.html"
+    },
+    "links": {
+      "title": "Digital PR for Link Building: Strategies That Scale",
+      "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
+      "url": "https://hawkacademy.co/resources/../blog/digital-pr-link-building.html"
+    },
+    "ga4": {
+      "title": "GA4 for SEO: The Metrics That Actually Matter",
+      "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
+      "url": "https://hawkacademy.co/resources/../blog/ga4-seo-metrics.html"
+    },
+    "google analytics": {
+      "title": "GA4 for SEO: The Metrics That Actually Matter",
+      "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
+      "url": "https://hawkacademy.co/resources/../blog/ga4-seo-metrics.html"
+    },
+    "analytics": {
+      "title": "GA4 for SEO: The Metrics That Actually Matter",
+      "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
+      "url": "https://hawkacademy.co/resources/../blog/ga4-seo-metrics.html"
+    },
+    "metrics": {
+      "title": "GA4 for SEO: The Metrics That Actually Matter",
+      "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
+      "url": "https://hawkacademy.co/resources/../blog/ga4-seo-metrics.html"
+    },
+    "reporting": {
+      "title": "GA4 for SEO: The Metrics That Actually Matter",
+      "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
+      "url": "https://hawkacademy.co/resources/../blog/ga4-seo-metrics.html"
+    },
+    "organic traffic": {
+      "title": "GA4 for SEO: The Metrics That Actually Matter",
+      "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
+      "url": "https://hawkacademy.co/resources/../blog/ga4-seo-metrics.html"
     }
   },
   "youtubeVideos": [
@@ -731,5 +731,5 @@
       "url": "https://youtu.be/HbIYPu3RqaQ"
     }
   ],
-  "generatedAt": "2026-05-06T21:05:10.238Z"
+  "generatedAt": "2026-05-07T20:59:35.954Z"
 }
