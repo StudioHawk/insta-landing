@@ -1,5 +1,55 @@
 {
   "entries": {
+    "ads": {
+      "title": "Ad Spend Calculator",
+      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
+      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
+    },
+    "google ads": {
+      "title": "Ad Spend Calculator",
+      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
+      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
+    },
+    "ppc": {
+      "title": "Ad Spend Calculator",
+      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
+      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
+    },
+    "ad spend": {
+      "title": "Ad Spend Calculator",
+      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
+      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
+    },
+    "cpc": {
+      "title": "Ad Spend Calculator",
+      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
+      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
+    },
+    "calculator": {
+      "title": "Ad Spend Calculator",
+      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
+      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
+    },
+    "roi": {
+      "title": "Ad Spend Calculator",
+      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
+      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
+    },
+    "cost": {
+      "title": "Ad Spend Calculator",
+      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
+      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
+    },
+    "paid search": {
+      "title": "Ad Spend Calculator",
+      "description": "See what Google Ads really cost over 3 years vs free organic traffic. Industry CPC data and step-by-step walkthrough.",
+      "url": "https://hawkacademy.co/resources/skills/ad-spend-calculator.html"
+    },
+    "organic vs paid": {
+      "title": "Ad Spend Calculator",
+      "description": "See what Google Ads really cost over 3 years vs free organic traffic. Industry CPC data and step-by-step walkthrough.",
+      "url": "https://hawkacademy.co/resources/skills/ad-spend-calculator.html"
+    },
     "b2b": {
       "title": "B2B SEO Audit",
       "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
@@ -240,46 +290,6 @@
       "description": "Getting your brand cited by AI assistants and large language model search experiences.",
       "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
     },
-    "ads": {
-      "title": "Ad Spend Calculator",
-      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
-      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
-    },
-    "google ads": {
-      "title": "Ad Spend Calculator",
-      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
-      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
-    },
-    "ppc": {
-      "title": "Ad Spend Calculator",
-      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
-      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
-    },
-    "ad spend": {
-      "title": "Ad Spend Calculator",
-      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
-      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
-    },
-    "cpc": {
-      "title": "Ad Spend Calculator",
-      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
-      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
-    },
-    "calculator": {
-      "title": "Ad Spend Calculator",
-      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
-      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
-    },
-    "roi": {
-      "title": "Ad Spend Calculator",
-      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
-      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
-    },
-    "cost": {
-      "title": "Ad Spend Calculator",
-      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
-      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator.html"
-    },
     "ai overviews": {
       "title": "How AI Overviews Are Changing the SEO Landscape",
       "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
@@ -384,16 +394,6 @@
       "title": "AI Visibility Check",
       "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
       "url": "https://hawkacademy.co/resources/skills/ai-visibility-check.html"
-    },
-    "paid search": {
-      "title": "Ad Spend Calculator",
-      "description": "See what Google Ads really cost over 3 years vs free organic traffic. Industry CPC data and step-by-step walkthrough.",
-      "url": "https://hawkacademy.co/resources/skills/ad-spend-calculator.html"
-    },
-    "organic vs paid": {
-      "title": "Ad Spend Calculator",
-      "description": "See what Google Ads really cost over 3 years vs free organic traffic. Industry CPC data and step-by-step walkthrough.",
-      "url": "https://hawkacademy.co/resources/skills/ad-spend-calculator.html"
     },
     "search console": {
       "title": "Search Console Quick Start",
@@ -731,5 +731,5 @@
       "url": "https://youtu.be/HbIYPu3RqaQ"
     }
   ],
-  "generatedAt": "2026-05-07T20:59:35.954Z"
+  "generatedAt": "2026-05-08T20:51:45.083Z"
 }
