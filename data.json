@@ -290,35 +290,35 @@
       "description": "Getting your brand cited by AI assistants and large language model search experiences.",
       "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
     },
-    "ai overviews": {
-      "title": "How AI Overviews Are Changing the SEO Landscape",
-      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
-      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
+    "content hub": {
+      "title": "Building a Content Hub: Topic Clusters That Rank",
+      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
+      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
     },
-    "sge": {
-      "title": "How AI Overviews Are Changing the SEO Landscape",
-      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
-      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
+    "topic clusters": {
+      "title": "Building a Content Hub: Topic Clusters That Rank",
+      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
+      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
     },
-    "google ai": {
-      "title": "How AI Overviews Are Changing the SEO Landscape",
-      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
-      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
+    "pillar page": {
+      "title": "Building a Content Hub: Topic Clusters That Rank",
+      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
+      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
     },
-    "zero click": {
-      "title": "How AI Overviews Are Changing the SEO Landscape",
-      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
-      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
+    "topical authority": {
+      "title": "Building a Content Hub: Topic Clusters That Rank",
+      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
+      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
     },
-    "featured snippets": {
-      "title": "How AI Overviews Are Changing the SEO Landscape",
-      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
-      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
+    "content strategy": {
+      "title": "Building a Content Hub: Topic Clusters That Rank",
+      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
+      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
     },
-    "ai search": {
-      "title": "How AI Overviews Are Changing the SEO Landscape",
-      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
-      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
+    "silos": {
+      "title": "Building a Content Hub: Topic Clusters That Rank",
+      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
+      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
     },
     "content gap": {
       "title": "Website Gap Finder",
@@ -331,16 +331,6 @@
       "url": "https://hawkacademy.co/resources/skills/website-gap-finder.html"
     },
     "content plan": {
-      "title": "Website Gap Finder",
-      "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
-      "url": "https://hawkacademy.co/resources/skills/website-gap-finder.html"
-    },
-    "content strategy": {
-      "title": "Website Gap Finder",
-      "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
-      "url": "https://hawkacademy.co/resources/skills/website-gap-finder.html"
-    },
-    "topic clusters": {
       "title": "Website Gap Finder",
       "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
       "url": "https://hawkacademy.co/resources/skills/website-gap-finder.html"
@@ -390,7 +380,17 @@
       "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
       "url": "https://hawkacademy.co/resources/skills/ai-visibility-check.html"
     },
+    "ai search": {
+      "title": "AI Visibility Check",
+      "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
+      "url": "https://hawkacademy.co/resources/skills/ai-visibility-check.html"
+    },
     "ai visibility": {
+      "title": "AI Visibility Check",
+      "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
+      "url": "https://hawkacademy.co/resources/skills/ai-visibility-check.html"
+    },
+    "ai overviews": {
       "title": "AI Visibility Check",
       "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
       "url": "https://hawkacademy.co/resources/skills/ai-visibility-check.html"
@@ -550,6 +550,26 @@
       "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
       "url": "https://hawkacademy.co/resources/../blog/core-web-vitals-checklist.html"
     },
+    "sge": {
+      "title": "How AI Overviews Are Changing the SEO Landscape",
+      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
+      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
+    },
+    "google ai": {
+      "title": "How AI Overviews Are Changing the SEO Landscape",
+      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
+      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
+    },
+    "zero click": {
+      "title": "How AI Overviews Are Changing the SEO Landscape",
+      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
+      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
+    },
+    "featured snippets": {
+      "title": "How AI Overviews Are Changing the SEO Landscape",
+      "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
+      "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
+    },
     "trust": {
       "title": "Google Trust Check",
       "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
@@ -584,26 +604,6 @@
       "title": "Google Trust Check",
       "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
       "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
-    },
-    "content hub": {
-      "title": "Building a Content Hub: Topic Clusters That Rank",
-      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
-      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
-    },
-    "pillar page": {
-      "title": "Building a Content Hub: Topic Clusters That Rank",
-      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
-      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
-    },
-    "topical authority": {
-      "title": "Building a Content Hub: Topic Clusters That Rank",
-      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
-      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
-    },
-    "silos": {
-      "title": "Building a Content Hub: Topic Clusters That Rank",
-      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
-      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
     },
     "expertise": {
       "title": "E-E-A-T Explained: Building Trust and Authority",
@@ -731,5 +731,5 @@
       "url": "https://youtu.be/HbIYPu3RqaQ"
     }
   ],
-  "generatedAt": "2026-05-08T20:51:45.083Z"
+  "generatedAt": "2026-05-09T20:37:21.551Z"
 }
