@@ -290,35 +290,35 @@
       "description": "Getting your brand cited by AI assistants and large language model search experiences.",
       "url": "https://hawkacademy.co/resources/../blog/optimising-for-chatgpt-perplexity-llm.html"
     },
-    "content hub": {
-      "title": "Building a Content Hub: Topic Clusters That Rank",
-      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
-      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
+    "eeat": {
+      "title": "E-E-A-T Explained: Building Trust and Authority",
+      "description": "Deep dive into Google's Experience, Expertise, Authoritativeness, and Trustworthiness framework.",
+      "url": "https://hawkacademy.co/resources/../blog/eeat-explained.html"
     },
-    "topic clusters": {
-      "title": "Building a Content Hub: Topic Clusters That Rank",
-      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
-      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
+    "expertise": {
+      "title": "E-E-A-T Explained: Building Trust and Authority",
+      "description": "Deep dive into Google's Experience, Expertise, Authoritativeness, and Trustworthiness framework.",
+      "url": "https://hawkacademy.co/resources/../blog/eeat-explained.html"
     },
-    "pillar page": {
-      "title": "Building a Content Hub: Topic Clusters That Rank",
-      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
-      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
+    "authority": {
+      "title": "E-E-A-T Explained: Building Trust and Authority",
+      "description": "Deep dive into Google's Experience, Expertise, Authoritativeness, and Trustworthiness framework.",
+      "url": "https://hawkacademy.co/resources/../blog/eeat-explained.html"
     },
-    "topical authority": {
-      "title": "Building a Content Hub: Topic Clusters That Rank",
-      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
-      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
+    "trust": {
+      "title": "E-E-A-T Explained: Building Trust and Authority",
+      "description": "Deep dive into Google's Experience, Expertise, Authoritativeness, and Trustworthiness framework.",
+      "url": "https://hawkacademy.co/resources/../blog/eeat-explained.html"
     },
-    "content strategy": {
-      "title": "Building a Content Hub: Topic Clusters That Rank",
-      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
-      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
+    "experience": {
+      "title": "E-E-A-T Explained: Building Trust and Authority",
+      "description": "Deep dive into Google's Experience, Expertise, Authoritativeness, and Trustworthiness framework.",
+      "url": "https://hawkacademy.co/resources/../blog/eeat-explained.html"
     },
-    "silos": {
-      "title": "Building a Content Hub: Topic Clusters That Rank",
-      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
-      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
+    "google quality": {
+      "title": "E-E-A-T Explained: Building Trust and Authority",
+      "description": "Deep dive into Google's Experience, Expertise, Authoritativeness, and Trustworthiness framework.",
+      "url": "https://hawkacademy.co/resources/../blog/eeat-explained.html"
     },
     "content gap": {
       "title": "Website Gap Finder",
@@ -331,6 +331,16 @@
       "url": "https://hawkacademy.co/resources/skills/website-gap-finder.html"
     },
     "content plan": {
+      "title": "Website Gap Finder",
+      "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
+      "url": "https://hawkacademy.co/resources/skills/website-gap-finder.html"
+    },
+    "content strategy": {
+      "title": "Website Gap Finder",
+      "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
+      "url": "https://hawkacademy.co/resources/skills/website-gap-finder.html"
+    },
+    "topic clusters": {
       "title": "Website Gap Finder",
       "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
       "url": "https://hawkacademy.co/resources/skills/website-gap-finder.html"
@@ -570,22 +580,27 @@
       "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
       "url": "https://hawkacademy.co/resources/../blog/how-ai-overviews-changing-seo.html"
     },
-    "trust": {
-      "title": "Google Trust Check",
-      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
-      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
+    "content hub": {
+      "title": "Building a Content Hub: Topic Clusters That Rank",
+      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
+      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
+    },
+    "pillar page": {
+      "title": "Building a Content Hub: Topic Clusters That Rank",
+      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
+      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
+    },
+    "topical authority": {
+      "title": "Building a Content Hub: Topic Clusters That Rank",
+      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
+      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
+    },
+    "silos": {
+      "title": "Building a Content Hub: Topic Clusters That Rank",
+      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
+      "url": "https://hawkacademy.co/resources/../blog/content-hub-topic-clusters.html"
     },
     "google": {
-      "title": "Google Trust Check",
-      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
-      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
-    },
-    "eeat": {
-      "title": "Google Trust Check",
-      "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
-      "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
-    },
-    "authority": {
       "title": "Google Trust Check",
       "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
       "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
@@ -604,21 +619,6 @@
       "title": "Google Trust Check",
       "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
       "url": "https://hawkacademy.co/resources/skills/google-trust-check.html"
-    },
-    "expertise": {
-      "title": "E-E-A-T Explained: Building Trust and Authority",
-      "description": "Deep dive into Google's Experience, Expertise, Authoritativeness, and Trustworthiness framework.",
-      "url": "https://hawkacademy.co/resources/../blog/eeat-explained.html"
-    },
-    "experience": {
-      "title": "E-E-A-T Explained: Building Trust and Authority",
-      "description": "Deep dive into Google's Experience, Expertise, Authoritativeness, and Trustworthiness framework.",
-      "url": "https://hawkacademy.co/resources/../blog/eeat-explained.html"
-    },
-    "google quality": {
-      "title": "E-E-A-T Explained: Building Trust and Authority",
-      "description": "Deep dive into Google's Experience, Expertise, Authoritativeness, and Trustworthiness framework.",
-      "url": "https://hawkacademy.co/resources/../blog/eeat-explained.html"
     },
     "site architecture": {
       "title": "Site Architecture and Crawl Budget",
@@ -731,5 +731,5 @@
       "url": "https://youtu.be/HbIYPu3RqaQ"
     }
   ],
-  "generatedAt": "2026-05-09T20:37:21.551Z"
+  "generatedAt": "2026-05-10T20:40:21.050Z"
 }
