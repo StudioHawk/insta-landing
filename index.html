@@ -131,9 +131,12 @@
   </main>
 
   <script>
-    // Fetch data.json once on load, wire up search + render YouTube grid.
-    // data.json is written by the GitHub Action (scripts/fetch-data.mjs).
-    // If it's missing (first-ever deploy, or a stale cache) we degrade gracefully.
+    // Search keywords come live from Format Finder so trigger words added or
+    // re-linked in FF appear here within ~60s without waiting for the daily
+    // GitHub cron. data.json is still bundled in the deploy as a fallback:
+    // - YouTube thumbnails always come from data.json (live API is FF-only).
+    // - Search entries come from the live endpoint; if it's unreachable we
+    //   fall back to data.json.entries so the page never goes blank.
     (function () {
       function escapeHtml(s) {
         return String(s).replace(/[&<>"']/g, function (c) {
@@ -198,20 +201,48 @@
         q.addEventListener("input", function (e) { render(e.target.value); });
       }
 
-      fetch("./data.json", { cache: "no-store" })
+      // Source of truth for search: Format Finder's public endpoint. The
+      // daily-cron data.json is a fallback for offline / FF-down scenarios
+      // AND the source of truth for YouTube videos (which the live endpoint
+      // doesn't return).
+      var LIVE_KEYWORDS_URL =
+        "https://format-finder-delta.vercel.app/api/public/insta-keywords";
+
+      var liveEntries = fetch(LIVE_KEYWORDS_URL, { cache: "no-store" })
+        .then(function (r) {
+          if (!r.ok) throw new Error("live keywords " + r.status);
+          return r.json();
+        })
+        .then(function (data) { return data.entries || null; })
+        .catch(function (err) {
+          console.warn("Live keywords endpoint unreachable, falling back to bundled data.json:", err);
+          return null;
+        });
+
+      var bundled = fetch("./data.json", { cache: "no-store" })
         .then(function (r) {
           if (!r.ok) throw new Error("data.json " + r.status);
           return r.json();
         })
-        .then(function (data) {
-          renderYouTube(data.youtubeVideos || []);
-          wireSearch(data.entries || {});
-        })
         .catch(function (err) {
           console.error("Failed to load data.json:", err);
-          document.getElementById("yt-grid").innerHTML = '<p class="yt-empty">Failed to load videos.</p>';
-          wireSearch({});
+          return null;
         });
+
+      Promise.all([liveEntries, bundled]).then(function (results) {
+        var live = results[0];
+        var bundle = results[1];
+        // Entries: prefer live; fall back to bundled if live failed.
+        var entries = live || (bundle && bundle.entries) || {};
+        wireSearch(entries);
+        // YouTube videos always come from the bundled snapshot.
+        if (bundle) {
+          renderYouTube(bundle.youtubeVideos || []);
+        } else {
+          document.getElementById("yt-grid").innerHTML =
+            '<p class="yt-empty">Failed to load videos.</p>';
+        }
+      });
     })();
   </script>
 </body>
