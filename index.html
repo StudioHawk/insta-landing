@@ -131,12 +131,13 @@
   </main>
 
   <script>
-    // Search keywords come live from Format Finder so trigger words added or
-    // re-linked in FF appear here within ~60s without waiting for the daily
-    // GitHub cron. data.json is still bundled in the deploy as a fallback:
-    // - YouTube thumbnails always come from data.json (live API is FF-only).
-    // - Search entries come from the live endpoint; if it's unreachable we
-    //   fall back to data.json.entries so the page never goes blank.
+    // Two completely separate data paths:
+    // - Search keywords: LIVE from format-finder on every page load. Source
+    //   of truth is /skills (Trigger Words page) + skill microsite keywords.
+    //   No bundled copy here — if FF is unreachable, search degrades to
+    //   "Nothing found" but the rest of the page still works.
+    // - YouTube thumbnails: snapshotted into data.json by the daily
+    //   refresh-youtube.yml workflow. data.json no longer carries keywords.
     (function () {
       function escapeHtml(s) {
         return String(s).replace(/[&<>"']/g, function (c) {
@@ -201,48 +202,33 @@
         q.addEventListener("input", function (e) { render(e.target.value); });
       }
 
-      // Source of truth for search: Format Finder's public endpoint. The
-      // daily-cron data.json is a fallback for offline / FF-down scenarios
-      // AND the source of truth for YouTube videos (which the live endpoint
-      // doesn't return).
+      // Keyword search — live from Format Finder. Single source of truth.
       var LIVE_KEYWORDS_URL =
         "https://format-finder-delta.vercel.app/api/public/insta-keywords";
 
-      var liveEntries = fetch(LIVE_KEYWORDS_URL, { cache: "no-store" })
+      fetch(LIVE_KEYWORDS_URL, { cache: "no-store" })
         .then(function (r) {
           if (!r.ok) throw new Error("live keywords " + r.status);
           return r.json();
         })
-        .then(function (data) { return data.entries || null; })
+        .then(function (data) { wireSearch(data.entries || {}); })
         .catch(function (err) {
-          console.warn("Live keywords endpoint unreachable, falling back to bundled data.json:", err);
-          return null;
+          console.error("Live keywords endpoint unreachable — search disabled:", err);
+          wireSearch({});
         });
 
-      var bundled = fetch("./data.json", { cache: "no-store" })
+      // YouTube grid — snapshotted into data.json by the daily cron.
+      fetch("./data.json", { cache: "no-store" })
         .then(function (r) {
           if (!r.ok) throw new Error("data.json " + r.status);
           return r.json();
         })
+        .then(function (data) { renderYouTube(data.youtubeVideos || []); })
         .catch(function (err) {
           console.error("Failed to load data.json:", err);
-          return null;
-        });
-
-      Promise.all([liveEntries, bundled]).then(function (results) {
-        var live = results[0];
-        var bundle = results[1];
-        // Entries: prefer live; fall back to bundled if live failed.
-        var entries = live || (bundle && bundle.entries) || {};
-        wireSearch(entries);
-        // YouTube videos always come from the bundled snapshot.
-        if (bundle) {
-          renderYouTube(bundle.youtubeVideos || []);
-        } else {
           document.getElementById("yt-grid").innerHTML =
             '<p class="yt-empty">Failed to load videos.</p>';
-        }
-      });
+        });
     })();
   </script>
 </body>

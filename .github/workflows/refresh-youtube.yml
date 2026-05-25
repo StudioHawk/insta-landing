@@ -1,4 +1,4 @@
-name: Refresh data and deploy
+name: Refresh YouTube data and deploy
 on:
   schedule:
     # 20:00 UTC = 07:00 Melbourne (AEDT UTC+11). Drifts 1h during AEST.
@@ -6,6 +6,11 @@ on:
   workflow_dispatch: {}
   push:
     branches: [main]
+
+# SCOPE: YouTube thumbnails only. Search keywords come live from
+# format-finder's /api/public/insta-keywords on each page load — do not
+# re-add SUPABASE_* env or any keyword-fetching step here. The two paths
+# are intentionally separated.
 
 permissions:
   contents: write
@@ -30,13 +35,11 @@ jobs:
         run: npm ci
         working-directory: scripts
 
-      - name: Fetch data
-        run: node scripts/fetch-data.mjs
+      - name: Refresh YouTube videos in data.json
+        run: node scripts/refresh-youtube.mjs
         env:
-          SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          YOUTUBE_API_KEY:           ${{ secrets.YOUTUBE_API_KEY }}
-          STUDIOHAWK_YT_CHANNEL_ID:  ${{ secrets.STUDIOHAWK_YT_CHANNEL_ID }}
+          YOUTUBE_API_KEY:          ${{ secrets.YOUTUBE_API_KEY }}
+          STUDIOHAWK_YT_CHANNEL_ID: ${{ secrets.STUDIOHAWK_YT_CHANNEL_ID }}
 
       - name: Commit if changed
         run: |
@@ -46,7 +49,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to data.json — skipping commit"
           else
-            git commit -m "data: refresh $(date -u +%Y-%m-%d)"
+            git commit -m "data: refresh youtube $(date -u +%Y-%m-%d)"
             git push
           fi
 
