@@ -1,6 +1,12 @@
 {
   "youtubeVideos": [
     {
+      "id": "47tcY587bOQ",
+      "title": "How I Get Free Press Coverage for Any Brand (RAIDS Protocol)",
+      "thumbnailUrl": "https://i.ytimg.com/vi/47tcY587bOQ/maxresdefault.jpg",
+      "url": "https://youtu.be/47tcY587bOQ"
+    },
+    {
       "id": "vugUqC8XoH0",
       "title": "Dominate Local AI Search in 2 Days With This Free Toolkit",
       "thumbnailUrl": "https://i.ytimg.com/vi/vugUqC8XoH0/maxresdefault.jpg",
@@ -11,13 +17,7 @@
       "title": "How AI Search Now Decides Who Gets B2B Leads (And How I Got On The List)",
       "thumbnailUrl": "https://i.ytimg.com/vi/UyWZRvGKI4A/maxresdefault.jpg",
       "url": "https://youtu.be/UyWZRvGKI4A"
-    },
-    {
-      "id": "VFRGQNDziMM",
-      "title": "8 AI SEO Predictions for 2026 (If Half Come True, You'll Dominate)",
-      "thumbnailUrl": "https://i.ytimg.com/vi/VFRGQNDziMM/maxresdefault.jpg",
-      "url": "https://youtu.be/VFRGQNDziMM"
     }
   ],
-  "generatedAt": "2026-05-25T21:00:21.225Z"
+  "generatedAt": "2026-05-26T21:38:57.407Z"
 }
