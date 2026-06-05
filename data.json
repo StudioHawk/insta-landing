@@ -1,6 +1,12 @@
 {
   "youtubeVideos": [
     {
+      "id": "S18roQFhxUQ",
+      "title": "The No-Hype Guide to Claude for SEO",
+      "thumbnailUrl": "https://i.ytimg.com/vi/S18roQFhxUQ/maxresdefault.jpg",
+      "url": "https://youtu.be/S18roQFhxUQ"
+    },
+    {
       "id": "47tcY587bOQ",
       "title": "How I Get Free Press Coverage for Any Brand (RAIDS Protocol)",
       "thumbnailUrl": "https://i.ytimg.com/vi/47tcY587bOQ/maxresdefault.jpg",
@@ -11,13 +17,7 @@
       "title": "Dominate Local AI Search in 2 Days With This Free Toolkit",
       "thumbnailUrl": "https://i.ytimg.com/vi/vugUqC8XoH0/maxresdefault.jpg",
       "url": "https://youtu.be/vugUqC8XoH0"
-    },
-    {
-      "id": "UyWZRvGKI4A",
-      "title": "How AI Search Now Decides Who Gets B2B Leads (And How I Got On The List)",
-      "thumbnailUrl": "https://i.ytimg.com/vi/UyWZRvGKI4A/maxresdefault.jpg",
-      "url": "https://youtu.be/UyWZRvGKI4A"
     }
   ],
-  "generatedAt": "2026-06-04T21:27:45.316Z"
+  "generatedAt": "2026-06-05T21:20:13.160Z"
 }
