@@ -1,6 +1,12 @@
 {
   "youtubeVideos": [
     {
+      "id": "z7vmho9x1Kk",
+      "title": "I Studied 100 Ecommerce Sites for 21 Months, Here's How Much Money AI Search Made Them",
+      "thumbnailUrl": "https://i.ytimg.com/vi/z7vmho9x1Kk/maxresdefault.jpg",
+      "url": "https://youtu.be/z7vmho9x1Kk"
+    },
+    {
       "id": "S18roQFhxUQ",
       "title": "Rank #1 on Google with Claude AI SEO!",
       "thumbnailUrl": "https://i.ytimg.com/vi/S18roQFhxUQ/maxresdefault.jpg",
@@ -11,13 +17,7 @@
       "title": "Digital PR Strategy: 5 Steps to Rank in Google & AI Search",
       "thumbnailUrl": "https://i.ytimg.com/vi/47tcY587bOQ/maxresdefault.jpg",
       "url": "https://youtu.be/47tcY587bOQ"
-    },
-    {
-      "id": "vugUqC8XoH0",
-      "title": "Dominate Local AI Search in 2 Days With This Free Toolkit",
-      "thumbnailUrl": "https://i.ytimg.com/vi/vugUqC8XoH0/maxresdefault.jpg",
-      "url": "https://youtu.be/vugUqC8XoH0"
     }
   ],
-  "generatedAt": "2026-06-21T21:07:58.520Z"
+  "generatedAt": "2026-06-22T21:57:58.384Z"
 }
