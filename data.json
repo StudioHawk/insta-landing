@@ -1,6 +1,12 @@
 {
   "youtubeVideos": [
     {
+      "id": "djt17f1OWtE",
+      "title": "I Read Every Google Patent. Here's How They Actually Rank Websites.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/djt17f1OWtE/maxresdefault.jpg",
+      "url": "https://youtu.be/djt17f1OWtE"
+    },
+    {
       "id": "z7vmho9x1Kk",
       "title": "I Tracked 100 Ecommerce Sites for 21 Months, AI Search Results Shocked Me",
       "thumbnailUrl": "https://i.ytimg.com/vi/z7vmho9x1Kk/maxresdefault.jpg",
@@ -8,16 +14,10 @@
     },
     {
       "id": "S18roQFhxUQ",
-      "title": "Rank #1 on Google with Claude AI SEO!",
+      "title": "The Claude SEO Skills I Use to Rank Clients #1 on Google",
       "thumbnailUrl": "https://i.ytimg.com/vi/S18roQFhxUQ/maxresdefault.jpg",
       "url": "https://youtu.be/S18roQFhxUQ"
-    },
-    {
-      "id": "47tcY587bOQ",
-      "title": "Digital PR Strategy: The 5-Step System to Rank in AI Search",
-      "thumbnailUrl": "https://i.ytimg.com/vi/47tcY587bOQ/maxresdefault.jpg",
-      "url": "https://youtu.be/47tcY587bOQ"
     }
   ],
-  "generatedAt": "2026-07-06T21:23:54.012Z"
+  "generatedAt": "2026-07-07T21:17:49.304Z"
 }
