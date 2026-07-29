@@ -59,7 +59,7 @@
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5V9h3v10zM6.5 7.3A1.8 1.8 0 1 1 6.5 3.7a1.8 1.8 0 0 1 0 3.6zM19 19h-3v-5.2c0-1.2-.4-2-1.5-2a1.6 1.6 0 0 0-1.5 1 2 2 0 0 0-.1.7V19h-3V9h3v1.3a3 3 0 0 1 2.7-1.5c2 0 3.4 1.3 3.4 4V19z"/></svg>
           <span>LinkedIn</span>
         </a>
-        <a class="social-btn" href="https://hawkacademy.co" target="_blank" rel="noopener" aria-label="Hawk Academy">
+        <a class="social-btn" href="https://hawkacademy.co" target="_blank" rel="noopener" aria-label="Hawk Academy" data-utm="social-hawk-academy">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10l10-5 10 5-10 5z"/><path d="M6 12v5a6 6 0 0 0 12 0v-5"/><path d="M22 10v5"/></svg>
           <span>Hawk Academy</span>
         </a>
@@ -79,7 +79,7 @@
         <p class="yt-empty">Loading...</p>
       </div>
 
-      <a class="card card-free" href="https://hawkacademy.co" target="_blank" rel="noopener">
+      <a class="card card-free" href="https://hawkacademy.co" target="_blank" rel="noopener" data-utm="card-hawk-academy">
         <div class="card-top">
           <span class="card-badge card-badge-free">FREE FOREVER</span>
         </div>
@@ -92,22 +92,7 @@
         <span class="card-cta card-cta-free">Join free →</span>
       </a>
 
-      <a class="card card-workshop" href="https://hawkacademy.co/workshop" target="_blank" rel="noopener">
-        <div class="card-top">
-          <span class="card-badge card-badge-workshop">2-DAY INTENSIVE</span>
-        </div>
-        <h3 class="card-title">The Workshop</h3>
-        <p class="card-sub">Two days of hands-on AI Search with my team. Build real pages. Leave with them ranking before you fly home.</p>
-        <div class="card-chips">
-          <span class="chip">📍 Melbourne</span>
-          <span class="chip">Sydney</span>
-          <span class="chip">Atlanta</span>
-          <span class="chip">London</span>
-        </div>
-        <span class="card-cta card-cta-workshop">Apply →</span>
-      </a>
-
-      <a class="card card-studiohawk" href="https://studiohawk.com.au" target="_blank" rel="noopener">
+      <a class="card card-studiohawk" href="https://studiohawk.com.au" target="_blank" rel="noopener" data-utm="card-studiohawk">
         <div class="card-top">
           <span class="card-badge card-badge-gold">🏆 42 AWARDS</span>
         </div>
@@ -120,7 +105,7 @@
         <span class="card-cta card-cta-studiohawk">Learn more →</span>
       </a>
 
-      <a class="card-slim" href="https://harrysanders.com/contact" target="_blank" rel="noopener">
+      <a class="card-slim" href="https://harrysanders.com/contact" target="_blank" rel="noopener" data-utm="card-contact">
         <div class="slim-left">
           <span class="slim-title">Get in touch with me</span>
           <span class="slim-sub">Press, Speaking, Opportunities</span>
@@ -142,6 +127,76 @@
       function escapeHtml(s) {
         return String(s).replace(/[&<>"']/g, function (c) {
           return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+        });
+      }
+
+      // ---- UTM tagging ------------------------------------------------
+      // Every outbound click to a property we own carries the same source,
+      // so all Harry-personal-brand traffic rolls up to one row in GA4 and
+      // one bucket in HubSpot (portal 21494221 on studiohawk.com.au).
+      //
+      //   utm_source   = the brand being measured. Constant across every
+      //                  personal-brand surface, so GA4 "harry-sanders"
+      //                  totals = everything Harry's face drove.
+      //   utm_medium   = the surface. This page is the bio link; a future
+      //                  LinkedIn bio / newsletter would use its own medium
+      //                  while keeping the same source.
+      //   utm_campaign = personal-brand (vs paid/agency campaigns).
+      //   utm_content  = which link on the page (data-utm attribute).
+      //   utm_term     = the searched trigger word, on search matches only.
+      //
+      // Third-party links (Instagram, YouTube, LinkedIn) are deliberately
+      // left clean — those platforms ignore UTMs and it just uglifies the URL.
+      var UTM = {
+        source: "harry-sanders",
+        medium: "bio-link",
+        campaign: "personal-brand",
+      };
+      var UTM_HOSTS = ["hawkacademy.co", "studiohawk.com.au", "harrysanders.com"];
+
+      function isTrackedHost(host) {
+        for (var i = 0; i < UTM_HOSTS.length; i++) {
+          if (host === UTM_HOSTS[i] || host.endsWith("." + UTM_HOSTS[i])) return true;
+        }
+        return false;
+      }
+
+      function withUtm(rawUrl, content, term) {
+        try {
+          var u = new URL(rawUrl, location.href);
+          if (u.protocol !== "http:" && u.protocol !== "https:") return rawUrl;
+          if (!isTrackedHost(u.hostname)) return rawUrl;
+          // Respect a URL that already carries hand-set tagging.
+          if (u.searchParams.has("utm_source")) return rawUrl;
+          u.searchParams.set("utm_source", UTM.source);
+          u.searchParams.set("utm_medium", UTM.medium);
+          u.searchParams.set("utm_campaign", UTM.campaign);
+          if (content) u.searchParams.set("utm_content", content);
+          if (term) u.searchParams.set("utm_term", term);
+          return u.toString();
+        } catch (err) {
+          return rawUrl;
+        }
+      }
+
+      // Guard against a non-http(s) URL arriving from the keywords API.
+      function safeHref(rawUrl) {
+        try {
+          var u = new URL(rawUrl, location.href);
+          return u.protocol === "http:" || u.protocol === "https:" ? rawUrl : "#";
+        } catch (err) {
+          return "#";
+        }
+      }
+
+      // Tag the hard-coded links in the markup. Anything without data-utm
+      // (and anything off-domain) is left exactly as authored.
+      function tagStaticLinks() {
+        var links = document.querySelectorAll("a[href]");
+        Array.prototype.forEach.call(links, function (a) {
+          var original = a.getAttribute("href");
+          var tagged = withUtm(original, a.getAttribute("data-utm") || "");
+          if (tagged !== original) a.href = tagged;
         });
       }
 
@@ -192,15 +247,21 @@
             return;
           }
           trackKeyword(k);
+          // utm_content=search + utm_term=<trigger word> so the destination's
+          // analytics show which spoken keyword actually drove the click.
+          var href = safeHref(withUtm(e.url, "search", k));
           result.innerHTML =
             '<div class="match">' +
             '<div class="match-title">' + escapeHtml(e.title) + '</div>' +
             (e.description ? '<div class="match-desc">' + escapeHtml(e.description) + '</div>' : '') +
-            '<a class="match-cta" href="' + encodeURI(e.url) + '" target="_blank" rel="noopener">Open →</a>' +
+            '<a class="match-cta" href="' + escapeHtml(href) + '" target="_blank" rel="noopener">Open →</a>' +
             '</div>';
         }
         q.addEventListener("input", function (e) { render(e.target.value); });
       }
+
+      // Script sits at the end of <body>, so the static markup is parsed.
+      tagStaticLinks();
 
       // Keyword search — live from Format Finder. Single source of truth.
       var LIVE_KEYWORDS_URL =
