@@ -1,6 +1,12 @@
 {
   "youtubeVideos": [
     {
+      "id": "Q3ZBZGwpoG0",
+      "title": "I Read Google's Secret Rulebook, Here's How They Actually Rank Content",
+      "thumbnailUrl": "https://i.ytimg.com/vi/Q3ZBZGwpoG0/maxresdefault.jpg",
+      "url": "https://youtu.be/Q3ZBZGwpoG0"
+    },
+    {
       "id": "djt17f1OWtE",
       "title": "I Read Every Google Patent. Here's How They Actually Rank Websites.",
       "thumbnailUrl": "https://i.ytimg.com/vi/djt17f1OWtE/maxresdefault.jpg",
@@ -11,13 +17,7 @@
       "title": "Why Your Ecommerce Site Is Losing AI Search Sales",
       "thumbnailUrl": "https://i.ytimg.com/vi/z7vmho9x1Kk/maxresdefault.jpg",
       "url": "https://youtu.be/z7vmho9x1Kk"
-    },
-    {
-      "id": "S18roQFhxUQ",
-      "title": "The Claude SEO Skills I Use to Rank Clients #1 on Google",
-      "thumbnailUrl": "https://i.ytimg.com/vi/S18roQFhxUQ/maxresdefault.jpg",
-      "url": "https://youtu.be/S18roQFhxUQ"
     }
   ],
-  "generatedAt": "2026-08-25T20:20:35.485Z"
+  "generatedAt": "2026-08-26T22:38:28.562Z"
 }
