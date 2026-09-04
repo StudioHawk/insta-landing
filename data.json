@@ -1,6 +1,12 @@
 {
   "youtubeVideos": [
     {
+      "id": "KO1PudJpXJU",
+      "title": "Focusing on Page Speed Scores is Killing Your AI SEO",
+      "thumbnailUrl": "https://i.ytimg.com/vi/KO1PudJpXJU/maxresdefault.jpg",
+      "url": "https://youtu.be/KO1PudJpXJU"
+    },
+    {
       "id": "Q3ZBZGwpoG0",
       "title": "How Google Really Ranks Websites (I Read Their Secret 182-Page Rulebook)",
       "thumbnailUrl": "https://i.ytimg.com/vi/Q3ZBZGwpoG0/maxresdefault.jpg",
@@ -11,13 +17,7 @@
       "title": "I Read Every Google Patent. Here's How They Actually Rank Websites.",
       "thumbnailUrl": "https://i.ytimg.com/vi/djt17f1OWtE/maxresdefault.jpg",
       "url": "https://youtu.be/djt17f1OWtE"
-    },
-    {
-      "id": "z7vmho9x1Kk",
-      "title": "Why Your Ecommerce Site Is Losing AI Search Sales",
-      "thumbnailUrl": "https://i.ytimg.com/vi/z7vmho9x1Kk/maxresdefault.jpg",
-      "url": "https://youtu.be/z7vmho9x1Kk"
     }
   ],
-  "generatedAt": "2026-09-03T22:07:33.439Z"
+  "generatedAt": "2026-09-04T22:00:17.689Z"
 }
