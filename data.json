@@ -1,6 +1,12 @@
 {
   "youtubeVideos": [
     {
+      "id": "qks6Bf-N_xg",
+      "title": "You Don't Need 1,000 Backlinks to Rank in Google (The 5 Levels of Link Building)",
+      "thumbnailUrl": "https://i.ytimg.com/vi/qks6Bf-N_xg/maxresdefault.jpg",
+      "url": "https://youtu.be/qks6Bf-N_xg"
+    },
+    {
       "id": "KO1PudJpXJU",
       "title": "The Biggest Lie in SEO: Page Speed Scores (Do This Instead)",
       "thumbnailUrl": "https://i.ytimg.com/vi/KO1PudJpXJU/maxresdefault.jpg",
@@ -11,13 +17,7 @@
       "title": "How Google Really Ranks Websites (I Read Their Secret 182-Page Rulebook)",
       "thumbnailUrl": "https://i.ytimg.com/vi/Q3ZBZGwpoG0/maxresdefault.jpg",
       "url": "https://youtu.be/Q3ZBZGwpoG0"
-    },
-    {
-      "id": "djt17f1OWtE",
-      "title": "I Read Every Google Patent. Here's How They Actually Rank Websites.",
-      "thumbnailUrl": "https://i.ytimg.com/vi/djt17f1OWtE/maxresdefault.jpg",
-      "url": "https://youtu.be/djt17f1OWtE"
     }
   ],
-  "generatedAt": "2026-09-10T22:10:42.917Z"
+  "generatedAt": "2026-09-11T22:08:54.293Z"
 }
