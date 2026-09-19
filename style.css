@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("fonts/press-start-2p-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --bg: #0a0a14;
   --bg-2: #0f0f1a;
@@ -224,7 +231,52 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
   text-decoration: none;
 }
 .match-cta:hover { filter: brightness(1.1); }
-.no-match { color: var(--muted); font-size: 14px; padding: 12px; }
+.no-match { color: var(--muted); font-size: 14px; padding: 12px; line-height: 1.5; }
+.no-match .miss-link { color: var(--accent-cyan); text-decoration: none; font-weight: 600; white-space: nowrap; }
+.no-match .miss-link:hover { text-decoration: underline; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+/* Tappable keyword chips: the popular row under the box, and "Did you mean" */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+.chips[hidden] { display: none; }
+.chips-label {
+  width: 100%;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.chip-btn {
+  font: inherit;
+  font-size: 13px;
+  line-height: 1;
+  padding: 8px 13px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--fg);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+.chip-btn:hover, .chip-btn:focus-visible {
+  border-color: var(--accent-cyan);
+  background: rgba(1,255,255,0.08);
+  transform: translateY(-1px);
+  outline: none;
+}
+.result .chips { margin-top: 8px; }
 
 /* ===== Funnel section ===== */
 .funnel { display: flex; flex-direction: column; gap: 14px; }
@@ -245,6 +297,7 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
 .yt-card { display: block; text-decoration: none; color: var(--fg); }
 .yt-card img {
   width: 100%;
+  height: auto;
   aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 10px;
@@ -254,7 +307,10 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
 }
 .yt-card:hover img { border-color: rgba(255,255,255,0.3); }
 .yt-card span {
-  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: 12px;
   margin-top: 6px;
   line-height: 1.35;
@@ -293,15 +349,6 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
 .stat { display: flex; flex-direction: column; }
 .stat strong { font-size: 20px; font-weight: 800; letter-spacing: -0.01em; }
 .stat small { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
-.card-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
-.chip {
-  font-size: 12px;
-  padding: 4px 10px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  color: var(--fg);
-}
 .card-cta {
   display: inline-block;
   padding: 10px 18px;
@@ -335,33 +382,6 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
   color: var(--bg);
 }
 .card-cta-free:hover { filter: brightness(1.1); transform: translateY(-1px); }
-
-/* Workshop — lavender gradient, premium */
-.card-workshop {
-  background:
-    linear-gradient(135deg, rgba(139,92,246,0.12) 0%, rgba(139,92,246,0.02) 60%),
-    var(--surface);
-  border-color: rgba(139,92,246,0.3);
-}
-.card-workshop:hover {
-  border-color: rgba(139,92,246,0.6);
-  box-shadow: 0 0 0 4px rgba(139,92,246,0.08);
-}
-.card-badge-workshop {
-  background: rgba(139,92,246,0.15);
-  color: #c4b5fd;
-  border: 1px solid rgba(139,92,246,0.35);
-}
-.card-workshop .chip {
-  background: rgba(139,92,246,0.08);
-  border-color: rgba(139,92,246,0.2);
-  color: #e9e5ff;
-}
-.card-cta-workshop {
-  background: var(--accent-lavender);
-  color: #fff;
-}
-.card-cta-workshop:hover { filter: brightness(1.12); transform: translateY(-1px); }
 
 /* StudioHawk — cyan border, gold badge, enterprise */
 .card-studiohawk {
@@ -426,7 +446,8 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
   .avatar { width: 100px; height: 100px; }
   .name { font-size: 26px; }
   .bio-headline { font-size: 14px; }
-  .yt-grid { grid-template-columns: 1fr; }
+  .yt-grid { gap: 8px; }
+  .yt-card span { font-size: 11px; }
   .card { padding: 18px; }
   .card-title { font-size: 19px; }
   .card-stats { gap: 16px; }
@@ -437,7 +458,7 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
      Desktop natural order inside .hero: ...bio → mission → socials → search.
      Mobile desired order:                ...bio → search → socials → mission. */
   .hero { display: flex; flex-direction: column; }
-  .hero .search  { order: 0; margin-top: 24px; } /* sits right under bio — keep gap small */
+  .hero .search  { order: 0; margin-top: 24px; } /* sits right under bio, keep gap small */
   .hero .socials { order: 1; }                    /* pushed after search */
   .hero .mission { order: 2; }                    /* pushed to the end, where search used to be */
 }

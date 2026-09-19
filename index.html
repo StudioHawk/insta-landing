@@ -3,20 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Harry Sanders — Links</title>
+  <title>Harry Sanders | Links</title>
+  <meta name="description" content="Type the word Harry said in the video to get the free SEO and AI Search guide. Plus Hawk Academy, StudioHawk and the latest YouTube videos." />
+  <link rel="canonical" href="https://insta.harrysanders.com/" />
+  <meta name="theme-color" content="#0a0a14" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://insta.harrysanders.com/" />
+  <meta property="og:site_name" content="Harry Sanders" />
   <meta property="og:title" content="Harry Sanders" />
-  <meta property="og:description" content="Search for the word you heard in the video." />
-  <meta property="og:image" content="avatar.jpg" />
-  <link rel="icon" href="avatar.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <meta property="og:description" content="Type the word you heard in the video to get the free guide." />
+  <meta property="og:image" content="https://insta.harrysanders.com/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Harry Sanders" />
+  <meta name="twitter:description" content="Type the word you heard in the video to get the free guide." />
+  <meta name="twitter:image" content="https://insta.harrysanders.com/og.jpg" />
+  <link rel="icon" href="icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="preload" href="fonts/press-start-2p-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main>
     <header class="hero">
-      <img class="avatar" src="avatar.jpg" alt="Harry Sanders" width="120" height="120" />
+      <img class="avatar" src="avatar.jpg" alt="Harry Sanders" width="120" height="120" fetchpriority="high" />
       <h1 class="name">Harry Sanders</h1>
       <p class="bio-headline">I grew a 120 person, $20M SEO agency from nothing. Now I teach AI Search for free.</p>
       <p class="bio-creds">Forbes 30 Under 30</p>
@@ -68,8 +79,10 @@
       <section class="search">
         <h2 class="search-heading">Looking for a free guide?</h2>
         <p class="search-sub">Type the word I said in the video.</p>
-        <input id="q" type="text" placeholder="e.g. ecom" autocomplete="off" autofocus />
-        <div id="result" class="result"></div>
+        <label for="q" class="sr-only">Type the word from the video</label>
+        <input id="q" type="text" placeholder="e.g. backlinks" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="search" autofocus />
+        <div id="popular" class="chips" aria-label="Popular words"></div>
+        <div id="result" class="result" role="status" aria-live="polite"></div>
       </section>
     </header>
 
@@ -97,7 +110,7 @@
           <span class="card-badge card-badge-gold">🏆 42 AWARDS</span>
         </div>
         <h3 class="card-title">StudioHawk</h3>
-        <p class="card-sub">One of the world's largest dedicated SEO &amp; AI Search agencies. 120+ specialists. 500+ clients. US, UK, AU. Famous for direct access to specialists — no account managers.</p>
+        <p class="card-sub">One of the world's largest dedicated SEO &amp; AI Search agencies. 120+ specialists. 500+ clients. US, UK, AU. Famous for direct access to specialists: no account managers.</p>
         <div class="card-stats">
           <div class="stat"><strong>4.9 ★</strong><small>274 reviews</small></div>
           <div class="stat"><strong>500+</strong><small>clients</small></div>
@@ -116,14 +129,12 @@
   </main>
 
   <script>
-    // Two completely separate data paths:
-    // - Search keywords: LIVE from format-finder on every page load. Source
-    //   of truth is /skills (Trigger Words page) + skill microsite keywords.
-    //   No bundled copy here — if FF is unreachable, search degrades to
-    //   "Nothing found" but the rest of the page still works.
-    // - YouTube thumbnails: snapshotted into data.json by the daily
-    //   refresh-youtube.yml workflow. data.json no longer carries keywords.
+    // Everything the page needs comes from ./data.json, which the daily
+    // GitHub Action builds from Supabase (keywords, popular words) and the
+    // YouTube API (thumbnails). No runtime dependency on any other app.
     (function () {
+      var SKILLS_HUB = "https://hawkacademy.co/claude-seo-skills";
+
       function escapeHtml(s) {
         return String(s).replace(/[&<>"']/g, function (c) {
           return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -146,7 +157,7 @@
       //   utm_term     = the searched trigger word, on search matches only.
       //
       // Third-party links (Instagram, YouTube, LinkedIn) are deliberately
-      // left clean — those platforms ignore UTMs and it just uglifies the URL.
+      // left clean. Those platforms ignore UTMs and it just uglifies the URL.
       var UTM = {
         source: "harry-sanders",
         medium: "bio-link",
@@ -179,7 +190,7 @@
         }
       }
 
-      // Guard against a non-http(s) URL arriving from the keywords API.
+      // Guard against a non-http(s) URL arriving from the data file.
       function safeHref(rawUrl) {
         try {
           var u = new URL(rawUrl, location.href);
@@ -200,15 +211,18 @@
         });
       }
 
-      // Keyword analytics — fire-and-forget beacon on successful match.
-      // Deduped per page load so typing "trust", "trus", "trust" counts once.
+      // ---- Search analytics ------------------------------------------
+      // Fire-and-forget beacon, deduped per page load. Hits are logged as
+      // the matched keyword. Misses are logged as "miss:<what they typed>"
+      // once typing has paused, so the daily build can see which words are
+      // being said on camera that the map doesn't know about.
       // Public Supabase anon key is safe here (RLS allows only INSERT from anon).
       var SUPABASE_URL = "https://biiwikljmyqszoawvohj.supabase.co";
       var SUPABASE_ANON_KEY = "sb_publishable_fCA2Px3itEpTNuJ3gXGvZA_toUBaObr";
-      var __trackedKeywords = new Set();
-      function trackKeyword(kw) {
-        if (!kw || __trackedKeywords.has(kw)) return;
-        __trackedKeywords.add(kw);
+      var __logged = new Set();
+      function logSearch(value) {
+        if (!value || __logged.has(value)) return;
+        __logged.add(value);
         fetch(SUPABASE_URL + "/rest/v1/insta_keyword_searches", {
           method: "POST",
           headers: {
@@ -217,78 +231,204 @@
             "Content-Type": "application/json",
             Prefer: "return=minimal",
           },
-          body: JSON.stringify({ keyword: kw }),
+          body: JSON.stringify({ keyword: value }),
+          keepalive: true,
         }).catch(function () { /* silent */ });
       }
+      function trackHit(key) { logSearch(key); }
+      function trackMiss(q) { logSearch("miss:" + q.slice(0, 40)); }
 
+      // ---- YouTube grid ----------------------------------------------
       function renderYouTube(videos) {
         var grid = document.getElementById("yt-grid");
         if (!videos || videos.length === 0) {
-          grid.innerHTML = '<p class="yt-empty">YouTube videos unavailable — try refreshing shortly.</p>';
+          grid.innerHTML = '<p class="yt-empty">YouTube videos unavailable. Try refreshing shortly.</p>';
           return;
         }
         grid.innerHTML = videos.map(function (v) {
-          return '<a href="' + encodeURI(v.url) + '" target="_blank" rel="noopener" class="yt-card">' +
-            '<img src="' + encodeURI(v.thumbnailUrl) + '" alt="' + escapeHtml(v.title) + '" loading="lazy" />' +
+          var id = encodeURIComponent(v.id || "");
+          var base = "https://i.ytimg.com/vi/" + id + "/";
+          var t = v.thumbnails || {};
+          var src = t.medium || (v.id ? base + "mqdefault.jpg" : v.thumbnailUrl);
+          // Only offer the 640px candidate when YouTube confirmed it exists;
+          // a 404 in srcset shows a broken image, it does not fall back.
+          var srcset = escapeHtml(src) + " 320w" + (t.standard ? ", " + escapeHtml(t.standard) + " 640w" : "");
+          return '<a href="' + escapeHtml(safeHref(v.url)) + '" target="_blank" rel="noopener" class="yt-card">' +
+            '<img src="' + escapeHtml(src) + '" srcset="' + srcset + '" sizes="(max-width: 520px) 30vw, 180px" width="320" height="180" alt="" loading="lazy" decoding="async" />' +
             '<span>' + escapeHtml(v.title) + '</span>' +
             '</a>';
         }).join("");
       }
 
-      function wireSearch(entries) {
-        var q = document.getElementById("q");
-        var result = document.getElementById("result");
-        function render(key) {
-          var k = (key || "").trim().toLowerCase();
-          if (!k) { result.innerHTML = ""; return; }
-          var e = entries[k];
-          if (!e) {
-            result.innerHTML = '<div class="no-match">Nothing found for "<strong>' + escapeHtml(k) + '</strong>". Make sure you got the exact spelling.</div>';
-            return;
+      // ---- Search ----------------------------------------------------
+      var entries = {};      // keyword -> { title, description, url }
+      var keys = [];         // all keywords
+      var normIndex = {};    // normalised keyword -> keyword
+      var loaded = false;
+
+      function normalise(s) {
+        return String(s).toLowerCase().replace(/[^a-z0-9]+/g, "");
+      }
+
+      function setEntries(e) {
+        entries = e || {};
+        keys = Object.keys(entries);
+        normIndex = {};
+        keys.forEach(function (k) { normIndex[normalise(k)] = k; });
+        loaded = true;
+      }
+
+      function levenshtein(a, b) {
+        if (a === b) return 0;
+        if (!a.length) return b.length;
+        if (!b.length) return a.length;
+        var prev = [], cur = [], i, j;
+        for (j = 0; j <= b.length; j++) prev[j] = j;
+        for (i = 1; i <= a.length; i++) {
+          cur[0] = i;
+          for (j = 1; j <= b.length; j++) {
+            var cost = a[i - 1] === b[j - 1] ? 0 : 1;
+            cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
           }
-          trackKeyword(k);
-          // utm_content=search + utm_term=<trigger word> so the destination's
-          // analytics show which spoken keyword actually drove the click.
-          var href = safeHref(withUtm(e.url, "search", k));
+          var tmp = prev; prev = cur; cur = tmp;
+        }
+        return prev[b.length];
+      }
+
+      // Exact match first, then forgiving variants: spacing and punctuation,
+      // singular/plural, a unique prefix ("ecom" -> "ecommerce"), and finally
+      // a one- or two-letter typo. Anything ambiguous becomes suggestions.
+      function resolve(raw) {
+        var q = String(raw || "").trim().toLowerCase().replace(/\s+/g, " ");
+        if (!q) return { kind: "empty" };
+        if (entries[q]) return { kind: "hit", key: q };
+        var n = normalise(q);
+        if (!n) return { kind: "empty" };
+        if (normIndex[n]) return { kind: "hit", key: normIndex[n] };
+        if (n.length > 3 && n.slice(-1) === "s" && normIndex[n.slice(0, -1)]) return { kind: "hit", key: normIndex[n.slice(0, -1)] };
+        if (normIndex[n + "s"]) return { kind: "hit", key: normIndex[n + "s"] };
+
+        if (n.length >= 3) {
+          var pref = keys.filter(function (k) { return normalise(k).indexOf(n) === 0; });
+          if (pref.length) {
+            var urls = {};
+            pref.forEach(function (k) { urls[entries[k].url] = true; });
+            if (Object.keys(urls).length === 1) return { kind: "hit", key: pref[0] };
+            return { kind: "suggest", keys: pref.slice(0, 6) };
+          }
+        }
+
+        if (n.length >= 4) {
+          var best = null, bestD = 99;
+          keys.forEach(function (k) {
+            var d = levenshtein(n, normalise(k));
+            if (d < bestD) { bestD = d; best = k; }
+          });
+          var maxD = n.length >= 7 ? 2 : 1;
+          if (best && bestD <= maxD) return { kind: "suggest", keys: [best] };
+        }
+
+        return { kind: "miss", q: q };
+      }
+
+      function chipsHtml(list, label) {
+        return '<div class="chips">' +
+          (label ? '<span class="chips-label">' + escapeHtml(label) + '</span>' : '') +
+          list.map(function (k) {
+            return '<button type="button" class="chip-btn" data-word="' + escapeHtml(k) + '">' + escapeHtml(k) + '</button>';
+          }).join("") +
+          '</div>';
+      }
+
+      var input = document.getElementById("q");
+      var result = document.getElementById("result");
+      var popular = document.getElementById("popular");
+      var missTimer = null;
+
+      function render() {
+        var raw = input.value;
+        if (missTimer) { clearTimeout(missTimer); missTimer = null; }
+        if (!raw.trim()) { result.innerHTML = ""; popular.hidden = false; return; }
+        popular.hidden = true;
+
+        if (!loaded) {
+          result.innerHTML = '<div class="no-match">One sec, loading the guide list...</div>';
+          return;
+        }
+
+        var r = resolve(raw);
+        if (r.kind === "empty") { result.innerHTML = ""; popular.hidden = false; return; }
+
+        if (r.kind === "hit") {
+          var e = entries[r.key];
+          trackHit(r.key);
+          var href = safeHref(withUtm(e.url, "search", r.key));
           result.innerHTML =
             '<div class="match">' +
-            '<div class="match-title">' + escapeHtml(e.title) + '</div>' +
+            '<div class="match-title">' + escapeHtml(e.title || r.key) + '</div>' +
             (e.description ? '<div class="match-desc">' + escapeHtml(e.description) + '</div>' : '') +
             '<a class="match-cta" href="' + escapeHtml(href) + '" target="_blank" rel="noopener">Open →</a>' +
             '</div>';
+          return;
         }
-        q.addEventListener("input", function (e) { render(e.target.value); });
+
+        if (r.kind === "suggest") {
+          result.innerHTML = chipsHtml(r.keys, "Did you mean");
+          return;
+        }
+
+        var hub = safeHref(withUtm(SKILLS_HUB, "search-miss", r.q));
+        result.innerHTML =
+          '<div class="no-match">Nothing found for "<strong>' + escapeHtml(r.q) + '</strong>". Check the spelling, or ' +
+          '<a class="miss-link" href="' + escapeHtml(hub) + '" target="_blank" rel="noopener">browse every free guide →</a></div>';
+        // Log the miss only once typing has paused, so "ec", "eco" never count.
+        if (r.q.length >= 3) {
+          var q = r.q;
+          missTimer = setTimeout(function () {
+            if (input.value.trim().toLowerCase().replace(/\s+/g, " ") === q) trackMiss(q);
+          }, 1200);
+        }
       }
+
+      function pick(word) {
+        input.value = word;
+        render();
+        input.focus();
+      }
+
+      function renderPopular(list) {
+        var words = (list || []).filter(function (k) { return entries[k]; }).slice(0, 8);
+        if (!words.length) { popular.innerHTML = ""; return; }
+        popular.innerHTML = chipsHtml(words, "Popular").replace(/^<div class="chips">|<\/div>$/g, "");
+      }
+
+      // Listeners go on immediately, so typing before data arrives is not lost.
+      input.addEventListener("input", render);
+      document.addEventListener("click", function (ev) {
+        var btn = ev.target.closest && ev.target.closest(".chip-btn");
+        if (btn) pick(btn.getAttribute("data-word"));
+      });
 
       // Script sits at the end of <body>, so the static markup is parsed.
       tagStaticLinks();
 
-      // Keyword search — live from Format Finder. Single source of truth.
-      var LIVE_KEYWORDS_URL =
-        "https://format-finder-delta.vercel.app/api/public/insta-keywords";
-
-      fetch(LIVE_KEYWORDS_URL, { cache: "no-store" })
-        .then(function (r) {
-          if (!r.ok) throw new Error("live keywords " + r.status);
-          return r.json();
-        })
-        .then(function (data) { wireSearch(data.entries || {}); })
-        .catch(function (err) {
-          console.error("Live keywords endpoint unreachable — search disabled:", err);
-          wireSearch({});
-        });
-
-      // YouTube grid — snapshotted into data.json by the daily cron.
       fetch("./data.json", { cache: "no-store" })
         .then(function (r) {
           if (!r.ok) throw new Error("data.json " + r.status);
           return r.json();
         })
-        .then(function (data) { renderYouTube(data.youtubeVideos || []); })
+        .then(function (data) {
+          setEntries(data.entries || {});
+          renderPopular(data.popular || []);
+          renderYouTube(data.youtubeVideos || []);
+          render(); // re-run for anything typed while loading
+        })
         .catch(function (err) {
           console.error("Failed to load data.json:", err);
+          setEntries({});
           document.getElementById("yt-grid").innerHTML =
             '<p class="yt-empty">Failed to load videos.</p>';
+          render();
         });
     })();
   </script>
