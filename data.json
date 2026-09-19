@@ -903,28 +903,40 @@
     "clarity",
     "digital pr",
     "journo",
-    "uslinks",
-    "brief"
+    "local",
+    "uslinks"
   ],
   "youtubeVideos": [
     {
       "id": "qks6Bf-N_xg",
       "title": "You Don't Need 1,000 Backlinks to Rank in Google (The 5 Levels of Link Building)",
-      "thumbnailUrl": "https://i.ytimg.com/vi/qks6Bf-N_xg/maxresdefault.jpg",
-      "url": "https://youtu.be/qks6Bf-N_xg"
+      "url": "https://youtu.be/qks6Bf-N_xg",
+      "thumbnails": {
+        "medium": "https://i.ytimg.com/vi/qks6Bf-N_xg/mqdefault.jpg",
+        "standard": "https://i.ytimg.com/vi/qks6Bf-N_xg/sddefault.jpg",
+        "maxres": "https://i.ytimg.com/vi/qks6Bf-N_xg/maxresdefault.jpg"
+      }
     },
     {
       "id": "KO1PudJpXJU",
       "title": "The Biggest Lie in SEO: Page Speed Scores (Do This Instead)",
-      "thumbnailUrl": "https://i.ytimg.com/vi/KO1PudJpXJU/maxresdefault.jpg",
-      "url": "https://youtu.be/KO1PudJpXJU"
+      "url": "https://youtu.be/KO1PudJpXJU",
+      "thumbnails": {
+        "medium": "https://i.ytimg.com/vi/KO1PudJpXJU/mqdefault.jpg",
+        "standard": "https://i.ytimg.com/vi/KO1PudJpXJU/sddefault.jpg",
+        "maxres": "https://i.ytimg.com/vi/KO1PudJpXJU/maxresdefault.jpg"
+      }
     },
     {
       "id": "Q3ZBZGwpoG0",
       "title": "How Google Really Ranks Websites (I Read Their Secret 182-Page Rulebook)",
-      "thumbnailUrl": "https://i.ytimg.com/vi/Q3ZBZGwpoG0/maxresdefault.jpg",
-      "url": "https://youtu.be/Q3ZBZGwpoG0"
+      "url": "https://youtu.be/Q3ZBZGwpoG0",
+      "thumbnails": {
+        "medium": "https://i.ytimg.com/vi/Q3ZBZGwpoG0/mqdefault.jpg",
+        "standard": "https://i.ytimg.com/vi/Q3ZBZGwpoG0/sddefault.jpg",
+        "maxres": "https://i.ytimg.com/vi/Q3ZBZGwpoG0/maxresdefault.jpg"
+      }
     }
   ],
-  "generatedAt": "2026-09-19T03:08:23.940Z"
+  "generatedAt": "2026-09-19T03:11:28.932Z"
 }
