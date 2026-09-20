@@ -22,11 +22,11 @@
   <link rel="icon" href="icon-192.png" type="image/png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preload" href="fonts/press-start-2p-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <!-- ?v= is bumped whenever style.css changes. A visitor can hold a
-       cached stylesheet while the HTML revalidates, which renders the
-       page with styles that do not match its markup. _headers keeps that
-       window at zero; this breaks an already-cached copy immediately. -->
-  <link rel="stylesheet" href="style.css?v=2026-09-20" />
+  <!-- ?v= is a hash of style.css, stamped by scripts/refresh-data.mjs on
+       every build. The zone forces a 4 hour browser cache that _headers
+       cannot override, so without this a visitor runs fresh HTML against a
+       stale stylesheet. Do not edit by hand. -->
+  <link rel="stylesheet" href="style.css?v=2e0c938c" />
 </head>
 <body>
   <main>

@@ -27,10 +27,13 @@
  */
 import { promises as fs } from "fs";
 import path from "path";
+import { createHash } from "crypto";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_PATH = path.join(__dirname, "..", "data.json");
+const HTML_PATH = path.join(__dirname, "..", "index.html");
+const CSS_PATH = path.join(__dirname, "..", "style.css");
 
 const {
   SUPABASE_URL,
@@ -347,8 +350,31 @@ async function guarded(label, fn) {
   }
 }
 
+// The harrysanders.com zone sets a 4 hour Browser Cache TTL, which overrides
+// whatever Cache-Control the _headers file asks for. That once left visitors
+// running fresh HTML against a stale stylesheet: a removed element was still
+// on screen and the region picker rendered unstyled. The HTML itself always
+// revalidates, so pinning the stylesheet URL to a hash of its contents means
+// changed CSS always arrives on a URL nothing has cached. Nothing to remember
+// on deploy: this runs on every build.
+async function stampStylesheetVersion() {
+  const css = await fs.readFile(CSS_PATH);
+  const version = createHash("sha1").update(css).digest("hex").slice(0, 8);
+  const html = await fs.readFile(HTML_PATH, "utf8");
+  const next = html.replace(/href="style\.css(?:\?v=[^"]*)?"/, `href="style.css?v=${version}"`);
+  if (next === html) {
+    console.log(`Stylesheet already stamped v=${version}`);
+    return false;
+  }
+  await fs.writeFile(HTML_PATH, next);
+  console.log(`Stamped stylesheet v=${version} into index.html`);
+  return true;
+}
+
 async function main() {
   const existing = await loadExisting();
+
+  await guarded("stylesheet version", stampStylesheetVersion);
 
   const entries = await guarded("keywords", buildEntries);
   const popular = await guarded("popular", () => buildPopular(entries ?? existing?.entries));

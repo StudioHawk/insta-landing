@@ -1,10 +1,10 @@
 # Cloudflare Pages header rules.
 #
-# The HTML always revalidates, so a stylesheet with its own cache window can
-# outlive the markup it belongs to. That shipped once: visitors ran new HTML
-# against a four-hour-old style.css, which left the region picker unstyled
-# and a removed button still on screen. Anything the markup depends on now
-# revalidates with it. Content-addressed files keep their long cache.
+# Note the zone (harrysanders.com) sets Browser Cache TTL to 4 hours, which
+# overrides the Cache-Control below for stylesheets and images. That is why
+# index.html loads style.css with a ?v= hash stamped at build time: a changed
+# stylesheet arrives on a URL nothing has cached. These rules still apply
+# where the zone does not override them, and record the intent.
 /style.css
   Cache-Control: public, max-age=0, must-revalidate
 
