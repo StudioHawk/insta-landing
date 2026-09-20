@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Harry Sanders | Links</title>
   <meta name="description" content="Type the word Harry said in the video to get the free SEO and AI Search guide. Plus Hawk Academy, StudioHawk and the latest YouTube videos." />
   <link rel="canonical" href="https://insta.harrysanders.com/" />
@@ -22,7 +22,11 @@
   <link rel="icon" href="icon-192.png" type="image/png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="preload" href="fonts/press-start-2p-latin.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="stylesheet" href="style.css" />
+  <!-- ?v= is bumped whenever style.css changes. A visitor can hold a
+       cached stylesheet while the HTML revalidates, which renders the
+       page with styles that do not match its markup. _headers keeps that
+       window at zero; this breaks an already-cached copy immediately. -->
+  <link rel="stylesheet" href="style.css?v=2026-09-20" />
 </head>
 <body>
   <main>
@@ -69,10 +73,6 @@
         <a class="social-btn" href="https://linkedin.com/in/harry-sanders" target="_blank" rel="noopener" aria-label="LinkedIn" data-track="social-linkedin">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5V9h3v10zM6.5 7.3A1.8 1.8 0 1 1 6.5 3.7a1.8 1.8 0 0 1 0 3.6zM19 19h-3v-5.2c0-1.2-.4-2-1.5-2a1.6 1.6 0 0 0-1.5 1 2 2 0 0 0-.1.7V19h-3V9h3v1.3a3 3 0 0 1 2.7-1.5c2 0 3.4 1.3 3.4 4V19z"/></svg>
           <span>LinkedIn</span>
-        </a>
-        <a class="social-btn social-btn-hawk" href="https://hawkacademy.co" target="_blank" rel="noopener" aria-label="Hawk Academy" data-utm="social-hawk-academy">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10l10-5 10 5-10 5z"/><path d="M6 12v5a6 6 0 0 0 12 0v-5"/><path d="M22 10v5"/></svg>
-          <span>Hawk Academy</span>
         </a>
       </nav>
 
@@ -338,22 +338,75 @@
       var regionModal = document.getElementById("region-modal");
       var regionOpener = null;
 
+      // A touch device is treated differently in three places below: no
+      // focus stealing, same-tab navigation, and a back-button close.
+      var IS_TOUCH = (window.matchMedia && matchMedia("(hover: none)").matches) ||
+        navigator.maxTouchPoints > 0;
+      var scrollLockY = 0;
+      var pushedState = false;
+
+      // iOS ignores overflow:hidden on body, so the page carries on scrolling
+      // behind the sheet. Pinning the body and restoring the offset afterwards
+      // is the version that holds everywhere.
+      function lockScroll() {
+        scrollLockY = window.scrollY || document.documentElement.scrollTop || 0;
+        document.body.style.top = -scrollLockY + "px";
+        document.body.classList.add("modal-open");
+      }
+      function unlockScroll() {
+        document.body.classList.remove("modal-open");
+        document.body.style.top = "";
+        window.scrollTo(0, scrollLockY);
+      }
+
       function openRegions(trigger) {
         regionOpener = trigger || null;
         regionModal.hidden = false;
-        document.body.classList.add("modal-open");
-        var first = regionModal.querySelector(".region");
-        if (first) first.focus();
+
+        // If the stylesheet is stale or missing, this is not an overlay: it
+        // renders as a plain block partway down the page while the scroll
+        // sits locked. Rather than show that, go straight to the site.
+        if (getComputedStyle(regionModal).position !== "fixed") {
+          regionModal.hidden = true;
+          var fallback = trigger && trigger.getAttribute("href");
+          if (fallback) window.location.href = fallback;
+          return;
+        }
+
+        lockScroll();
+        // Only move focus for keyboard and mouse users. On a phone it makes
+        // the viewport jump before the sheet has settled.
+        if (!IS_TOUCH) {
+          var first = regionModal.querySelector(".region");
+          if (first) first.focus();
+        }
+        // Give the hardware back button something to close.
+        if (!pushedState) {
+          try { history.pushState({ regionModal: true }, ""); pushedState = true; } catch (err) { /* ignore */ }
+        }
         trackClick("card-studiohawk-open");
       }
 
-      function closeRegions() {
+      function closeRegions(opts) {
+        opts = opts || {};
         if (regionModal.hidden) return;
         regionModal.hidden = true;
-        document.body.classList.remove("modal-open");
-        if (regionOpener) regionOpener.focus();
+        unlockScroll();
+        if (regionOpener && !opts.noFocus) regionOpener.focus();
         regionOpener = null;
+        if (pushedState && !opts.skipHistory) {
+          pushedState = false;
+          try { history.back(); } catch (err) { /* ignore */ }
+        } else {
+          pushedState = false;
+        }
       }
+
+      // The back button, and the in-app browser's back swipe, closes the
+      // sheet instead of leaving the page.
+      window.addEventListener("popstate", function () {
+        if (!regionModal.hidden) closeRegions({ skipHistory: true, noFocus: true });
+      });
 
       document.addEventListener("click", function (ev) {
         var card = ev.target.closest && ev.target.closest(".card-studiohawk");
@@ -362,9 +415,21 @@
           openRegions(card);
           return;
         }
-        if (ev.target.closest && ev.target.closest("[data-close]")) closeRegions();
-        // A region link closes the sheet behind itself on the way out.
-        if (ev.target.closest && ev.target.closest(".region")) closeRegions();
+        if (ev.target.closest && ev.target.closest("[data-close]")) { closeRegions(); return; }
+
+        var region = ev.target.closest && ev.target.closest(".region");
+        if (region) {
+          if (IS_TOUCH && !ev.metaKey && !ev.ctrlKey && !ev.shiftKey) {
+            // Navigate in this tab. A new tab either fails to open at all in
+            // the Instagram browser or strands the visitor in a second one.
+            ev.preventDefault();
+            var dest = region.href;
+            closeRegions({ skipHistory: true, noFocus: true });
+            window.location.href = dest;
+            return;
+          }
+          closeRegions({ skipHistory: true, noFocus: true });
+        }
       });
 
       document.addEventListener("keydown", function (ev) {

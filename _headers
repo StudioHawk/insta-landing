@@ -1,0 +1,15 @@
+# Cloudflare Pages header rules.
+#
+# The HTML always revalidates, so a stylesheet with its own cache window can
+# outlive the markup it belongs to. That shipped once: visitors ran new HTML
+# against a four-hour-old style.css, which left the region picker unstyled
+# and a removed button still on screen. Anything the markup depends on now
+# revalidates with it. Content-addressed files keep their long cache.
+/style.css
+  Cache-Control: public, max-age=0, must-revalidate
+
+/data.json
+  Cache-Control: public, max-age=0, must-revalidate
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable

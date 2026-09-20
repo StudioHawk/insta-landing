@@ -457,7 +457,13 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
 .slim-arrow { color: var(--accent-cyan); font-size: 18px; font-weight: 700; }
 
 /* ===== Region picker (opened by the StudioHawk card) ===== */
-body.modal-open { overflow: hidden; }
+body.modal-open {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+}
 .modal {
   position: fixed;
   inset: 0;
@@ -475,8 +481,13 @@ body.modal-open { overflow: hidden; }
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
+@keyframes sheet-in {
+  from { transform: translateY(14px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
 .modal-panel {
   position: relative;
+  animation: sheet-in 0.18s ease-out;
   width: 100%;
   max-width: 400px;
   padding: 22px 20px 20px;
@@ -573,19 +584,22 @@ body.modal-open { overflow: hidden; }
   .social-btn { padding: 7px 12px; font-size: 12px; }
 
   .modal { align-items: flex-end; padding: 0; }
+  /* Blurring a full-screen layer is expensive in an in-app browser. */
+  .modal-backdrop {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: rgba(3, 3, 10, 0.82);
+  }
+  @keyframes sheet-in {
+    from { transform: translateY(100%); }
+    to { transform: none; }
+  }
   .modal-panel {
     max-width: none;
     border-radius: 18px 18px 0 0;
     border-bottom: none;
     padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
   }
-
-  /* On a phone the socials row is reordered above the 100K Mission panel
-     (see the order rules below), so the Hawk Academy pill would sit right
-     on top of it. Hide it here: the Hawk Academy card further down the
-     page carries the same link with far more context. On desktop the row
-     sits below the mission, so the pill stays. */
-  .social-btn-hawk { display: none; }
 
   /* Mobile: swap "Looking for a free guide" and "100K Mission" positions.
      Desktop natural order inside .hero: ...bio → mission → socials → search.
@@ -594,4 +608,7 @@ body.modal-open { overflow: hidden; }
   .hero .search  { order: 0; margin-top: 24px; } /* sits right under bio, keep gap small */
   .hero .socials { order: 1; }                    /* pushed after search */
   .hero .mission { order: 2; }                    /* pushed to the end, where search used to be */
+}
+@media (prefers-reduced-motion: reduce) {
+  .modal-panel { animation: none; }
 }
