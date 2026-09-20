@@ -21,12 +21,11 @@
   <meta name="twitter:image" content="https://insta.harrysanders.com/og.jpg" />
   <link rel="icon" href="icon-192.png" type="image/png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <link rel="preload" href="fonts/press-start-2p-latin.woff2" as="font" type="font/woff2" crossorigin />
   <!-- ?v= is a hash of style.css, stamped by scripts/refresh-data.mjs on
        every build. The zone forces a 4 hour browser cache that _headers
        cannot override, so without this a visitor runs fresh HTML against a
        stale stylesheet. Do not edit by hand. -->
-  <link rel="stylesheet" href="style.css?v=2e0c938c" />
+  <link rel="stylesheet" href="style.css?v=9c648daf" />
 </head>
 <body>
   <main>
@@ -45,20 +44,13 @@
         <span class="bio-emoji" aria-hidden="true">🎓</span>
         Free AI Search course <span class="bio-arrow" aria-hidden="true">↓</span>
       </p>
-      <section class="mission" aria-label="100K Mission progress">
-        <div class="mission-top">
-          <span class="mission-label">▶ 100K MISSION</span>
-          <span class="mission-count">11%</span>
-        </div>
-        <div class="mission-bar" role="progressbar" aria-valuenow="11" aria-valuemin="0" aria-valuemax="100">
-          <div class="mission-fill" style="width: 11%"></div>
-        </div>
-        <div class="mission-score">
-          <span>11,000</span>
-          <span class="mission-slash">/</span>
-          <span>100,000</span>
-        </div>
-        <p class="mission-sub">Building a community of 100,000 people crushing SEO &amp; AI Search.</p>
+      <section class="search">
+        <h2 class="search-heading">Looking for a free guide?</h2>
+        <p class="search-sub">Type the word I said in the video.</p>
+        <label for="q" class="sr-only">Type the word from the video</label>
+        <input id="q" type="text" placeholder="e.g. backlinks" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="search" autofocus />
+        <div id="popular" class="chips" aria-label="Popular words"></div>
+        <div id="result" class="result" role="status" aria-live="polite"></div>
       </section>
 
       <nav class="socials">
@@ -75,19 +67,11 @@
           <span>LinkedIn</span>
         </a>
       </nav>
-
-      <section class="search">
-        <h2 class="search-heading">Looking for a free guide?</h2>
-        <p class="search-sub">Type the word I said in the video.</p>
-        <label for="q" class="sr-only">Type the word from the video</label>
-        <input id="q" type="text" placeholder="e.g. backlinks" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" enterkeyhint="search" autofocus />
-        <div id="popular" class="chips" aria-label="Popular words"></div>
-        <div id="result" class="result" role="status" aria-live="polite"></div>
-      </section>
     </header>
 
     <section class="funnel">
       <h2 class="funnel-heading">Recent on YouTube</h2>
+      <div id="yt-hero" class="yt-hero"></div>
       <div id="yt-grid" class="yt-grid">
         <p class="yt-empty">Loading...</p>
       </div>
@@ -517,25 +501,44 @@
       }, true);
 
       // ---- YouTube grid ----------------------------------------------
+      // The newest upload gets a full-width thumbnail, the next three sit
+      // under it. A cold visitor from Instagram sees one clear thing to
+      // watch rather than three equal small ones.
+      function videoCard(v, isHero) {
+        var id = encodeURIComponent(v.id || "");
+        var base = "https://i.ytimg.com/vi/" + id + "/";
+        var t = v.thumbnails || {};
+        // Only mqdefault (320x180) and maxresdefault (1280x720) are 16:9.
+        // YouTube's 480 and 640 files are 4:3, so offering them would crop
+        // the top and bottom off the thumbnail.
+        var small = t.medium || (v.id ? base + "mqdefault.jpg" : v.thumbnailUrl);
+        var big = t.maxres || small;
+        var srcset = isHero && t.maxres
+          ? escapeHtml(small) + " 320w, " + escapeHtml(t.maxres) + " 1280w"
+          : escapeHtml(small) + " 320w";
+        var sizes = isHero ? "(max-width: 620px) 100vw, 580px" : "(max-width: 520px) 30vw, 180px";
+        var dims = isHero ? 'width="640" height="360"' : 'width="320" height="180"';
+        return '<a href="' + escapeHtml(safeHref(canonicalYouTube(v.url))) + '" target="_blank" rel="noopener"' +
+          ' class="yt-card' + (isHero ? " yt-card-hero" : "") + '" data-track="video:' + escapeHtml(v.id || "") + '">' +
+          '<span class="yt-thumb">' +
+          '<img src="' + escapeHtml(isHero ? big : small) + '" srcset="' + srcset + '" sizes="' + sizes + '" ' + dims +
+          ' alt="" loading="' + (isHero ? "eager" : "lazy") + '" decoding="async" />' +
+          '<span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>' +
+          '</span>' +
+          '<span class="yt-title">' + escapeHtml(v.title) + '</span>' +
+          '</a>';
+      }
+
       function renderYouTube(videos) {
+        var hero = document.getElementById("yt-hero");
         var grid = document.getElementById("yt-grid");
         if (!videos || videos.length === 0) {
+          hero.innerHTML = "";
           grid.innerHTML = '<p class="yt-empty">YouTube videos unavailable. Try refreshing shortly.</p>';
           return;
         }
-        grid.innerHTML = videos.map(function (v) {
-          var id = encodeURIComponent(v.id || "");
-          var base = "https://i.ytimg.com/vi/" + id + "/";
-          var t = v.thumbnails || {};
-          var src = t.medium || (v.id ? base + "mqdefault.jpg" : v.thumbnailUrl);
-          // Only offer the 640px candidate when YouTube confirmed it exists;
-          // a 404 in srcset shows a broken image, it does not fall back.
-          var srcset = escapeHtml(src) + " 320w" + (t.standard ? ", " + escapeHtml(t.standard) + " 640w" : "");
-          return '<a href="' + escapeHtml(safeHref(canonicalYouTube(v.url))) + '" target="_blank" rel="noopener" class="yt-card" data-track="video:' + escapeHtml(v.id || "") + '">' +
-            '<img src="' + escapeHtml(src) + '" srcset="' + srcset + '" sizes="(max-width: 520px) 30vw, 180px" width="320" height="180" alt="" loading="lazy" decoding="async" />' +
-            '<span>' + escapeHtml(v.title) + '</span>' +
-            '</a>';
-        }).join("");
+        hero.innerHTML = videoCard(videos[0], true);
+        grid.innerHTML = videos.slice(1, 4).map(function (v) { return videoCard(v, false); }).join("");
       }
 
       // ---- Search ----------------------------------------------------

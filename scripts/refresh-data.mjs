@@ -313,7 +313,7 @@ async function fetchYouTubeVideos() {
   const uploadsId = (await chRes.json()).items?.[0]?.contentDetails?.relatedPlaylists?.uploads;
   if (!uploadsId) { console.warn(`No uploads playlist for channel ${STUDIOHAWK_YT_CHANNEL_ID}`); return null; }
 
-  const plRes = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=3&playlistId=${uploadsId}&key=${YOUTUBE_API_KEY}`);
+  const plRes = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=4&playlistId=${uploadsId}&key=${YOUTUBE_API_KEY}`);
   if (!plRes.ok) { console.warn(`YouTube playlistItems API ${plRes.status}: ${await plRes.text()}`); return null; }
   return ((await plRes.json()).items ?? []).map((item) => {
     const s = item.snippet;
@@ -323,11 +323,10 @@ async function fetchYouTubeVideos() {
       id,
       title: s.title,
       url: `https://youtu.be/${id}`,
-      // The page picks medium (320px) by default and offers standard (640px)
-      // in srcset only when YouTube says it exists.
+      // Only these two sizes are 16:9. YouTube's "high" (480x360) and
+      // "standard" (640x480) are 4:3 and would crop in the page's frames.
       thumbnails: {
         medium: t.medium?.url ?? `https://i.ytimg.com/vi/${id}/mqdefault.jpg`,
-        standard: t.standard?.url ?? null,
         maxres: t.maxres?.url ?? null,
       },
     };

@@ -1,10 +1,3 @@
-@font-face {
-  font-family: "Press Start 2P";
-  src: url("fonts/press-start-2p-latin.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 :root {
   --bg: #0a0a14;
   --bg-2: #0f0f1a;
@@ -29,91 +22,6 @@ html, body {
 }
 a { color: inherit; }
 main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
-
-/* ===== 100K Mission — retro pixel progress quest panel ===== */
-.mission {
-  padding: 14px 14px 12px;
-  background: #050510;
-  border: 2px solid var(--accent-green);
-  /* hard pixel-art shadow: offset blocky outline, no blur */
-  box-shadow:
-    0 0 0 2px #050510,
-    0 0 0 4px rgba(34,197,94,0.35),
-    4px 4px 0 0 rgba(34,197,94,0.2);
-  border-radius: 2px;
-  margin: 20px auto 18px;
-  max-width: 440px;
-  text-align: left;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-}
-.mission-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-.mission-label {
-  font-family: "Press Start 2P", system-ui, monospace;
-  font-size: 10px;
-  color: var(--accent-green);
-  text-shadow: 2px 2px 0 #050510;
-  letter-spacing: 0.04em;
-}
-.mission-count {
-  font-family: "Press Start 2P", system-ui, monospace;
-  font-size: 10px;
-  color: var(--accent-cyan);
-  text-shadow: 2px 2px 0 #050510;
-}
-/* The bar itself: chunky pixel blocks via repeating gradient stripes */
-.mission-bar {
-  position: relative;
-  height: 16px;
-  width: 100%;
-  background: #0f0f1a;
-  border: 2px solid #2a2a3d;
-  border-radius: 0;           /* sharp pixel corners */
-  overflow: hidden;
-  box-shadow: inset 2px 2px 0 rgba(0,0,0,0.4);
-}
-.mission-fill {
-  position: relative;
-  height: 100%;
-  /* Base colour + vertical "block" stripes + top highlight for 8-bit shading */
-  background:
-    linear-gradient(to bottom, rgba(255,255,255,0.22) 0 25%, transparent 25% 100%),
-    repeating-linear-gradient(
-      to right,
-      var(--accent-green) 0 6px,
-      #16a34a 6px 8px
-    );
-  transition: width 0.8s steps(20, end);    /* stepped fill = arcade feel */
-  border-right: 2px solid #f0fff4;           /* bright lead edge */
-  box-shadow: inset 0 -2px 0 rgba(0,0,0,0.25);
-}
-.mission-score {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-  font-family: "Press Start 2P", system-ui, monospace;
-  font-size: 10px;
-  color: var(--fg);
-  letter-spacing: 0.04em;
-}
-.mission-slash {
-  color: var(--muted);
-}
-.mission-sub {
-  font-size: 11px;
-  color: var(--muted);
-  margin: 8px 0 0;
-  text-align: center;
-  line-height: 1.4;
-}
 
 /* ===== Hero ===== */
 .hero { text-align: center; margin-bottom: 36px; }
@@ -162,7 +70,7 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
-  margin-top: 20px;
+  margin-top: 16px;   /* sits directly under the popular chips */
 }
 .social-btn {
   display: inline-flex;
@@ -185,7 +93,7 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
 .social-btn svg { flex-shrink: 0; }
 
 /* ===== Search ===== */
-.search { margin-top: 64px; margin-bottom: 40px; text-align: center; }
+.search { margin-top: 34px; margin-bottom: 0; text-align: center; }
 .search-heading {
   font-size: 20px;
   font-weight: 700;
@@ -213,6 +121,8 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
   box-shadow: 0 0 0 3px rgba(1,255,255,0.12);
 }
 .result { margin-top: 16px; }
+/* No reserved space until there is something to say. */
+.result:empty { margin-top: 0; }
 .match {
   background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
   border: 1px solid rgba(34,197,94,0.4);
@@ -319,7 +229,7 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
   transition: border-color 0.15s;
 }
 .yt-card:hover img { border-color: rgba(255,255,255,0.3); }
-.yt-card span {
+.yt-card .yt-title {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -329,7 +239,41 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
   line-height: 1.35;
   color: var(--muted);
 }
-.yt-card:hover span { color: var(--fg); }
+.yt-card:hover .yt-title { color: var(--fg); }
+
+/* Newest upload, full width, with the next three beneath it. */
+.yt-hero { margin-bottom: 10px; }
+.yt-hero:empty { display: none; }
+.yt-card-hero .yt-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--fg);
+  margin-top: 8px;
+}
+.yt-thumb { position: relative; display: block; }
+.yt-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(3, 3, 10, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #fff;
+  transition: background 0.15s, border-color 0.15s;
+}
+.yt-play svg { width: 16px; height: 16px; margin-left: 2px; }
+.yt-card-hero .yt-play { width: 58px; height: 58px; }
+.yt-card-hero .yt-play svg { width: 26px; height: 26px; margin-left: 3px; }
+.yt-card:hover .yt-play {
+  background: rgba(1, 255, 255, 0.22);
+  border-color: var(--accent-cyan);
+}
 .yt-empty { color: var(--muted); font-size: 13px; font-style: italic; }
 
 /* ===== Cards (shared) ===== */
@@ -601,13 +545,11 @@ body.modal-open {
     padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
   }
 
-  /* Mobile: swap "Looking for a free guide" and "100K Mission" positions.
-     Desktop natural order inside .hero: ...bio → mission → socials → search.
-     Mobile desired order:                ...bio → search → socials → mission. */
-  .hero { display: flex; flex-direction: column; }
-  .hero .search  { order: 0; margin-top: 24px; } /* sits right under bio, keep gap small */
-  .hero .socials { order: 1; }                    /* pushed after search */
-  .hero .mission { order: 2; }                    /* pushed to the end, where search used to be */
+  /* One order everywhere now: bio, search, pills, videos, cards. */
+  .search { margin-top: 26px; }
+  .yt-play { width: 30px; height: 30px; }
+  .yt-play svg { width: 14px; height: 14px; }
+  .yt-card-hero .yt-play { width: 50px; height: 50px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .modal-panel { animation: none; }
