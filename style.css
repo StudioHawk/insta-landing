@@ -456,6 +456,96 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
 .slim-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
 .slim-arrow { color: var(--accent-cyan); font-size: 18px; font-weight: 700; }
 
+/* ===== Region picker (opened by the StudioHawk card) ===== */
+body.modal-open { overflow: hidden; }
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal[hidden] { display: none; }
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 3, 10, 0.72);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  padding: 22px 20px 20px;
+  background:
+    radial-gradient(ellipse at top right, rgba(1,255,255,0.10), transparent 60%),
+    var(--surface);
+  border: 1px solid rgba(1,255,255,0.28);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  font: inherit;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.modal-close:hover, .modal-close:focus-visible {
+  color: var(--fg);
+  border-color: var(--border);
+  outline: none;
+}
+.modal-title {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  margin: 0 0 4px;
+}
+.modal-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 16px;
+  line-height: 1.45;
+}
+.region {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  min-height: 56px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--fg);
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+.region:last-child { margin-bottom: 0; }
+.region:hover, .region:focus-visible {
+  border-color: var(--accent-cyan);
+  background: rgba(1,255,255,0.07);
+  transform: translateY(-1px);
+  outline: none;
+}
+.region-flag { font-size: 22px; line-height: 1; flex-shrink: 0; }
+.region-text { display: flex; flex-direction: column; flex: 1 1 auto; }
+.region-name { font-size: 15px; font-weight: 600; }
+.region-host { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.region-arrow { color: var(--accent-cyan); font-size: 17px; font-weight: 700; flex-shrink: 0; }
+
 /* ===== Footer ===== */
 .footer {
   text-align: center;
@@ -481,6 +571,21 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
   .card-stats { gap: 16px; }
   .socials { gap: 6px; }
   .social-btn { padding: 7px 12px; font-size: 12px; }
+
+  .modal { align-items: flex-end; padding: 0; }
+  .modal-panel {
+    max-width: none;
+    border-radius: 18px 18px 0 0;
+    border-bottom: none;
+    padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
+  }
+
+  /* On a phone the socials row is reordered above the 100K Mission panel
+     (see the order rules below), so the Hawk Academy pill would sit right
+     on top of it. Hide it here: the Hawk Academy card further down the
+     page carries the same link with far more context. On desktop the row
+     sits below the mission, so the pill stays. */
+  .social-btn-hawk { display: none; }
 
   /* Mobile: swap "Looking for a free guide" and "100K Mission" positions.
      Desktop natural order inside .hero: ...bio → mission → socials → search.

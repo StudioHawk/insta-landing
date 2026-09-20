@@ -281,7 +281,9 @@ async function buildEntries() {
 async function buildPopular(entries) {
   if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !entries) return null;
   const since = new Date(Date.now() - 90 * 86400e3).toISOString();
-  const rows = await sb(`insta_keyword_searches?select=keyword&created_at=gte.${encodeURIComponent(since)}&keyword=not.like.miss:*`);
+  // Skip every prefixed row ("miss:", "click:", "open:", "video:"): only a
+  // plain keyword means somebody searched that word and found something.
+  const rows = await sb(`insta_keyword_searches?select=keyword&created_at=gte.${encodeURIComponent(since)}&keyword=not.like.*:*`);
   const counts = new Map();
   for (const r of rows) {
     const k = String(r.keyword ?? "").trim().toLowerCase();
