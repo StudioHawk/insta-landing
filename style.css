@@ -242,21 +242,31 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
 /* Tappable keyword chips: the popular row under the box, and "Did you mean" */
 .chips {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;              /* one row, always */
+  justify-content: flex-start;
+  justify-content: safe center;   /* centred when it fits, never clipped */
   align-items: center;
   gap: 6px;
   margin-top: 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-padding: 0 16px;
+  /* Fade the right edge so it reads as scrollable rather than cut off. */
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 12px, #000 calc(100% - 20px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 12px, #000 calc(100% - 20px), transparent 100%);
+  padding: 2px 4px;
 }
+.chips::-webkit-scrollbar { display: none; }
 .chips[hidden] { display: none; }
 .chips-label {
-  width: 100%;
+  flex: 0 0 auto;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--muted);
   font-weight: 600;
-  margin-bottom: 2px;
+  margin-right: 2px;
 }
 .chip-btn {
   font: inherit;
@@ -264,6 +274,8 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
   line-height: 1;
   min-height: 40px;
   padding: 8px 14px;
+  flex: 0 0 auto;
+  white-space: nowrap;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 999px;
@@ -334,7 +346,22 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
   overflow: hidden;
 }
 .card:hover { transform: translateY(-2px); }
-.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.card-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+/* Who the card is for. Sits beside the badge, wraps beneath it when narrow. */
+.card-for {
+  font-size: 11px;
+  line-height: 1.35;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+.card-free .card-for { color: #9ad7b0; }
+.card-studiohawk .card-for { color: #8fd8e6; }
 .card-badge {
   display: inline-block;
   padding: 4px 10px;

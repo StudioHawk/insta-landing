@@ -288,7 +288,7 @@
     "dpr": {
       "title": "RAIDS DPR YT",
       "description": "",
-      "url": "https://youtu.be/jC6esPlTN9g?si=VfDI9ycmNeCQlEwq"
+      "url": "https://www.youtube.com/watch?v=jC6esPlTN9g"
     },
     "draft": {
       "title": "Content Brief & Draft",
@@ -448,7 +448,7 @@
     "island": {
       "title": "How Google Really Ranks Websites (I Read Their Secret 182-Page Rulebook)",
       "description": "",
-      "url": "https://yt.openinapp.co/udubgwv"
+      "url": "https://www.youtube.com/watch?v=Q3ZBZGwpoG0&t=15s"
     },
     "journey": {
       "title": "The Hawk Academy SEO Roadmap",
@@ -618,7 +618,7 @@
     "panic": {
       "title": "I Read Every Google Patent. Here's How They Actually Rank Websites.",
       "description": "",
-      "url": "https://yt.openinapp.co/lqlyc"
+      "url": "https://www.youtube.com/watch?v=djt17f1OWtE"
     },
     "patent": {
       "title": "I Read Every Google Patent. Here's How They Actually Rank Websites.",
@@ -693,7 +693,7 @@
     "rulebook": {
       "title": "How Google Really Ranks Websites (I Read Their Secret 182-Page Rulebook)",
       "description": "",
-      "url": "https://yt.openinapp.co/udubgwv"
+      "url": "https://www.youtube.com/watch?v=Q3ZBZGwpoG0&t=15s"
     },
     "saas": {
       "title": "B2B SEO Audit",
@@ -773,7 +773,7 @@
     "smallbiz": {
       "title": "Local AI SEO: The Complete Strategy to Rank in 2026",
       "description": "",
-      "url": "https://yt.openinapp.co/ms8w6"
+      "url": "https://www.youtube.com/watch?v=vugUqC8XoH0"
     },
     "software": {
       "title": "SaaS SEO Audit",
@@ -900,8 +900,8 @@
     "ai",
     "backlinks",
     "dpr",
-    "clarity",
     "digital pr",
+    "clarity",
     "journo",
     "uslinks",
     "brief"
@@ -938,5 +938,5 @@
       }
     }
   ],
-  "generatedAt": "2026-09-19T22:01:44.146Z"
+  "generatedAt": "2026-09-20T00:18:01.577Z"
 }

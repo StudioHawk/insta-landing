@@ -90,6 +90,45 @@ function isOwned(hostname) {
   return OWNED_HOSTS.some((h) => hostname === h || hostname.endsWith("." + h));
 }
 
+// Canonical YouTube watch URL, so the page ships one clean link per video
+// instead of youtu.be shorteners carrying ?si= tracking junk. The page turns
+// these into an app-opening tap; anything it cannot parse is left alone.
+function canonicaliseYouTube(raw) {
+  let u;
+  try { u = new URL(raw); } catch { return raw; }
+  const host = u.hostname.replace(/^www\./, "").replace(/^m\./, "");
+  let id = null;
+  if (host === "youtu.be") {
+    id = u.pathname.split("/")[1] || null;
+  } else if (host === "youtube.com" || host === "music.youtube.com") {
+    if (u.pathname === "/watch") id = u.searchParams.get("v");
+    else {
+      const m = u.pathname.match(/^\/(?:shorts|embed|live|v)\/([^/?#]+)/);
+      if (m) id = m[1];
+      else return raw; // channel, playlist, anything else: leave as authored
+    }
+  } else {
+    return raw;
+  }
+  if (!id || !/^[A-Za-z0-9_-]{6,20}$/.test(id)) return raw;
+  const t = u.searchParams.get("t") || u.searchParams.get("start") || "";
+  const hms = t.match(/^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s?)?$/);
+  const secs = hms ? (+hms[1] || 0) * 3600 + (+hms[2] || 0) * 60 + (+hms[3] || 0) : 0;
+  return `https://www.youtube.com/watch?v=${id}${secs ? `&t=${secs}s` : ""}`;
+}
+
+// yt.openinapp.co serves an interstitial page rather than a redirect, so the
+// viewer pays an extra page load before reaching the video. Pull the real
+// YouTube URL out of that page; the page's own app-opening handles the rest.
+async function unwrapOpenInApp(raw) {
+  const res = await fetch(raw, { headers: { "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15" } });
+  if (!res.ok) throw new Error(`openinapp ${res.status}`);
+  const html = await res.text();
+  const m = html.match(/https?:\/\/(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)[A-Za-z0-9_\-?=&;%.]+/);
+  if (!m) throw new Error("no YouTube URL in the interstitial");
+  return canonicaliseYouTube(m[0].replace(/&amp;/g, "&"));
+}
+
 // Follow redirects on owned domains and return the final URL, keeping any
 // query string the original carried. Returns the input on any failure.
 const resolveCache = new Map();
@@ -98,7 +137,11 @@ async function resolveUrl(raw) {
   let out = raw;
   try {
     const start = new URL(raw);
-    if (isOwned(start.hostname)) {
+    if (start.hostname.endsWith("openinapp.co")) {
+      out = await unwrapOpenInApp(raw);
+    } else if (/(^|\.)(youtube\.com|youtu\.be)$/.test(start.hostname)) {
+      out = canonicaliseYouTube(raw);
+    } else if (isOwned(start.hostname)) {
       const res = await fetch(start.toString(), {
         method: "GET",
         redirect: "follow",

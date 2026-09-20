@@ -95,6 +95,7 @@
       <a class="card card-free" href="https://hawkacademy.co" target="_blank" rel="noopener" data-utm="card-hawk-academy">
         <div class="card-top">
           <span class="card-badge card-badge-free">FREE FOREVER</span>
+          <span class="card-for">For people learning, or businesses under $1 million a year</span>
         </div>
         <h3 class="card-title">Hawk Academy</h3>
         <p class="card-sub">The free course &amp; community that's trained 6,000+ people on SEO &amp; AI Search. No upsell. No lock-in.</p>
@@ -108,6 +109,7 @@
       <a class="card card-studiohawk" href="https://studiohawk.com.au" target="_blank" rel="noopener" data-utm="card-studiohawk">
         <div class="card-top">
           <span class="card-badge card-badge-gold">🏆 42 AWARDS</span>
+          <span class="card-for">For companies doing over $1 million a year</span>
         </div>
         <h3 class="card-title">StudioHawk</h3>
         <p class="card-sub">One of the world's largest dedicated SEO &amp; AI Search agencies. 120+ specialists. 500+ clients. US, UK, AU. Famous for direct access to specialists: no account managers.</p>
@@ -200,13 +202,106 @@
         }
       }
 
+      // ---- YouTube: canonical links that open the app ------------------
+      // Most visitors arrive inside the Instagram in-app browser, where a
+      // youtu.be or openinapp link just loads the YouTube website in a
+      // cramped webview (no sign-in, no subscribe, no watch history).
+      //
+      // Two steps. First every YouTube link is rewritten to its canonical
+      // watch URL, so the href in the markup is a real, paste-able link
+      // that works with JavaScript off. Second, on a phone, a tap tries the
+      // YouTube app's own URL scheme and falls back to that same web URL if
+      // the app does not take over within a moment. Desktop is untouched:
+      // firing an app scheme there produces a browser error dialog.
+      var IS_IOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+      var IS_ANDROID = /Android/.test(navigator.userAgent);
+
+      // Returns { id, start } for a watch/shorts/live/embed URL, { handle }
+      // for a channel, or null for anything that is not YouTube.
+      function youtube(rawUrl) {
+        var u;
+        try { u = new URL(rawUrl, location.href); } catch (err) { return null; }
+        var host = u.hostname.replace(/^www\./, "").replace(/^m\./, "");
+        var id = null;
+        if (host === "youtu.be") {
+          id = u.pathname.split("/")[1] || null;
+        } else if (host === "youtube.com" || host === "music.youtube.com") {
+          if (u.pathname === "/watch") {
+            id = u.searchParams.get("v");
+          } else {
+            var m = u.pathname.match(/^\/(?:shorts|embed|live|v)\/([^/?#]+)/);
+            if (m) id = m[1];
+            var c = u.pathname.match(/^\/(@[^/?#]+)/);
+            if (!id && c) return { handle: c[1] };
+          }
+        } else {
+          return null;
+        }
+        if (!id || !/^[A-Za-z0-9_-]{6,20}$/.test(id)) return null;
+        // Keep a start time if one was set ("22s", "1m30s" or plain seconds).
+        var t = u.searchParams.get("t") || u.searchParams.get("start") || "";
+        var secs = 0;
+        var hms = t.match(/^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s?)?$/);
+        if (hms) secs = (+hms[1] || 0) * 3600 + (+hms[2] || 0) * 60 + (+hms[3] || 0);
+        return { id: id, start: secs };
+      }
+
+      // The canonical https URL. Tracking junk such as ?si= is dropped.
+      function youtubeWebUrl(y) {
+        if (y.handle) return "https://www.youtube.com/" + y.handle;
+        return "https://www.youtube.com/watch?v=" + y.id + (y.start ? "&t=" + y.start + "s" : "");
+      }
+
+      // The app's own scheme. Android's YouTube app answers vnd.youtube,
+      // iOS answers youtube://, and both ignore a scheme they do not know,
+      // which is what the fallback timer below is for.
+      function youtubeAppUrl(y) {
+        if (y.handle) return (IS_ANDROID ? "vnd.youtube://" : "youtube://") + "www.youtube.com/" + y.handle;
+        if (IS_ANDROID) return "vnd.youtube://" + y.id + (y.start ? "?t=" + y.start : "");
+        return "youtube://www.youtube.com/watch?v=" + y.id + (y.start ? "&t=" + y.start + "s" : "");
+      }
+
+      function openYouTube(y) {
+        var web = youtubeWebUrl(y);
+        if (!IS_IOS && !IS_ANDROID) { window.open(web, "_blank", "noopener"); return; }
+        var done = false;
+        function cancel() { done = true; }
+        // If the app opens, this page is backgrounded and these fire first.
+        window.addEventListener("pagehide", cancel, { once: true });
+        window.addEventListener("blur", cancel, { once: true });
+        document.addEventListener("visibilitychange", function () {
+          if (document.hidden) cancel();
+        }, { once: true });
+        setTimeout(function () {
+          if (!done && !document.hidden) window.location.href = web;
+        }, 1200);
+        window.location.href = youtubeAppUrl(y);
+      }
+
+      // Rewrite a YouTube href to its canonical form. Anything else, and
+      // anything we cannot parse an id out of, is returned untouched.
+      function canonicalYouTube(rawUrl) {
+        var y = youtube(rawUrl);
+        return y ? youtubeWebUrl(y) : rawUrl;
+      }
+
+      document.addEventListener("click", function (ev) {
+        var a = ev.target.closest && ev.target.closest("a[href]");
+        if (!a || ev.defaultPrevented || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button > 0) return;
+        var y = youtube(a.getAttribute("href"));
+        if (!y) return;
+        ev.preventDefault();
+        openYouTube(y);
+      });
+
       // Tag the hard-coded links in the markup. Anything without data-utm
       // (and anything off-domain) is left exactly as authored.
       function tagStaticLinks() {
         var links = document.querySelectorAll("a[href]");
         Array.prototype.forEach.call(links, function (a) {
           var original = a.getAttribute("href");
-          var tagged = withUtm(original, a.getAttribute("data-utm") || "");
+          var tagged = withUtm(canonicalYouTube(original), a.getAttribute("data-utm") || "");
           if (tagged !== original) a.href = tagged;
         });
       }
@@ -253,7 +348,7 @@
           // Only offer the 640px candidate when YouTube confirmed it exists;
           // a 404 in srcset shows a broken image, it does not fall back.
           var srcset = escapeHtml(src) + " 320w" + (t.standard ? ", " + escapeHtml(t.standard) + " 640w" : "");
-          return '<a href="' + escapeHtml(safeHref(v.url)) + '" target="_blank" rel="noopener" class="yt-card">' +
+          return '<a href="' + escapeHtml(safeHref(canonicalYouTube(v.url))) + '" target="_blank" rel="noopener" class="yt-card">' +
             '<img src="' + escapeHtml(src) + '" srcset="' + srcset + '" sizes="(max-width: 520px) 30vw, 180px" width="320" height="180" alt="" loading="lazy" decoding="async" />' +
             '<span>' + escapeHtml(v.title) + '</span>' +
             '</a>';
@@ -362,7 +457,7 @@
         if (r.kind === "hit") {
           var e = entries[r.key];
           trackHit(r.key);
-          var href = safeHref(withUtm(e.url, "search", r.key));
+          var href = safeHref(withUtm(canonicalYouTube(e.url), "search", r.key));
           result.innerHTML =
             '<div class="match">' +
             '<div class="match-title">' + escapeHtml(e.title || r.key) + '</div>' +
