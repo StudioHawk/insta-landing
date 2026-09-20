@@ -913,7 +913,6 @@
       "url": "https://youtu.be/qks6Bf-N_xg",
       "thumbnails": {
         "medium": "https://i.ytimg.com/vi/qks6Bf-N_xg/mqdefault.jpg",
-        "standard": "https://i.ytimg.com/vi/qks6Bf-N_xg/sddefault.jpg",
         "maxres": "https://i.ytimg.com/vi/qks6Bf-N_xg/maxresdefault.jpg"
       }
     },
@@ -923,7 +922,6 @@
       "url": "https://youtu.be/KO1PudJpXJU",
       "thumbnails": {
         "medium": "https://i.ytimg.com/vi/KO1PudJpXJU/mqdefault.jpg",
-        "standard": "https://i.ytimg.com/vi/KO1PudJpXJU/sddefault.jpg",
         "maxres": "https://i.ytimg.com/vi/KO1PudJpXJU/maxresdefault.jpg"
       }
     },
@@ -933,10 +931,18 @@
       "url": "https://youtu.be/Q3ZBZGwpoG0",
       "thumbnails": {
         "medium": "https://i.ytimg.com/vi/Q3ZBZGwpoG0/mqdefault.jpg",
-        "standard": "https://i.ytimg.com/vi/Q3ZBZGwpoG0/sddefault.jpg",
         "maxres": "https://i.ytimg.com/vi/Q3ZBZGwpoG0/maxresdefault.jpg"
+      }
+    },
+    {
+      "id": "djt17f1OWtE",
+      "title": "I Read Every Google Patent. Here's How They Actually Rank Websites.",
+      "url": "https://youtu.be/djt17f1OWtE",
+      "thumbnails": {
+        "medium": "https://i.ytimg.com/vi/djt17f1OWtE/mqdefault.jpg",
+        "maxres": "https://i.ytimg.com/vi/djt17f1OWtE/maxresdefault.jpg"
       }
     }
   ],
-  "generatedAt": "2026-09-20T00:48:03.910Z"
+  "generatedAt": "2026-09-20T00:51:51.566Z"
 }
