@@ -329,6 +329,20 @@ async function describeResource(url) {
   return out;
 }
 
+// A Page link cell can hold several links (a two-link DM, one per line). The
+// page shows one per word: the link whose page title matches the Page label,
+// otherwise the first.
+async function pickLink(cell, label) {
+  const urls = String(cell ?? "").match(/https?:\/\/[^\s,]+/gi) ?? [];
+  if (urls.length < 2 || !label) return urls[0] ?? "";
+  const norm = (s) => String(s ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+  for (const u of urls) {
+    const hit = await describeResource(await resolveUrl(u));
+    if (hit?.title && norm(hit.title) === norm(label)) return u;
+  }
+  return urls[0];
+}
+
 async function buildEntries() {
   if (!TRIGGER_SHEET_ID) {
     console.warn("TRIGGER_SHEET_ID missing, skipping keywords");
@@ -358,8 +372,10 @@ async function buildEntries() {
   const known = new Map();
   for (const { rows, cols } of tabs) {
     for (const r of rows.slice(1)) {
-      const title = String(r[cols.label] ?? "").trim(), url = String(r[cols.link] ?? "").trim();
-      if (!title || DM_ONLY.test(title) || !/^https?:\/\//i.test(url)) continue;
+      const title = String(r[cols.label] ?? "").trim();
+      if (!title || DM_ONLY.test(title)) continue;
+      const url = await pickLink(r[cols.link], title);
+      if (!url) continue;
       const key = await resolveUrl(url);
       if (!known.has(key)) known.set(key, { title, description: cols.description >= 0 ? String(r[cols.description] ?? "").trim() : "" });
     }
@@ -374,11 +390,11 @@ async function buildEntries() {
       const list = cleanWords(r[cols.words]);
       if (!list.length) continue;
       let title = String(r[cols.label] ?? "").trim();
-      let url = String(r[cols.link] ?? "").trim();
       let description = cols.description >= 0 ? String(r[cols.description] ?? "").trim() : "";
       if (DM_ONLY.test(title)) { dmOnly++; continue; }
+      let url = await pickLink(r[cols.link], title);
       let isAuto = false;
-      if (!/^https?:\/\//i.test(url)) {
+      if (!url) {
         // Just a word: publish the resource its DM sends (sheet row i+1).
         const dm = (links.get(i + 1) ?? [])[0];
         if (!dm) { noLink++; continue; }
