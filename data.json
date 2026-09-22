@@ -950,6 +950,11 @@
       "description": "Set up Google Search Console in 5 minutes. Find striking distance keywords and the free traffic hiding in your data.",
       "url": "https://hawkacademy.co/claude-seo-skills/gsc-quick-start"
     },
+    "seemypage": {
+      "title": "Can AI See Your Page?",
+      "description": "Paste a URL and see in one click whether your content is visible to AI crawlers that do not run JavaScript (GPTBot, ClaudeBot, PerplexityBot). Checks the raw HTML for your heading, content, links and schema. Free, no login.",
+      "url": "https://hawkacademy.co/seo-tools/can-ai-see-your-page/"
+    },
     "seo": {
       "title": "Ad Spend Calculator",
       "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
@@ -1224,5 +1229,5 @@
       }
     }
   ],
-  "generatedAt": "2026-09-22T02:00:44.147Z"
+  "generatedAt": "2026-09-22T02:11:42.102Z"
 }
