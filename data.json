@@ -908,6 +908,15 @@
   ],
   "youtubeVideos": [
     {
+      "id": "jF8auonTAEo",
+      "title": "Everyone Thinks Google Punishes AI Content (I Can Prove It Doesn't)",
+      "url": "https://youtu.be/jF8auonTAEo",
+      "thumbnails": {
+        "medium": "https://i.ytimg.com/vi/jF8auonTAEo/mqdefault.jpg",
+        "maxres": "https://i.ytimg.com/vi/jF8auonTAEo/maxresdefault.jpg"
+      }
+    },
+    {
       "id": "qks6Bf-N_xg",
       "title": "You Don't Need 1,000 Backlinks to Rank in Google (The 5 Levels of Link Building)",
       "url": "https://youtu.be/qks6Bf-N_xg",
@@ -933,16 +942,7 @@
         "medium": "https://i.ytimg.com/vi/Q3ZBZGwpoG0/mqdefault.jpg",
         "maxres": "https://i.ytimg.com/vi/Q3ZBZGwpoG0/maxresdefault.jpg"
       }
-    },
-    {
-      "id": "djt17f1OWtE",
-      "title": "I Read Every Google Patent. Here's How They Actually Rank Websites.",
-      "url": "https://youtu.be/djt17f1OWtE",
-      "thumbnails": {
-        "medium": "https://i.ytimg.com/vi/djt17f1OWtE/mqdefault.jpg",
-        "maxres": "https://i.ytimg.com/vi/djt17f1OWtE/maxresdefault.jpg"
-      }
     }
   ],
-  "generatedAt": "2026-09-21T22:57:12.333Z"
+  "generatedAt": "2026-09-22T00:31:02.788Z"
 }
