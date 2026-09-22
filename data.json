@@ -25,6 +25,11 @@
       "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
       "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator"
     },
+    "adspend": {
+      "title": "Ad Spend Calculator",
+      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
+      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator"
+    },
     "affiliate": {
       "title": "How to Track claude.ai Referral Traffic in GA4",
       "description": "Track Claude referral traffic in GA4: the manual source/medium method, the new AI Assistant channel, why GA4 undercounts Claude, and how to isolate it from ChatGPT and Gemini.",
@@ -65,6 +70,11 @@
       "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
       "url": "https://hawkacademy.co/claude-seo-skills/ai-visibility"
     },
+    "aislop": {
+      "title": "AI Slop Content Checker",
+      "description": "Paste your content or a URL and get two scores in under 30 seconds: how much of it is filler and pattern language, and how much of it is material other pages do not have. Every hit is quoted back to you. It is not an AI detector and never guesses who wrote the page.",
+      "url": "https://hawkacademy.co/seo-tools/ai-slop-content-checker/"
+    },
     "analytics": {
       "title": "GA4 for SEO: The Metrics That Actually Matter",
       "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
@@ -77,7 +87,12 @@
     },
     "audpr": {
       "title": "The Australia Digital PR Calendar",
-      "description": "",
+      "description": "A free calendar of every seasonal link-building moment in 2026, with the window to pitch and a data-led angle for each. Make a copy, plan a year of earned links.",
+      "url": "https://hawkacademy.co/resources/digital-pr-calendar-australia"
+    },
+    "aupr": {
+      "title": "The Australia Digital PR Calendar",
+      "description": "A free calendar of every seasonal link-building moment in 2026, with the window to pitch and a data-led angle for each. Make a copy, plan a year of earned links.",
       "url": "https://hawkacademy.co/resources/digital-pr-calendar-australia"
     },
     "authority": {
@@ -89,6 +104,11 @@
       "title": "B2B SEO Audit",
       "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
       "url": "https://hawkacademy.co/claude-seo-skills/b2b-seo-audit"
+    },
+    "backlink": {
+      "title": "Every Way to Get Backlinks in 2026 (Free to Expert Level)",
+      "description": "",
+      "url": "https://www.youtube.com/watch?v=qks6Bf-N_xg"
     },
     "backlinks": {
       "title": "Every Way to Get Backlinks in 2026 (Free to Expert Level)",
@@ -135,12 +155,27 @@
       "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
       "url": "https://hawkacademy.co/claude-seo-skills/ai-visibility"
     },
+    "canyouseeme": {
+      "title": "AI Visibility Check",
+      "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
+      "url": "https://hawkacademy.co/claude-seo-skills/ai-visibility"
+    },
+    "case": {
+      "title": "CASE STUDY",
+      "description": "",
+      "url": "https://studiohawk.com.au/case-studies/"
+    },
     "case studies": {
       "title": "B2B SEO Audit",
       "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
       "url": "https://hawkacademy.co/claude-seo-skills/b2b-seo-audit"
     },
     "case study": {
+      "title": "CASE STUDY",
+      "description": "",
+      "url": "https://studiohawk.com.au/case-studies/"
+    },
+    "casestudy": {
       "title": "CASE STUDY",
       "description": "",
       "url": "https://studiohawk.com.au/case-studies/"
@@ -164,6 +199,11 @@
       "title": "I Read Every Google Patent. Here's How They Actually Rank Websites.",
       "description": "",
       "url": "https://www.youtube.com/watch?v=djt17f1OWtE"
+    },
+    "clairty": {
+      "title": "Clarity AI Bot Auditor",
+      "description": "Paste your Microsoft Clarity AI Bot Activity data. The skill diagnoses every AI bot as healthy, blocked, throttled, over-scraping, or violating your rules, then gives one decisive fix per bot to get ChatGPT, Claude, Perplexity and Gemini crawling you again.",
+      "url": "https://hawkacademy.co/claude-seo-skills/clarity-ai-bot-auditor"
     },
     "clarity": {
       "title": "Clarity AI Bot Auditor",
@@ -300,6 +340,16 @@
       "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
       "url": "https://hawkacademy.co/claude-seo-skills/information-gain"
     },
+    "ecom": {
+      "title": "Ecommerce SEO Audit",
+      "description": "Full on-page audit for online stores covering category pages, product pages, internal linking, and AI search readiness.",
+      "url": "https://hawkacademy.co/claude-seo-skills/ecommerce-seo-audit"
+    },
+    "ecomm": {
+      "title": "Ecommerce SEO Audit",
+      "description": "Full on-page audit for online stores covering category pages, product pages, internal linking, and AI search readiness.",
+      "url": "https://hawkacademy.co/claude-seo-skills/ecommerce-seo-audit"
+    },
     "ecommerce": {
       "title": "Ecommerce SEO Audit",
       "description": "Full on-page audit for online stores covering category pages, product pages, internal linking, and AI search readiness.",
@@ -360,6 +410,11 @@
       "description": "A free, vetted checklist of 123 legitimate places to earn a backlink, no spam, no paid links. Make a copy of the sheet and work it top down. From Hawk Academy by StudioHawk.",
       "url": "https://hawkacademy.co/resources/free-backlinks"
     },
+    "globall": {
+      "title": "Free Backlinks List: 123 Legitimate, Free Link Sources (Sheet)",
+      "description": "A free, vetted checklist of 123 legitimate places to earn a backlink, no spam, no paid links. Make a copy of the sheet and work it top down. From Hawk Academy by StudioHawk.",
+      "url": "https://hawkacademy.co/resources/free-backlinks"
+    },
     "google": {
       "title": "Google Trust Check",
       "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
@@ -381,6 +436,11 @@
       "url": "https://hawkacademy.co/seo-guides/ga4-seo-metrics"
     },
     "google business": {
+      "title": "Local SEO Audit",
+      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
+      "url": "https://hawkacademy.co/claude-seo-skills/local-seo-audit"
+    },
+    "google business profile": {
       "title": "Local SEO Audit",
       "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
       "url": "https://hawkacademy.co/claude-seo-skills/local-seo-audit"
@@ -460,6 +520,11 @@
       "description": "",
       "url": "https://studiohawk.com.au/case-studies/"
     },
+    "journos": {
+      "title": "Case Studies",
+      "description": "",
+      "url": "https://studiohawk.com.au/case-studies/"
+    },
     "keyword research": {
       "title": "The Complete Beginner's Guide to SEO in 2026",
       "description": "Everything needed for ranking in search engines, from keyword research through on-page optimization.",
@@ -486,6 +551,11 @@
       "url": "https://hawkacademy.co/seo-guides/digital-pr-link-building"
     },
     "linkz": {
+      "title": "Free Australian Backlinks: 55+ High-Authority Link Sources Most Businesses Miss",
+      "description": "55 free, high-authority Australian backlink sources, led by .gov.au state supplier portals almost no business claims. Tiered checklist with the direct sheet, free. From Hawk Academy by StudioHawk.",
+      "url": "https://hawkacademy.co/resources/free-australian-backlinks"
+    },
+    "linkzz": {
       "title": "Free Australian Backlinks: 55+ High-Authority Link Sources Most Businesses Miss",
       "description": "55 free, high-authority Australian backlink sources, led by .gov.au state supplier portals almost no business claims. Tiered checklist with the direct sheet, free. From Hawk Academy by StudioHawk.",
       "url": "https://hawkacademy.co/resources/free-australian-backlinks"
@@ -555,12 +625,22 @@
       "description": "The 10-step SEO roadmap StudioHawk uses to train a 120-person SEO agency. Maps every step to a free Hawk Academy guide, Claude skill, tool, and course module.",
       "url": "https://hawkacademy.co/resources/seo-roadmap"
     },
+    "newbies": {
+      "title": "The Hawk Academy SEO Roadmap",
+      "description": "The 10-step SEO roadmap StudioHawk uses to train a 120-person SEO agency. Maps every step to a free Hawk Academy guide, Claude skill, tool, and course module.",
+      "url": "https://hawkacademy.co/resources/seo-roadmap"
+    },
     "news": {
       "title": "Data PR & Outreach",
       "description": "Generate data-driven PR angles from your own data. Creates pitches, outreach emails, and target journalist lists for link building.",
       "url": "https://hawkacademy.co/claude-seo-skills/data-pr-outreach"
     },
     "nflinks": {
+      "title": "Are nofollow links good for SEO?",
+      "description": "",
+      "url": "https://hawkacademy.co/seo-guides/are-nofollow-links-good-for-seo"
+    },
+    "nofollowlinks": {
       "title": "Are nofollow links good for SEO?",
       "description": "",
       "url": "https://hawkacademy.co/seo-guides/are-nofollow-links-good-for-seo"
@@ -609,6 +689,11 @@
       "title": "Website Gap Finder",
       "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
       "url": "https://hawkacademy.co/claude-seo-skills/website-gap"
+    },
+    "pagespeed": {
+      "title": "Focusing on Page Speed Scores is Killing Your AI SEO",
+      "description": "",
+      "url": "https://www.youtube.com/watch?v=KO1PudJpXJU"
     },
     "paid search": {
       "title": "Ad Spend Calculator",
@@ -690,6 +775,11 @@
       "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
       "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator"
     },
+    "rule book": {
+      "title": "How Google Really Ranks Websites (I Read Their Secret 182-Page Rulebook)",
+      "description": "",
+      "url": "https://www.youtube.com/watch?v=Q3ZBZGwpoG0&t=15s"
+    },
     "rulebook": {
       "title": "How Google Really Ranks Websites (I Read Their Secret 182-Page Rulebook)",
       "description": "",
@@ -770,6 +860,11 @@
       "description": "Why site internal structure matters and ensuring search engines efficiently discover key pages.",
       "url": "https://hawkacademy.co/seo-guides/site-architecture-crawl-budget"
     },
+    "small biz": {
+      "title": "Local AI SEO: The Complete Strategy to Rank in 2026",
+      "description": "",
+      "url": "https://www.youtube.com/watch?v=vugUqC8XoH0"
+    },
     "smallbiz": {
       "title": "Local AI SEO: The Complete Strategy to Rank in 2026",
       "description": "",
@@ -840,10 +935,20 @@
       "description": "",
       "url": "https://hawkacademy.co/resources/digital-pr-calendar-uk"
     },
+    "uklink": {
+      "title": "Free UK Backlinks: 50 Legitimate Link Sources for UK Businesses",
+      "description": "The high-authority, mostly-free backlink sources UK businesses miss: Contracts Finder, Find a Tender and the devolved portals, UK directories, chambers, earned .ac.uk tactics, and journalist platforms. Vetted, anti-spam, free.",
+      "url": "https://hawkacademy.co/resources/free-uk-backlinks"
+    },
     "uklinks": {
       "title": "Free UK Backlinks: 50 Legitimate Link Sources for UK Businesses",
       "description": "The high-authority, mostly-free backlink sources UK businesses miss: Contracts Finder, Find a Tender and the devolved portals, UK directories, chambers, earned .ac.uk tactics, and journalist platforms. Vetted, anti-spam, free.",
       "url": "https://hawkacademy.co/resources/free-uk-backlinks"
+    },
+    "ukpr": {
+      "title": "The UK Digital PR Calendar",
+      "description": "",
+      "url": "https://hawkacademy.co/resources/digital-pr-calendar-uk"
     },
     "unique content": {
       "title": "Information Gain Finder",
@@ -864,6 +969,11 @@
       "title": "Free US Backlinks: 50+ Legitimate Link Sources for US Businesses",
       "description": "The high-authority, mostly-free backlink sources US businesses miss: SAM.gov and state procurement portals, US directories, chambers, earned .edu and .gov tactics, and journalist platforms. Vetted, anti-spam, free.",
       "url": "https://hawkacademy.co/resources/free-us-backlinks"
+    },
+    "uspr": {
+      "title": "The USA Digital PR Calendar",
+      "description": "",
+      "url": "https://hawkacademy.co/resources/digital-pr-calendar-usa"
     },
     "website check": {
       "title": "Website Score Check",
@@ -944,5 +1054,5 @@
       }
     }
   ],
-  "generatedAt": "2026-09-22T00:31:02.788Z"
+  "generatedAt": "2026-09-22T00:47:56.203Z"
 }
