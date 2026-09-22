@@ -17,7 +17,7 @@ It pulls three things, each isolated so one failure never blanks the others
 
 | Field | Source | Notes |
 |---|---|---|
-| `entries` | Supabase `microsites` + `manual_triggers` + `ideas` | Same aggregation Format Finder's `/api/public/insta-keywords` used to serve. Owned-domain URLs are followed through redirects so the page links to the final address. |
+| `entries` | Trigger Word Google Sheet (ID in the `TRIGGER_SHEET_ID` secret; never commit it, the sheet also holds DM copy and CTRs). Tabs: "Bio link only" then Sheet1, Sheet1 wins a clash | A row is published only with both a **Page label** and a **Page link**. Bracketed notes in the words column are stripped. Fewer than 150 words keeps the previous list. Owned-domain URLs are followed through redirects so the page links to the final address. |
 | `popular` | Supabase `insta_keyword_searches`, last 90 days | Top 8 matched words, shown as tappable chips under the search box. Topped up with evergreen words when thin. |
 | `youtubeVideos` | YouTube Data API | Latest 3 uploads, with the thumbnail sizes YouTube confirms exist. |
 
@@ -51,8 +51,8 @@ Query the misses to find words being said on camera that the map does not know.
 |---|---|
 | Copy, cards, bio, mission numbers | Edit `index.html`, push to `main`. Live in about a minute. |
 | Styling | Edit `style.css`, push. |
-| A keyword's destination | Edit `deployed_url` on the skill row in Supabase `microsites`, or `custom_url` on the `manual_triggers` row. Then run the workflow (or wait for the daily run). |
-| Add a keyword | Add it to a skill's `keywords[]` array in `microsites`, or add a `manual_triggers` row (bucket `comment`, plus either `linked_skill_id` or `custom_url` + `custom_label`). |
+| A keyword's destination | Change its **Page link** in the Trigger Word sheet, then Actions → *Refresh data and deploy* → Run workflow. Live in about a minute. |
+| Add a keyword | Add a row to the Trigger Word sheet (Sheet1 for a ManyChat trigger, "Bio link only" otherwise) with a **Page label** and **Page link**, then run the workflow. |
 | Popular chips | Automatic from search analytics. |
 | YouTube videos | Automatic. |
 | No-match message | In `index.html`, search for "Nothing found for". |

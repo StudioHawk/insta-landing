@@ -4,11 +4,12 @@
  *
  * Three sources, each isolated so one failing never blanks the others:
  *
- *   1. Search keywords (Supabase: microsites + manual_triggers + ideas).
- *      Replicates the aggregation Format Finder's /api/public/insta-keywords
- *      used to do at request time, so the page no longer depends on that
- *      app being alive. Owned-domain URLs are followed through redirects so
- *      the page links straight to the final address.
+ *   1. Search keywords (the Trigger Word Google Sheet, two tabs).
+ *      "Bio link only" holds the topic words that used to come from Format
+ *      Finder's microsite keywords; Sheet1 holds the ManyChat trigger words
+ *      and wins any clash. A row reaches the page only with both a Page label
+ *      and a Page link. Format Finder is no longer involved. Owned-domain URLs
+ *      are followed through redirects so the page links to the final address.
  *   2. Popular words (Supabase: insta_keyword_searches, last 90 days). The
  *      page shows these as tappable chips under the search box.
  *   3. Latest 3 YouTube videos (YouTube Data API).
@@ -36,6 +37,7 @@ const HTML_PATH = path.join(__dirname, "..", "index.html");
 const CSS_PATH = path.join(__dirname, "..", "style.css");
 
 const {
+  TRIGGER_SHEET_ID,
   SUPABASE_URL,
   SUPABASE_SERVICE_ROLE_KEY,
   YOUTUBE_API_KEY,
@@ -46,32 +48,6 @@ const {
 // on the page), everything else is stored exactly as authored.
 const OWNED_HOSTS = ["hawkacademy.co", "studiohawk.com.au", "harrysanders.com"];
 
-// Mirrors format-finder/lib/trigger-keywords.ts. A single-word trigger
-// override on an idea is ignored when it is one of these.
-const STOP_WORDS = new Set([
-  "i", "you", "he", "she", "we", "they", "it",
-  "my", "your", "our", "his", "her", "their", "its",
-  "this", "that", "these", "those",
-  "what", "which", "who", "whose", "whom",
-  "him", "us", "them",
-  "a", "an", "the",
-  "at", "in", "on", "of", "to", "for", "with", "by", "from", "about",
-  "into", "onto", "upon", "out", "off", "up", "down", "over", "under",
-  "across", "through", "before", "after", "during", "without", "within",
-  "below", "above", "here", "there",
-  "and", "or", "but", "if", "when", "then", "than", "while", "as",
-  "though", "although", "because", "since", "so", "yet",
-  "is", "are", "was", "were", "be", "been", "being",
-  "have", "has", "had",
-  "do", "does", "did",
-  "will", "would", "could", "should", "may", "might", "must", "can",
-  "please", "thanks", "thank", "hey", "ok", "okay", "well", "just", "like",
-  "really", "now", "today", "tonight",
-  "winner", "winners", "answer", "answers", "thoughts",
-  "engagement", "engage", "comments", "comment",
-  "anything", "everything", "something", "nothing",
-  "anyone", "everyone", "someone", "noone",
-]);
 
 // ---------------------------------------------------------------------------
 // Supabase (plain REST, no SDK)
@@ -174,97 +150,122 @@ async function resolveUrl(raw) {
 }
 
 // ---------------------------------------------------------------------------
-// 1. Keywords. Same two-layer union format-finder served:
-//    (a) every microsite.keywords[] entry, newest skill wins a clash
-//    (b) every comment-bucket trigger word, resolved to one destination,
-//        overlaid on top of (a)
+// 1. Keywords, from the Trigger Word sheet.
+//
+// The sheet ID lives in the TRIGGER_SHEET_ID repo secret and must never be
+// committed or logged: this repo is public, and the sheet also carries the
+// ManyChat DM copy and CTRs. Read through Google's CSV export, which needs the
+// sheet shared as "anyone with the link can view".
+//
+// Two tabs, read in order, later tab wins a clash (the same layering Format
+// Finder used: topic keywords first, trigger words overlaid on top):
+//   (a) "Bio link only" topic words, ex-Format Finder microsite keywords
+//   (b) Sheet1, the ManyChat trigger words
+// Columns are matched by exact header name, never by position. Sheet1's
+// "Full message (opening DM -> link)" header also contains the word "link",
+// so a loose match would read DM text as the destination URL.
 // ---------------------------------------------------------------------------
+const SHEET_TABS = [
+  { gid: "1535177512", label: "Bio link only" },
+  { gid: "0", label: "Sheet1 (ManyChat triggers)" },
+];
+
+// A renamed column, a moved tab or link sharing switched off comes back as a
+// short or empty list. Below this, keep yesterday's words instead of
+// publishing a gutted search.
+const MIN_KEYWORDS = 150;
+
+// RFC 4180: quoted fields can hold commas, doubled quotes and line breaks,
+// all of which turn up in the DM-copy column.
+function parseCsv(text) {
+  const rows = [];
+  let row = [], field = "", quoted = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (quoted) {
+      if (ch === '"') {
+        if (text[i + 1] === '"') { field += '"'; i++; } else quoted = false;
+      } else field += ch;
+    } else if (ch === '"') quoted = true;
+    else if (ch === ",") { row.push(field); field = ""; }
+    else if (ch === "\n" || ch === "\r") {
+      if (ch === "\r" && text[i + 1] === "\n") i++;
+      row.push(field); rows.push(row); row = []; field = "";
+    } else field += ch;
+  }
+  if (field !== "" || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
+async function readTab(gid) {
+  const res = await fetch(
+    `https://docs.google.com/spreadsheets/d/${TRIGGER_SHEET_ID}/export?format=csv&gid=${gid}`,
+    { redirect: "follow" },
+  );
+  // Never put the URL in an error: it carries the sheet ID.
+  if (!res.ok) throw new Error(`sheet tab gid=${gid}: HTTP ${res.status}`);
+  const type = res.headers.get("content-type") ?? "";
+  if (!type.includes("text/csv")) throw new Error(`sheet tab gid=${gid} did not return CSV (${type}); is link sharing still on?`);
+  return parseCsv(await res.text());
+}
+
+function columnsOf(header, tabLabel) {
+  const at = (re) => header.findIndex((h) => re.test(String(h).trim()));
+  const cols = {
+    words: at(/^words?(\s*\(s\))?$/i),
+    label: at(/^page label$/i),
+    link: at(/^page link$/i),
+    description: at(/^page description$/i), // optional
+  };
+  const missing = ["words", "label", "link"].filter((k) => cols[k] < 0);
+  if (missing.length) throw new Error(`${tabLabel}: no ${missing.join(" / ")} column in [${header.join(" | ")}]`);
+  return cols;
+}
+
+// "rule book, rule book (DM trigger)" -> ["rule book"]. Bracketed notes are for
+// Talia, not visitors, and would otherwise become searchable as-is.
+function cleanWords(cell) {
+  return String(cell ?? "")
+    .replace(/\([^)]*\)/g, " ")
+    .split(",")
+    .map((w) => w.trim().toLowerCase().replace(/\s+/g, " "))
+    .filter((w) => w.length >= 2);
+}
+
 async function buildEntries() {
-  if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
-    console.warn("Supabase env missing, skipping keywords");
+  if (!TRIGGER_SHEET_ID) {
+    console.warn("TRIGGER_SHEET_ID missing, skipping keywords");
     return null;
   }
 
-  const [ideas, skills, manual] = await Promise.all([
-    sb("ideas?select=id,trigger_keyword,trigger_keywords,status"),
-    sb("microsites?select=id,title,description,deployed_url,keywords,source_idea_id,updated_at&type=eq.skill&deployed_url=not.is.null"),
-    sb("manual_triggers?select=*"),
-  ]);
-
-  // trigger word (UPPER) -> set of idea ids, filmed-or-later ideas only
-  const triggerToIdeaIds = new Map();
-  for (const idea of ideas) {
-    if (!idea.status || idea.status === "idea") continue;
-    const kwSet = new Set();
-    const override = typeof idea.trigger_keyword === "string" ? idea.trigger_keyword.trim() : "";
-    if (override && !STOP_WORDS.has(override.toLowerCase())) {
-      kwSet.add(override.toUpperCase());
-    } else {
-      for (const raw of Array.isArray(idea.trigger_keywords) ? idea.trigger_keywords : []) {
-        const kw = String(raw).toUpperCase().trim();
-        if (kw) kwSet.add(kw);
+  const entries = {};
+  for (const tab of SHEET_TABS) {
+    const rows = await readTab(tab.gid);
+    const cols = columnsOf(rows[0] ?? [], tab.label);
+    const seenInTab = new Set(); // first row wins within a tab
+    let words = 0, offPage = 0;
+    for (const r of rows.slice(1)) {
+      const list = cleanWords(r[cols.words]);
+      if (!list.length) continue;
+      const title = String(r[cols.label] ?? "").trim();
+      const url = String(r[cols.link] ?? "").trim();
+      if (!title || !/^https?:\/\//i.test(url)) { offPage++; continue; }
+      const description = cols.description >= 0 ? String(r[cols.description] ?? "").trim() : "";
+      for (const w of list) {
+        if (seenInTab.has(w)) continue;
+        seenInTab.add(w);
+        entries[w] = { title, description, url };
+        words++;
       }
     }
-    for (const kw of kwSet) {
-      if (!triggerToIdeaIds.has(kw)) triggerToIdeaIds.set(kw, new Set());
-      triggerToIdeaIds.get(kw).add(idea.id);
-    }
+    console.log(`  ${tab.label}: ${words} words${offPage ? `, ${offPage} rows kept off the page (no Page label or Page link)` : ""}`);
   }
 
-  // manual triggers, comment bucket only
-  const manualByKeyword = new Map();
-  for (const m of manual) {
-    if ((m.bucket ?? "comment") !== "comment") continue;
-    const kw = String(m.keyword ?? "").toUpperCase().trim();
-    if (!kw) continue;
-    manualByKeyword.set(kw, {
-      linked_skill_id: m.linked_skill_id ?? null,
-      custom_url: m.custom_url ?? null,
-      custom_label: m.custom_label ?? null,
-    });
-  }
-
-  const skillById = new Map(skills.map((s) => [s.id, s]));
-  const entries = {};
-
-  // (a) microsite keywords, newest-updated skill first so it wins clashes
-  const byRecency = [...skills].sort((a, b) => (Date.parse(b.updated_at) || 0) - (Date.parse(a.updated_at) || 0));
-  for (const s of byRecency) {
-    if (!s.deployed_url) continue;
-    for (const raw of Array.isArray(s.keywords) ? s.keywords : []) {
-      const kw = typeof raw === "string" ? raw.trim().toLowerCase() : "";
-      if (!kw || entries[kw]) continue;
-      entries[kw] = { title: s.title ?? "", description: s.description ?? "", url: s.deployed_url };
-    }
-  }
-
-  // (b) trigger words overlay
-  const allKeywords = new Set([...triggerToIdeaIds.keys(), ...manualByKeyword.keys()]);
-  for (const keyword of allKeywords) {
-    const lower = keyword.toLowerCase();
-    const m = manualByKeyword.get(keyword);
-
-    if (m?.custom_url) {
-      entries[lower] = { title: m.custom_label ?? keyword, description: "", url: m.custom_url };
-      continue;
-    }
-
-    let resolved = null;
-    if (m?.linked_skill_id) {
-      const s = skillById.get(m.linked_skill_id);
-      if (s?.deployed_url) resolved = s;
-    }
-    if (!resolved) {
-      const ideaIds = triggerToIdeaIds.get(keyword) ?? new Set();
-      const explicit = skills.filter((s) => s.source_idea_id && ideaIds.has(s.source_idea_id));
-      const byKeyword = skills.filter((s) =>
-        (Array.isArray(s.keywords) ? s.keywords : []).some((k) => typeof k === "string" && k.toLowerCase() === lower),
-      );
-      const candidates = explicit.length > 0 ? explicit : byKeyword;
-      if (candidates.length === 1) resolved = candidates[0];
-    }
-    if (!resolved?.deployed_url) continue;
-    entries[lower] = { title: resolved.title ?? "", description: resolved.description ?? "", url: resolved.deployed_url };
+  const count = Object.keys(entries).length;
+  if (count < MIN_KEYWORDS) {
+    const msg = `Only ${count} words came back from the sheet (floor is ${MIN_KEYWORDS}), keeping yesterday's list. Check the sheet's columns and link sharing.`;
+    console.log(`::warning title=Keywords not updated::${msg}`);
+    throw new Error(msg);
   }
 
   // Follow redirects on our own domains so the page links to final URLs.
