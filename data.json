@@ -115,6 +115,16 @@
       "description": "",
       "url": "https://www.youtube.com/watch?v=qks6Bf-N_xg"
     },
+    "bad review": {
+      "title": "Google Review Handler Skill",
+      "description": "Free AI-powered Google review handler for Claude. Paste a bad review and the skill checks it against Google's 11 review policy categories, drafts a removal request if it qualifies, and writes a tight 3-sentence response either way.",
+      "url": "https://hawkacademy.co/claude-seo-skills/google-review-handler"
+    },
+    "badreview": {
+      "title": "Google Review Handler Skill",
+      "description": "Free AI-powered Google review handler for Claude. Paste a bad review and the skill checks it against Google's 11 review policy categories, drafts a removal request if it qualifies, and writes a tight 3-sentence response either way.",
+      "url": "https://hawkacademy.co/claude-seo-skills/google-review-handler"
+    },
     "beating competitors": {
       "title": "Competitor Gap Check",
       "description": "See exactly why your competitor outranks you on Google. Side-by-side comparison with a 60-day catch-up plan.",
@@ -154,6 +164,16 @@
       "title": "AI Visibility Check",
       "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
       "url": "https://hawkacademy.co/claude-seo-skills/ai-visibility"
+    },
+    "canibal": {
+      "title": "Cannibalization Detector",
+      "description": "Free AI skill that finds keyword cannibalisation in your Search Console data: the queries where two of your own pages compete and split the signal. Get a per-query verdict and the single fix: consolidate, canonical, or differentiate.",
+      "url": "https://hawkacademy.co/claude-seo-skills/cannibalization-detector"
+    },
+    "cannibal": {
+      "title": "Cannibalization Detector",
+      "description": "Free AI skill that finds keyword cannibalisation in your Search Console data: the queries where two of your own pages compete and split the signal. Get a per-query verdict and the single fix: consolidate, canonical, or differentiate.",
+      "url": "https://hawkacademy.co/claude-seo-skills/cannibalization-detector"
     },
     "canyouseeme": {
       "title": "AI Visibility Check",
@@ -195,6 +215,21 @@
       "description": "Getting your brand cited by AI assistants and large language model search experiences.",
       "url": "https://hawkacademy.co/seo-guides/optimising-for-chatgpt-perplexity-llm"
     },
+    "ciatation": {
+      "title": "Bing Citation Share: How to See (and Grow) Your Slice of AI Answers",
+      "description": "Bing Webmaster Tools now shows your Citation Share: the percentage of AI answer citations that are yours. How to find it, read Intents, Topics and Compare, and grow it. Free.",
+      "url": "https://hawkacademy.co/seo-guides/bing-citation-share"
+    },
+    "citation": {
+      "title": "Bing Citation Share: How to See (and Grow) Your Slice of AI Answers",
+      "description": "Bing Webmaster Tools now shows your Citation Share: the percentage of AI answer citations that are yours. How to find it, read Intents, Topics and Compare, and grow it. Free.",
+      "url": "https://hawkacademy.co/seo-guides/bing-citation-share"
+    },
+    "citaton": {
+      "title": "Bing Citation Share: How to See (and Grow) Your Slice of AI Answers",
+      "description": "Bing Webmaster Tools now shows your Citation Share: the percentage of AI answer citations that are yours. How to find it, read Intents, Topics and Compare, and grow it. Free.",
+      "url": "https://hawkacademy.co/seo-guides/bing-citation-share"
+    },
     "city": {
       "title": "I Read Every Google Patent. Here's How They Actually Rank Websites.",
       "description": "",
@@ -215,10 +250,20 @@
       "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
       "url": "https://hawkacademy.co/claude-seo-skills/ai-visibility"
     },
+    "click me": {
+      "title": "Information Gain Finder",
+      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
+      "url": "https://hawkacademy.co/claude-seo-skills/information-gain"
+    },
     "click through rate": {
       "title": "Title Tag Optimizer",
       "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
       "url": "https://hawkacademy.co/claude-seo-skills/title-tag-optimizer"
+    },
+    "clickme": {
+      "title": "Information Gain Finder",
+      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
+      "url": "https://hawkacademy.co/claude-seo-skills/information-gain"
     },
     "clicks": {
       "title": "Title Tag Optimizer",
@@ -280,10 +325,20 @@
       "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
       "url": "https://hawkacademy.co/claude-seo-skills/website-gap"
     },
+    "core": {
+      "title": "The Core SEO Skills Pack",
+      "description": "Three free Claude Skills in one download. A technical SEO audit skill, a content brief and draft skill, and a data PR outreach skill. Built by StudioHawk for Claude Code and Claude Desktop.",
+      "url": "https://hawkacademy.co/claude-seo-skills/core-SEO-skills-pack"
+    },
     "core web vitals": {
       "title": "Core Web Vitals: A Practical Optimisation Checklist",
       "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
       "url": "https://hawkacademy.co/seo-guides/core-web-vitals-checklist"
+    },
+    "cores": {
+      "title": "The Core SEO Skills Pack",
+      "description": "Three free Claude Skills in one download. A technical SEO audit skill, a content brief and draft skill, and a data PR outreach skill. Built by StudioHawk for Claude Code and Claude Desktop.",
+      "url": "https://hawkacademy.co/claude-seo-skills/core-SEO-skills-pack"
     },
     "cost": {
       "title": "Ad Spend Calculator",
@@ -295,10 +350,20 @@
       "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
       "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator"
     },
+    "crawl": {
+      "title": "AI Crawler Access Checker",
+      "description": "Paste your domain and see in one click whether GPTBot, ClaudeBot, PerplexityBot and 13 other AI crawlers can actually reach your site, or whether your robots.txt is quietly blocking them. Free, no login. From Hawk Academy.",
+      "url": "https://hawkacademy.co/seo-tools/ai-crawler-access-checker/"
+    },
     "crawl budget": {
       "title": "Site Architecture and Crawl Budget",
       "description": "Why site internal structure matters and ensuring search engines efficiently discover key pages.",
       "url": "https://hawkacademy.co/seo-guides/site-architecture-crawl-budget"
+    },
+    "crawler": {
+      "title": "AI Crawler Access Checker",
+      "description": "Paste your domain and see in one click whether GPTBot, ClaudeBot, PerplexityBot and 13 other AI crawlers can actually reach your site, or whether your robots.txt is quietly blocking them. Free, no login. From Hawk Academy.",
+      "url": "https://hawkacademy.co/seo-tools/ai-crawler-access-checker/"
     },
     "crawling": {
       "title": "Site Architecture and Crawl Budget",
@@ -379,6 +444,16 @@
       "title": "How AI Overviews Are Changing the SEO Landscape",
       "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
       "url": "https://hawkacademy.co/seo-guides/how-ai-overviews-changing-seo"
+    },
+    "fit": {
+      "title": "Do you have Search Market Fit?",
+      "description": "Before you invest in SEO, find out if you have Search Market Fit: real search demand that matches what you sell. Free diagnostic combining live demand data with a fit assessment. From Hawk Academy.",
+      "url": "https://hawkacademy.co/seo-tools/market-fit-finder/"
+    },
+    "fitt": {
+      "title": "Do you have Search Market Fit?",
+      "description": "Before you invest in SEO, find out if you have Search Market Fit: real search demand that matches what you sell. Free diagnostic combining live demand data with a fit assessment. From Hawk Academy.",
+      "url": "https://hawkacademy.co/seo-tools/market-fit-finder/"
     },
     "food": {
       "title": "Restaurant SEO Audit",
@@ -490,6 +565,16 @@
       "description": "Why site internal structure matters and ensuring search engines efficiently discover key pages.",
       "url": "https://hawkacademy.co/seo-guides/site-architecture-crawl-budget"
     },
+    "info": {
+      "title": "Information Gain Finder",
+      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
+      "url": "https://hawkacademy.co/claude-seo-skills/information-gain"
+    },
+    "info gain": {
+      "title": "Information Gain Finder",
+      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
+      "url": "https://hawkacademy.co/claude-seo-skills/information-gain"
+    },
     "information gain": {
       "title": "Information Gain Finder",
       "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
@@ -525,10 +610,25 @@
       "description": "",
       "url": "https://studiohawk.com.au/case-studies/"
     },
+    "keyword": {
+      "title": "The AI Keyword Sheet",
+      "description": "Free Google Sheet that bulk-converts your keyword export into the questions real people ask ChatGPT and Gemini, plus persona and intent for every row. Make a copy, paste your keywords, done.",
+      "url": "https://hawkacademy.co/resources/ai-keyword-sheet"
+    },
+    "keyword prompt": {
+      "title": "The AI Keyword Sheet",
+      "description": "Free Google Sheet that bulk-converts your keyword export into the questions real people ask ChatGPT and Gemini, plus persona and intent for every row. Make a copy, paste your keywords, done.",
+      "url": "https://hawkacademy.co/resources/ai-keyword-sheet"
+    },
     "keyword research": {
       "title": "The Complete Beginner's Guide to SEO in 2026",
       "description": "Everything needed for ranking in search engines, from keyword research through on-page optimization.",
       "url": "https://hawkacademy.co/seo-guides/beginners-guide-to-seo-2026"
+    },
+    "keyword sheet": {
+      "title": "The AI Keyword Sheet",
+      "description": "Free Google Sheet that bulk-converts your keyword export into the questions real people ask ChatGPT and Gemini, plus persona and intent for every row. Make a copy, paste your keywords, done.",
+      "url": "https://hawkacademy.co/resources/ai-keyword-sheet"
     },
     "lcp": {
       "title": "Core Web Vitals: A Practical Optimisation Checklist",
@@ -625,6 +725,11 @@
       "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
       "url": "https://hawkacademy.co/seo-guides/ga4-seo-metrics"
     },
+    "mike": {
+      "title": "The Hawk Academy SEO Roadmap",
+      "description": "The 10-step SEO roadmap StudioHawk uses to train a 120-person SEO agency. Maps every step to a free Hawk Academy guide, Claude skill, tool, and course module.",
+      "url": "https://hawkacademy.co/resources/seo-roadmap"
+    },
     "missing pages": {
       "title": "Website Gap Finder",
       "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
@@ -654,6 +759,16 @@
       "title": "Are nofollow links good for SEO?",
       "description": "",
       "url": "https://hawkacademy.co/seo-guides/are-nofollow-links-good-for-seo"
+    },
+    "noob": {
+      "title": "The Hawk Academy SEO Roadmap",
+      "description": "The 10-step SEO roadmap StudioHawk uses to train a 120-person SEO agency. Maps every step to a free Hawk Academy guide, Claude skill, tool, and course module.",
+      "url": "https://hawkacademy.co/resources/seo-roadmap"
+    },
+    "nood": {
+      "title": "The Hawk Academy SEO Roadmap",
+      "description": "The 10-step SEO roadmap StudioHawk uses to train a 120-person SEO agency. Maps every step to a free Hawk Academy guide, Claude skill, tool, and course module.",
+      "url": "https://hawkacademy.co/resources/seo-roadmap"
     },
     "on page": {
       "title": "The Complete Beginner's Guide to SEO in 2026",
@@ -689,6 +804,21 @@
       "title": "Digital PR for Link Building: Strategies That Scale",
       "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
       "url": "https://hawkacademy.co/seo-guides/digital-pr-link-building"
+    },
+    "pack": {
+      "title": "The Core SEO Skills Pack",
+      "description": "Three free Claude Skills in one download. A technical SEO audit skill, a content brief and draft skill, and a data PR outreach skill. Built by StudioHawk for Claude Code and Claude Desktop.",
+      "url": "https://hawkacademy.co/claude-seo-skills/core-SEO-skills-pack"
+    },
+    "packs": {
+      "title": "The Core SEO Skills Pack",
+      "description": "Three free Claude Skills in one download. A technical SEO audit skill, a content brief and draft skill, and a data PR outreach skill. Built by StudioHawk for Claude Code and Claude Desktop.",
+      "url": "https://hawkacademy.co/claude-seo-skills/core-SEO-skills-pack"
+    },
+    "page": {
+      "title": "Is My Page Better?",
+      "description": "Grade any page's on-page SEO out of 100, then pit it head-to-head against a competitor - see where you're ahead, where you're behind, and exactly what to fix. Free, no login. From Hawk Academy.",
+      "url": "https://hawkacademy.co/seo-tools/ai-search-page-audit/"
     },
     "page speed": {
       "title": "Focusing on Page Speed Scores is Killing Your AI SEO",
@@ -755,10 +885,20 @@
       "description": "Full on-page audit for online stores covering category pages, product pages, internal linking, and AI search readiness.",
       "url": "https://hawkacademy.co/claude-seo-skills/ecommerce-seo-audit"
     },
+    "prompt": {
+      "title": "The AI Keyword Sheet",
+      "description": "Free Google Sheet that bulk-converts your keyword export into the questions real people ask ChatGPT and Gemini, plus persona and intent for every row. Make a copy, paste your keywords, done.",
+      "url": "https://hawkacademy.co/resources/ai-keyword-sheet"
+    },
     "raids": {
       "title": "RAIDS DPR YT",
       "description": "",
       "url": "https://www.youtube.com/watch?v=47tcY587bOQ"
+    },
+    "relevance": {
+      "title": "The SOURC-E Framework: How to Rank in AI Search",
+      "description": "SOURC-E is StudioHawk's six-pillar framework for ranking in AI search: Structure, Offsite, Uniqueness, Relevance, Credibility, Evaluation. The formula, the order to run it, and the free tools for each pillar.",
+      "url": "https://hawkacademy.co/seo-guides/sourc-e-framework"
     },
     "reporting": {
       "title": "GA4 for SEO: The Metrics That Actually Matter",
@@ -810,6 +950,11 @@
       "description": "Set up Google Search Console in 5 minutes. Find striking distance keywords and the free traffic hiding in your data.",
       "url": "https://hawkacademy.co/claude-seo-skills/gsc-quick-start"
     },
+    "seo": {
+      "title": "Ad Spend Calculator",
+      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
+      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator"
+    },
     "seo 101": {
       "title": "The Complete Beginner's Guide to SEO in 2026",
       "description": "Everything needed for ranking in search engines, from keyword research through on-page optimization.",
@@ -839,6 +984,11 @@
       "title": "How AI Overviews Are Changing the SEO Landscape",
       "description": "Understanding how Google's AI-generated search results affect organic click-through rates and adaptation strategies.",
       "url": "https://hawkacademy.co/seo-guides/how-ai-overviews-changing-seo"
+    },
+    "sheet": {
+      "title": "The AI Keyword Sheet",
+      "description": "Free Google Sheet that bulk-converts your keyword export into the questions real people ask ChatGPT and Gemini, plus persona and intent for every row. Make a copy, paste your keywords, done.",
+      "url": "https://hawkacademy.co/resources/ai-keyword-sheet"
     },
     "shopify": {
       "title": "Ecommerce SEO Audit",
@@ -920,6 +1070,11 @@
       "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
       "url": "https://hawkacademy.co/claude-seo-skills/title-tag-optimizer"
     },
+    "tools": {
+      "title": "Information Gain Finder",
+      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
+      "url": "https://hawkacademy.co/claude-seo-skills/information-gain"
+    },
     "topic clusters": {
       "title": "Website Gap Finder",
       "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
@@ -1000,6 +1155,11 @@
       "description": "Rate your website 0-5 on the 5 features every site winning on Google has. Based on a study of 400 websites.",
       "url": "https://hawkacademy.co/claude-seo-skills/website-score"
     },
+    "winner": {
+      "title": "Winner or Loser?",
+      "description": "Free AI skill that takes your Search Console data from before and after a Google core update, classifies every page as winner or loser, then diagnoses each loser with the intent-destination fit test: source type, task completion, market fit, and format fit. Built on the May 2026 core update patterns.",
+      "url": "https://hawkacademy.co/claude-seo-skills/winner-or-loser"
+    },
     "woocommerce": {
       "title": "Ecommerce SEO Audit",
       "description": "Full on-page audit for online stores covering category pages, product pages, internal linking, and AI search readiness.",
@@ -1064,5 +1224,5 @@
       }
     }
   ],
-  "generatedAt": "2026-09-22T01:47:27.549Z"
+  "generatedAt": "2026-09-22T02:00:44.147Z"
 }
