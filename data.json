@@ -31,9 +31,9 @@
       "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator"
     },
     "affiliate": {
-      "title": "How to Track claude.ai Referral Traffic in GA4",
-      "description": "Track Claude referral traffic in GA4: the manual source/medium method, the new AI Assistant channel, why GA4 undercounts Claude, and how to isolate it from ChatGPT and Gemini.",
-      "url": "https://hawkacademy.co/seo-guides/claude-ai-referral-traffic-ga4"
+      "title": "Affiliate Traffic Auditor",
+      "description": "Free AI skill that audits your GA4 referral traffic and affiliate payouts to find commission claimed by sources that did not earn the sale, the cookie-stuffing pattern behind the Honey and Phia stories.",
+      "url": "https://hawkacademy.co/claude-seo-skills/affiliate-traffic-auditor"
     },
     "ai": {
       "title": "AI Visibility Check",
@@ -181,7 +181,7 @@
       "url": "https://hawkacademy.co/claude-seo-skills/ai-visibility"
     },
     "case": {
-      "title": "CASE STUDY",
+      "title": "SEO & AI Search Case Studies",
       "description": "",
       "url": "https://studiohawk.com.au/case-studies/"
     },
@@ -191,12 +191,12 @@
       "url": "https://hawkacademy.co/claude-seo-skills/b2b-seo-audit"
     },
     "case study": {
-      "title": "CASE STUDY",
+      "title": "SEO & AI Search Case Studies",
       "description": "",
       "url": "https://studiohawk.com.au/case-studies/"
     },
     "casestudy": {
-      "title": "CASE STUDY",
+      "title": "SEO & AI Search Case Studies",
       "description": "",
       "url": "https://studiohawk.com.au/case-studies/"
     },
@@ -391,9 +391,9 @@
       "url": "https://hawkacademy.co/claude-seo-skills/restaurant-seo-audit"
     },
     "dpr": {
-      "title": "RAIDS DPR YT",
+      "title": "Digital PR Strategy: The 5-Step System to Rank in AI Search",
       "description": "",
-      "url": "https://www.youtube.com/watch?v=jC6esPlTN9g"
+      "url": "https://www.youtube.com/watch?v=47tcY587bOQ"
     },
     "draft": {
       "title": "Content Brief & Draft",
@@ -471,9 +471,9 @@
       "url": "https://hawkacademy.co/seo-guides/ga4-seo-metrics"
     },
     "gbp": {
-      "title": "Local SEO Audit",
-      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
-      "url": "https://hawkacademy.co/claude-seo-skills/local-seo-audit"
+      "title": "GBP Analytics Connector",
+      "description": "Free AI skill that walks you through Google's new GBP to Google Analytics link, then turns the new reporting collection into a monthly local actions report: calls, bookings, direction requests, and website clicks, with the 6-month data retention trap flagged before it bites.",
+      "url": "https://hawkacademy.co/claude-seo-skills/gbp-analytics-connector"
     },
     "getting started": {
       "title": "The Complete Beginner's Guide to SEO in 2026",
@@ -516,9 +516,9 @@
       "url": "https://hawkacademy.co/claude-seo-skills/local-seo-audit"
     },
     "google business profile": {
-      "title": "Local SEO Audit",
-      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
-      "url": "https://hawkacademy.co/claude-seo-skills/local-seo-audit"
+      "title": "GBP Analytics Connector",
+      "description": "Free AI skill that walks you through Google's new GBP to Google Analytics link, then turns the new reporting collection into a monthly local actions report: calls, bookings, direction requests, and website clicks, with the 6-month data retention trap flagged before it bites.",
+      "url": "https://hawkacademy.co/claude-seo-skills/gbp-analytics-connector"
     },
     "google quality": {
       "title": "E-E-A-T Explained: Building Trust and Authority",
@@ -891,9 +891,9 @@
       "url": "https://hawkacademy.co/resources/ai-keyword-sheet"
     },
     "raids": {
-      "title": "RAIDS DPR YT",
+      "title": "RAIDS Protocol — step by step",
       "description": "",
-      "url": "https://www.youtube.com/watch?v=47tcY587bOQ"
+      "url": "https://docs.google.com/document/d/1pVOwLJJNsb-m4rIVI7FH6W9r_D0eYiTTzlcu9482gy0/edit"
     },
     "relevance": {
       "title": "The SOURC-E Framework: How to Rank in AI Search",
@@ -954,11 +954,6 @@
       "title": "Can AI See Your Page?",
       "description": "Paste a URL and see in one click whether your content is visible to AI crawlers that do not run JavaScript (GPTBot, ClaudeBot, PerplexityBot). Checks the raw HTML for your heading, content, links and schema. Free, no login.",
       "url": "https://hawkacademy.co/seo-tools/can-ai-see-your-page/"
-    },
-    "seo": {
-      "title": "Ad Spend Calculator",
-      "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
-      "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator"
     },
     "seo 101": {
       "title": "The Complete Beginner's Guide to SEO in 2026",
@@ -1074,11 +1069,6 @@
       "title": "Title Tag Optimizer",
       "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
       "url": "https://hawkacademy.co/claude-seo-skills/title-tag-optimizer"
-    },
-    "tools": {
-      "title": "Information Gain Finder",
-      "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
-      "url": "https://hawkacademy.co/claude-seo-skills/information-gain"
     },
     "topic clusters": {
       "title": "Website Gap Finder",
@@ -1229,5 +1219,5 @@
       }
     }
   ],
-  "generatedAt": "2026-09-22T22:37:30.087Z"
+  "generatedAt": "2026-09-23T00:13:10.489Z"
 }
