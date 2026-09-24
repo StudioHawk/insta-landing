@@ -32,7 +32,7 @@
     },
     "affiliate": {
       "title": "Affiliate Traffic Auditor",
-      "description": "Free AI skill that audits your GA4 referral traffic and affiliate payouts to find commission claimed by sources that did not earn the sale, the cookie-stuffing pattern behind the Honey and Phia stories.",
+      "description": "Free affiliate traffic auditor skill: checks GA4 referral traffic and affiliate payouts for commission claimed by sources that did not earn the sale.",
       "url": "https://hawkacademy.co/claude-seo-skills/affiliate-traffic-auditor"
     },
     "ai": {
@@ -117,12 +117,12 @@
     },
     "bad review": {
       "title": "Google Review Handler Skill",
-      "description": "Free AI-powered Google review handler for Claude. Paste a bad review and the skill checks it against Google's 11 review policy categories, drafts a removal request if it qualifies, and writes a tight 3-sentence response either way.",
+      "description": "Free Google review handler skill for Claude: checks a bad review against Google's policies, drafts a removal request if it qualifies and writes your reply.",
       "url": "https://hawkacademy.co/claude-seo-skills/google-review-handler"
     },
     "badreview": {
       "title": "Google Review Handler Skill",
-      "description": "Free AI-powered Google review handler for Claude. Paste a bad review and the skill checks it against Google's 11 review policy categories, drafts a removal request if it qualifies, and writes a tight 3-sentence response either way.",
+      "description": "Free Google review handler skill for Claude: checks a bad review against Google's policies, drafts a removal request if it qualifies and writes your reply.",
       "url": "https://hawkacademy.co/claude-seo-skills/google-review-handler"
     },
     "beating competitors": {
@@ -137,7 +137,7 @@
     },
     "blueprint": {
       "title": "The Service Page Blueprint",
-      "description": "The service page blueprint from the reel: eleven sections, in page order, that help ChatGPT and Google's AI pick your business. Free, no email required.",
+      "description": "Every section a service page needs, in order, with the drawings from the reel, a filled-in example and the checks to run before it goes live. Free.",
       "url": "https://hawkacademy.co/resources/service-page-blueprint"
     },
     "booking": {
@@ -172,12 +172,12 @@
     },
     "canibal": {
       "title": "Cannibalization Detector",
-      "description": "Free AI skill that finds keyword cannibalisation in your Search Console data: the queries where two of your own pages compete and split the signal. Get a per-query verdict and the single fix: consolidate, canonical, or differentiate.",
+      "description": "Free keyword cannibalisation skill for Claude: finds queries where your own pages compete in Search Console, then gives one fix per query, worst first.",
       "url": "https://hawkacademy.co/claude-seo-skills/cannibalization-detector"
     },
     "cannibal": {
       "title": "Cannibalization Detector",
-      "description": "Free AI skill that finds keyword cannibalisation in your Search Console data: the queries where two of your own pages compete and split the signal. Get a per-query verdict and the single fix: consolidate, canonical, or differentiate.",
+      "description": "Free keyword cannibalisation skill for Claude: finds queries where your own pages compete in Search Console, then gives one fix per query, worst first.",
       "url": "https://hawkacademy.co/claude-seo-skills/cannibalization-detector"
     },
     "canyouseeme": {
@@ -332,7 +332,7 @@
     },
     "core": {
       "title": "The Core SEO Skills Pack",
-      "description": "Three free Claude Skills in one download. A technical SEO audit skill, a content brief and draft skill, and a data PR outreach skill. Built by StudioHawk for Claude Code and Claude Desktop.",
+      "description": "Free Core SEO Skills Pack for Claude: four skills in one download for technical audits, content briefs, data PR outreach and the 3 Ranking Laws Auditor.",
       "url": "https://hawkacademy.co/claude-seo-skills/core-SEO-skills-pack"
     },
     "core web vitals": {
@@ -342,7 +342,7 @@
     },
     "cores": {
       "title": "The Core SEO Skills Pack",
-      "description": "Three free Claude Skills in one download. A technical SEO audit skill, a content brief and draft skill, and a data PR outreach skill. Built by StudioHawk for Claude Code and Claude Desktop.",
+      "description": "Free Core SEO Skills Pack for Claude: four skills in one download for technical audits, content briefs, data PR outreach and the 3 Ranking Laws Auditor.",
       "url": "https://hawkacademy.co/claude-seo-skills/core-SEO-skills-pack"
     },
     "cost": {
@@ -477,7 +477,7 @@
     },
     "gbp": {
       "title": "GBP Analytics Connector",
-      "description": "Free AI skill that walks you through Google's new GBP to Google Analytics link, then turns the new reporting collection into a monthly local actions report: calls, bookings, direction requests, and website clicks, with the 6-month data retention trap flagged before it bites.",
+      "description": "Free GBP Analytics Connector skill: link Google Business Profile to Google Analytics, then get a monthly report of calls, bookings, directions and clicks.",
       "url": "https://hawkacademy.co/claude-seo-skills/gbp-analytics-connector"
     },
     "getting started": {
@@ -522,7 +522,7 @@
     },
     "google business profile": {
       "title": "GBP Analytics Connector",
-      "description": "Free AI skill that walks you through Google's new GBP to Google Analytics link, then turns the new reporting collection into a monthly local actions report: calls, bookings, direction requests, and website clicks, with the 6-month data retention trap flagged before it bites.",
+      "description": "Free GBP Analytics Connector skill: link Google Business Profile to Google Analytics, then get a monthly report of calls, bookings, directions and clicks.",
       "url": "https://hawkacademy.co/claude-seo-skills/gbp-analytics-connector"
     },
     "google quality": {
@@ -617,12 +617,12 @@
     },
     "keyword": {
       "title": "The AI Keyword Sheet",
-      "description": "Free Google Sheet that bulk-converts your keyword export into the questions real people ask ChatGPT and Gemini, plus persona and intent for every row. Make a copy, paste your keywords, done.",
+      "description": "Free Google Sheet that bulk-converts your keyword export into the questions people ask ChatGPT and Gemini, with persona and intent for every row.",
       "url": "https://hawkacademy.co/resources/ai-keyword-sheet"
     },
     "keyword prompt": {
       "title": "The AI Keyword Sheet",
-      "description": "Free Google Sheet that bulk-converts your keyword export into the questions real people ask ChatGPT and Gemini, plus persona and intent for every row. Make a copy, paste your keywords, done.",
+      "description": "Free Google Sheet that bulk-converts your keyword export into the questions people ask ChatGPT and Gemini, with persona and intent for every row.",
       "url": "https://hawkacademy.co/resources/ai-keyword-sheet"
     },
     "keyword research": {
@@ -632,7 +632,7 @@
     },
     "keyword sheet": {
       "title": "The AI Keyword Sheet",
-      "description": "Free Google Sheet that bulk-converts your keyword export into the questions real people ask ChatGPT and Gemini, plus persona and intent for every row. Make a copy, paste your keywords, done.",
+      "description": "Free Google Sheet that bulk-converts your keyword export into the questions people ask ChatGPT and Gemini, with persona and intent for every row.",
       "url": "https://hawkacademy.co/resources/ai-keyword-sheet"
     },
     "lcp": {
@@ -812,12 +812,12 @@
     },
     "pack": {
       "title": "The Core SEO Skills Pack",
-      "description": "Three free Claude Skills in one download. A technical SEO audit skill, a content brief and draft skill, and a data PR outreach skill. Built by StudioHawk for Claude Code and Claude Desktop.",
+      "description": "Free Core SEO Skills Pack for Claude: four skills in one download for technical audits, content briefs, data PR outreach and the 3 Ranking Laws Auditor.",
       "url": "https://hawkacademy.co/claude-seo-skills/core-SEO-skills-pack"
     },
     "packs": {
       "title": "The Core SEO Skills Pack",
-      "description": "Three free Claude Skills in one download. A technical SEO audit skill, a content brief and draft skill, and a data PR outreach skill. Built by StudioHawk for Claude Code and Claude Desktop.",
+      "description": "Free Core SEO Skills Pack for Claude: four skills in one download for technical audits, content briefs, data PR outreach and the 3 Ranking Laws Auditor.",
       "url": "https://hawkacademy.co/claude-seo-skills/core-SEO-skills-pack"
     },
     "page": {
@@ -892,7 +892,7 @@
     },
     "prompt": {
       "title": "The AI Keyword Sheet",
-      "description": "Free Google Sheet that bulk-converts your keyword export into the questions real people ask ChatGPT and Gemini, plus persona and intent for every row. Make a copy, paste your keywords, done.",
+      "description": "Free Google Sheet that bulk-converts your keyword export into the questions people ask ChatGPT and Gemini, with persona and intent for every row.",
       "url": "https://hawkacademy.co/resources/ai-keyword-sheet"
     },
     "raids": {
@@ -992,7 +992,7 @@
     },
     "sheet": {
       "title": "The AI Keyword Sheet",
-      "description": "Free Google Sheet that bulk-converts your keyword export into the questions real people ask ChatGPT and Gemini, plus persona and intent for every row. Make a copy, paste your keywords, done.",
+      "description": "Free Google Sheet that bulk-converts your keyword export into the questions people ask ChatGPT and Gemini, with persona and intent for every row.",
       "url": "https://hawkacademy.co/resources/ai-keyword-sheet"
     },
     "shopify": {
@@ -1157,7 +1157,7 @@
     },
     "winner": {
       "title": "Winner or Loser?",
-      "description": "Free AI skill that takes your Search Console data from before and after a Google core update, classifies every page as winner or loser, then diagnoses each loser with the intent-destination fit test: source type, task completion, market fit, and format fit. Built on the May 2026 core update patterns.",
+      "description": "Free core update analysis skill: paste Search Console data from before and after a Google core update, sort pages into winners and losers and diagnose each.",
       "url": "https://hawkacademy.co/claude-seo-skills/winner-or-loser"
     },
     "woocommerce": {
@@ -1189,7 +1189,7 @@
   "youtubeVideos": [
     {
       "id": "jF8auonTAEo",
-      "title": "Everyone Thinks Google Punishes AI Content (I Can Prove It Doesn't)",
+      "title": "Does Google Penalise AI Content? The Truth About SEO & AI Search",
       "url": "https://youtu.be/jF8auonTAEo",
       "thumbnails": {
         "medium": "https://i.ytimg.com/vi/jF8auonTAEo/mqdefault.jpg",
@@ -1224,5 +1224,5 @@
       }
     }
   ],
-  "generatedAt": "2026-09-24T03:17:53.775Z"
+  "generatedAt": "2026-09-24T22:55:27.075Z"
 }
