@@ -357,7 +357,7 @@
     },
     "crawl": {
       "title": "AI Crawler Access Checker",
-      "description": "Paste your domain and see in one click whether GPTBot, ClaudeBot, PerplexityBot and 13 other AI crawlers can actually reach your site, or whether your robots.txt is quietly blocking them. Free, no login. From Hawk Academy.",
+      "description": "Paste your domain and see in one click whether GPTBot, ClaudeBot, PerplexityBot and 13 other AI crawlers are allowed in by your robots.txt, or quietly blocked by it. Free, no login. From Hawk Academy.",
       "url": "https://hawkacademy.co/seo-tools/ai-crawler-access-checker/"
     },
     "crawl budget": {
@@ -367,7 +367,7 @@
     },
     "crawler": {
       "title": "AI Crawler Access Checker",
-      "description": "Paste your domain and see in one click whether GPTBot, ClaudeBot, PerplexityBot and 13 other AI crawlers can actually reach your site, or whether your robots.txt is quietly blocking them. Free, no login. From Hawk Academy.",
+      "description": "Paste your domain and see in one click whether GPTBot, ClaudeBot, PerplexityBot and 13 other AI crawlers are allowed in by your robots.txt, or quietly blocked by it. Free, no login. From Hawk Academy.",
       "url": "https://hawkacademy.co/seo-tools/ai-crawler-access-checker/"
     },
     "crawling": {
@@ -1224,5 +1224,5 @@
       }
     }
   ],
-  "generatedAt": "2026-09-26T22:18:02.541Z"
+  "generatedAt": "2026-09-27T22:45:07.933Z"
 }
