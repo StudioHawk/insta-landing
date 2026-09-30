@@ -475,6 +475,11 @@
       "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
       "url": "https://hawkacademy.co/seo-guides/ga4-seo-metrics"
     },
+    "gapfinder": {
+      "title": "Website Gap Finder",
+      "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
+      "url": "https://hawkacademy.co/claude-seo-skills/website-gap"
+    },
     "gbp": {
       "title": "GBP Analytics Connector",
       "description": "Free GBP Analytics Connector skill: link Google Business Profile to Google Analytics, then get a monthly report of calls, bookings, directions and clicks.",
@@ -739,6 +744,16 @@
       "title": "Website Gap Finder",
       "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
       "url": "https://hawkacademy.co/claude-seo-skills/website-gap"
+    },
+    "near by": {
+      "title": "Local SEO Audit",
+      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
+      "url": "https://hawkacademy.co/claude-seo-skills/local-seo-audit"
+    },
+    "nearby": {
+      "title": "Local SEO Audit",
+      "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
+      "url": "https://hawkacademy.co/claude-seo-skills/local-seo-audit"
     },
     "newbie": {
       "title": "The Hawk Academy SEO Roadmap",
@@ -1224,5 +1239,5 @@
       }
     }
   ],
-  "generatedAt": "2026-09-29T23:20:39.479Z"
+  "generatedAt": "2026-09-30T05:54:25.322Z"
 }
