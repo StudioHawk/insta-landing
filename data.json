@@ -275,6 +275,11 @@
       "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
       "url": "https://hawkacademy.co/claude-seo-skills/title-tag-optimizer"
     },
+    "climb": {
+      "title": "Website Gap Finder",
+      "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
+      "url": "https://hawkacademy.co/claude-seo-skills/website-gap"
+    },
     "cls": {
       "title": "Core Web Vitals: A Practical Optimisation Checklist",
       "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
@@ -1239,5 +1244,5 @@
       }
     }
   ],
-  "generatedAt": "2026-09-30T23:22:47.924Z"
+  "generatedAt": "2026-10-01T01:10:28.658Z"
 }
