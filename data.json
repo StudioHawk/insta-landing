@@ -140,6 +140,11 @@
       "description": "Every section a service page needs, in order, with the drawings from the reel, a filled-in example and the checks to run before it goes live. Free.",
       "url": "https://hawkacademy.co/resources/service-page-blueprint"
     },
+    "board": {
+      "title": "AI Visibility Dashboard",
+      "description": "Free Claude skill that builds your AI search board slide: four gauges (Eligible, Chosen, Arriving, Paying off) from real AI answers, GA4 and Search Console.",
+      "url": "https://hawkacademy.co/claude-seo-skills/ai-visibility-dashboard"
+    },
     "booking": {
       "title": "Restaurant SEO Audit",
       "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
@@ -1201,10 +1206,10 @@
     "ai",
     "dpr",
     "digital pr",
-    "brief",
     "journo",
+    "brief",
     "technical",
-    "clarity"
+    "backlink"
   ],
   "youtubeVideos": [
     {
@@ -1244,5 +1249,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-01T01:10:28.658Z"
+  "generatedAt": "2026-10-01T23:37:20.653Z"
 }
