@@ -755,6 +755,11 @@
       "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
       "url": "https://hawkacademy.co/claude-seo-skills/website-gap"
     },
+    "missingpages": {
+      "title": "Website Gap Finder",
+      "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
+      "url": "https://hawkacademy.co/claude-seo-skills/website-gap"
+    },
     "near by": {
       "title": "Local SEO Audit",
       "description": "Audit for local service businesses covering service pages, location pages, trust signals, and Google Business Profile.",
@@ -936,6 +941,11 @@
       "url": "https://hawkacademy.co/seo-guides/ga4-seo-metrics"
     },
     "restaurant": {
+      "title": "Restaurant SEO Audit",
+      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
+      "url": "https://hawkacademy.co/claude-seo-skills/restaurant-seo-audit"
+    },
+    "restaurants": {
       "title": "Restaurant SEO Audit",
       "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
       "url": "https://hawkacademy.co/claude-seo-skills/restaurant-seo-audit"
@@ -1206,8 +1216,8 @@
     "ai",
     "dpr",
     "digital pr",
-    "journo",
     "brief",
+    "journo",
     "technical",
     "backlink"
   ],
@@ -1249,5 +1259,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-01T23:37:20.653Z"
+  "generatedAt": "2026-10-02T23:29:33.433Z"
 }
