@@ -260,6 +260,16 @@
       "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
       "url": "https://hawkacademy.co/claude-seo-skills/ai-visibility"
     },
+    "claude audit": {
+      "title": "How to Use Claude for SEO Audits",
+      "description": "Claude can run every SEO audit, but not well on its own. The 8-step workflow we use at StudioHawk, with a free Claude skill for each step.",
+      "url": "https://hawkacademy.co/seo-guides/how-to-use-claude-for-seo-audits"
+    },
+    "claudeaudit": {
+      "title": "How to Use Claude for SEO Audits",
+      "description": "Claude can run every SEO audit, but not well on its own. The 8-step workflow we use at StudioHawk, with a free Claude skill for each step.",
+      "url": "https://hawkacademy.co/seo-guides/how-to-use-claude-for-seo-audits"
+    },
     "click me": {
       "title": "Information Gain Finder",
       "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
@@ -1259,5 +1269,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-04T22:39:19.248Z"
+  "generatedAt": "2026-10-05T00:48:38.250Z"
 }
