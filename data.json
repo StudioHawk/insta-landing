@@ -795,6 +795,11 @@
       "description": "Generate data-driven PR angles from your own data. Creates pitches, outreach emails, and target journalist lists for link building.",
       "url": "https://hawkacademy.co/claude-seo-skills/data-pr-outreach"
     },
+    "newseo": {
+      "title": "Does Google Penalise AI Content?",
+      "description": "The truth about AI content, SEO and AI search: what Google penalises and what it rewards.",
+      "url": "https://www.youtube.com/watch?v=jF8auonTAEo"
+    },
     "nflinks": {
       "title": "Are nofollow links good for SEO?",
       "description": "",
@@ -1070,6 +1075,11 @@
       "description": "Why site internal structure matters and ensuring search engines efficiently discover key pages.",
       "url": "https://hawkacademy.co/seo-guides/site-architecture-crawl-budget"
     },
+    "slop": {
+      "title": "Does Google Penalise AI Content?",
+      "description": "The truth about AI content, SEO and AI search: what Google penalises and what it rewards.",
+      "url": "https://www.youtube.com/watch?v=jF8auonTAEo"
+    },
     "small biz": {
       "title": "Local AI SEO: The Complete Strategy to Rank in 2026",
       "description": "",
@@ -1229,7 +1239,7 @@
     "brief",
     "journo",
     "backlink",
-    "technical"
+    "blueprint"
   ],
   "youtubeVideos": [
     {
@@ -1269,5 +1279,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-05T00:48:38.250Z"
+  "generatedAt": "2026-10-05T23:34:48.377Z"
 }
