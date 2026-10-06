@@ -1175,6 +1175,11 @@
       "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
       "url": "https://hawkacademy.co/claude-seo-skills/information-gain"
     },
+    "unstuck": {
+      "title": "The Core SEO Skills Pack",
+      "description": "Hawk Academy's core SEO Claude skills, bundled in one download.",
+      "url": "https://hawkacademy.co/claude-seo-skills/core-SEO-skills-pack"
+    },
     "usdpr": {
       "title": "The USA Digital PR Calendar",
       "description": "",
@@ -1279,5 +1284,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-05T23:34:48.377Z"
+  "generatedAt": "2026-10-06T01:04:09.757Z"
 }
