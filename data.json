@@ -1248,6 +1248,15 @@
   ],
   "youtubeVideos": [
     {
+      "id": "6_x-OsOMmFs",
+      "title": "WordPress vs Claude Code: Which Gets You Found on Google & AI in 2026?",
+      "url": "https://youtu.be/6_x-OsOMmFs",
+      "thumbnails": {
+        "medium": "https://i.ytimg.com/vi/6_x-OsOMmFs/mqdefault.jpg",
+        "maxres": "https://i.ytimg.com/vi/6_x-OsOMmFs/maxresdefault.jpg"
+      }
+    },
+    {
       "id": "jF8auonTAEo",
       "title": "Does Google Penalise AI Content? The Truth About SEO & AI Search",
       "url": "https://youtu.be/jF8auonTAEo",
@@ -1273,16 +1282,7 @@
         "medium": "https://i.ytimg.com/vi/KO1PudJpXJU/mqdefault.jpg",
         "maxres": "https://i.ytimg.com/vi/KO1PudJpXJU/maxresdefault.jpg"
       }
-    },
-    {
-      "id": "Q3ZBZGwpoG0",
-      "title": "How Google Really Ranks Websites (I Read Their Secret 182-Page Rulebook)",
-      "url": "https://youtu.be/Q3ZBZGwpoG0",
-      "thumbnails": {
-        "medium": "https://i.ytimg.com/vi/Q3ZBZGwpoG0/mqdefault.jpg",
-        "maxres": "https://i.ytimg.com/vi/Q3ZBZGwpoG0/maxresdefault.jpg"
-      }
     }
   ],
-  "generatedAt": "2026-10-06T01:04:09.757Z"
+  "generatedAt": "2026-10-06T23:29:56.274Z"
 }
