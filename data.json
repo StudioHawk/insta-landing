@@ -625,6 +625,11 @@
       "description": "",
       "url": "https://www.youtube.com/watch?v=Q3ZBZGwpoG0&t=15s"
     },
+    "jetpack": {
+      "title": "The Core SEO Skills Pack",
+      "description": "Free Core SEO Skills Pack for Claude: four skills in one download for technical audits, content briefs, data PR outreach and the 3 Ranking Laws Auditor.",
+      "url": "https://hawkacademy.co/claude-seo-skills/core-SEO-skills-pack"
+    },
     "journey": {
       "title": "The Hawk Academy SEO Roadmap",
       "description": "The 10-step SEO roadmap StudioHawk uses to train a 120-person SEO agency. Maps every step to a free Hawk Academy guide, Claude skill, tool, and course module.",
@@ -1284,5 +1289,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-07T04:27:39.644Z"
+  "generatedAt": "2026-10-07T04:29:28.580Z"
 }
