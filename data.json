@@ -1135,6 +1135,11 @@
       "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
       "url": "https://hawkacademy.co/claude-seo-skills/title-tag-optimizer"
     },
+    "topic": {
+      "title": "Topical Authority Map Skill",
+      "description": "Free topical authority map skill for Claude: build Core, AOR, Linking and Buyer Journey clusters plus a 12-week publishing order from any seed keyword.",
+      "url": "https://hawkacademy.co/claude-seo-skills/topical-authority-map"
+    },
     "topic clusters": {
       "title": "Website Gap Finder",
       "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
@@ -1289,5 +1294,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-07T04:29:28.580Z"
+  "generatedAt": "2026-10-07T05:44:17.005Z"
 }
