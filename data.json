@@ -1080,6 +1080,11 @@
       "description": "Why site internal structure matters and ensuring search engines efficiently discover key pages.",
       "url": "https://hawkacademy.co/seo-guides/site-architecture-crawl-budget"
     },
+    "skillz": {
+      "title": "Free Claude SEO Skills",
+      "description": "",
+      "url": "https://hawkacademy.co/claude-seo-skills"
+    },
     "slop": {
       "title": "Does Google Penalise AI Content?",
       "description": "The truth about AI content, SEO and AI search: what Google penalises and what it rewards.",
@@ -1252,9 +1257,9 @@
     "dpr",
     "digital pr",
     "brief",
+    "technical",
     "journo",
-    "backlink",
-    "blueprint"
+    "backlink"
   ],
   "youtubeVideos": [
     {
@@ -1294,5 +1299,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-07T05:44:17.005Z"
+  "generatedAt": "2026-10-07T23:58:02.721Z"
 }
