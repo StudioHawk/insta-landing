@@ -410,6 +410,11 @@
       "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
       "url": "https://hawkacademy.co/claude-seo-skills/title-tag-optimizer"
     },
+    "datapr": {
+      "title": "Data PR & Outreach",
+      "description": "Generate data-driven PR angles from your own data. Creates pitches, outreach emails, and target journalist lists for link building.",
+      "url": "https://hawkacademy.co/claude-seo-skills/data-pr-outreach"
+    },
     "digital pr": {
       "title": "Digital PR for Link Building: Strategies That Scale",
       "description": "Earning high-quality editorial backlinks through data-driven digital PR and newsworthy content campaigns.",
@@ -1319,5 +1324,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-08T03:01:01.415Z"
+  "generatedAt": "2026-10-08T03:15:20.900Z"
 }
