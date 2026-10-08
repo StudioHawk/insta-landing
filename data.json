@@ -1165,6 +1165,11 @@
       "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
       "url": "https://hawkacademy.co/seo-guides/content-hub-topic-clusters"
     },
+    "tourism": {
+      "title": "Free Backlinks and Listings for Australian Hospitality and Tourism",
+      "description": "11 free backlinks and listings for Australian hospitality and tourism: ATDW, Tripadvisor, AGFG and more, checked 25 Sep 2026.",
+      "url": "https://hawkacademy.co/resources/free-backlinks-for-hospitality"
+    },
     "trades": {
       "title": "Free Backlinks and Listings for Australian Tradies",
       "description": "18 free backlinks and listings for Australian tradies and home services: licence registers, trade directories and marketplaces, checked 25 Sep 2026.",
@@ -1314,5 +1319,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-08T01:39:29.105Z"
+  "generatedAt": "2026-10-08T01:42:36.611Z"
 }
