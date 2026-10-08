@@ -300,6 +300,11 @@
       "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
       "url": "https://hawkacademy.co/claude-seo-skills/website-gap"
     },
+    "clinic": {
+      "title": "Free Backlinks and Listings for Australian Health Practices",
+      "description": "16 free backlinks and listings for Australian health practices: the National Health Services Directory, Ahpra and booking platforms, checked 25 Sep 2026.",
+      "url": "https://hawkacademy.co/resources/free-backlinks-for-health-practices"
+    },
     "cls": {
       "title": "Core Web Vitals: A Practical Optimisation Checklist",
       "description": "Instructions to diagnose and fix LCP, CLS, and INP issues affecting search performance.",
@@ -1324,5 +1329,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-08T03:22:42.117Z"
+  "generatedAt": "2026-10-08T03:31:36.250Z"
 }
