@@ -1020,6 +1020,11 @@
       "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
       "url": "https://hawkacademy.co/claude-seo-skills/b2b-seo-audit"
     },
+    "saaslinks": {
+      "title": "Free Backlinks and Listings for SaaS and Software",
+      "description": "15 free backlinks and listings for SaaS and software companies: G2, Capterra, TrustRadius, launch sites and more, checked 25 Sep 2026.",
+      "url": "https://hawkacademy.co/resources/free-backlinks-for-saas"
+    },
     "score": {
       "title": "Website Score Check",
       "description": "Rate your website 0-5 on the 5 features every site winning on Google has. Based on a study of 400 websites.",
@@ -1329,5 +1334,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-08T03:31:36.250Z"
+  "generatedAt": "2026-10-08T03:35:09.028Z"
 }
