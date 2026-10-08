@@ -1155,6 +1155,11 @@
       "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
       "url": "https://hawkacademy.co/seo-guides/content-hub-topic-clusters"
     },
+    "trades": {
+      "title": "Free Backlinks and Listings for Australian Tradies",
+      "description": "18 free backlinks and listings for Australian tradies and home services: licence registers, trade directories and marketplaces, checked 25 Sep 2026.",
+      "url": "https://hawkacademy.co/resources/free-backlinks-for-tradies"
+    },
     "trust": {
       "title": "Google Trust Check",
       "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
@@ -1299,5 +1304,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-07T23:58:02.721Z"
+  "generatedAt": "2026-10-08T00:32:20.388Z"
 }
