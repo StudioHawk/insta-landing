@@ -105,6 +105,11 @@
       "description": "Audit for B2B services covering service pages, thought leadership, case studies, and lead generation paths.",
       "url": "https://hawkacademy.co/claude-seo-skills/b2b-seo-audit"
     },
+    "b2blinks": {
+      "title": "Free Backlinks and Listings for B2B Agencies and Service Firms",
+      "description": "12 free backlinks and listings for B2B agencies and service firms: Clutch, The Manifest, GoodFirms and more, checked 25 Sep 2026.",
+      "url": "https://hawkacademy.co/resources/free-backlinks-for-agencies"
+    },
     "backlink": {
       "title": "Every Way to Get Backlinks in 2026 (Free to Expert Level)",
       "description": "",
@@ -664,6 +669,11 @@
       "title": "The AI Keyword Sheet",
       "description": "Free Google Sheet that bulk-converts your keyword export into the questions people ask ChatGPT and Gemini, with persona and intent for every row.",
       "url": "https://hawkacademy.co/resources/ai-keyword-sheet"
+    },
+    "lawyer": {
+      "title": "Free Backlinks and Listings for US Lawyers and Law Firms",
+      "description": "13 free backlinks and listings for US lawyers and law firms: Avvo, Justia, Martindale and more, checked 25 Sep 2026.",
+      "url": "https://hawkacademy.co/resources/free-backlinks-for-lawyers"
     },
     "lcp": {
       "title": "Core Web Vitals: A Practical Optimisation Checklist",
@@ -1304,5 +1314,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-08T00:32:20.388Z"
+  "generatedAt": "2026-10-08T01:39:29.105Z"
 }
