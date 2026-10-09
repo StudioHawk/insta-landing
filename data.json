@@ -80,6 +80,11 @@
       "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
       "url": "https://hawkacademy.co/seo-guides/ga4-seo-metrics"
     },
+    "angles": {
+      "title": "The Digital PR Ideation Sheet",
+      "description": "The free ideation sheet we fill in before every digital PR campaign. Four angle shapes with a fill-in formula each, and a blank template with the three checks an idea has to pass.",
+      "url": "https://hawkacademy.co/resources/digital-pr-ideation-sheet"
+    },
     "audit": {
       "title": "Website Score Check",
       "description": "Rate your website 0-5 on the 5 features every site winning on Google has. Based on a study of 400 websites.",
@@ -780,6 +785,11 @@
       "description": "Identifying Google Analytics 4 reports and metrics that provide genuine insight into organic search performance.",
       "url": "https://hawkacademy.co/seo-guides/ga4-seo-metrics"
     },
+    "migrate": {
+      "title": "Website Migration",
+      "description": "Free website migration skill: give it the old site and the new one. It maps every URL to where it is going, flags the pages with nowhere to land, and gives you the launch-day checklist.",
+      "url": "https://hawkacademy.co/claude-seo-skills/website-migration"
+    },
     "mike": {
       "title": "The Hawk Academy SEO Roadmap",
       "description": "The 10-step SEO roadmap StudioHawk uses to train a 120-person SEO agency. Maps every step to a free Hawk Academy guide, Claude skill, tool, and course module.",
@@ -1334,5 +1344,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-09T00:05:49.648Z"
+  "generatedAt": "2026-10-09T03:20:49.028Z"
 }
