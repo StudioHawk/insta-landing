@@ -435,6 +435,11 @@
       "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
       "url": "https://hawkacademy.co/claude-seo-skills/restaurant-seo-audit"
     },
+    "dinner": {
+      "title": "Local AI SEO: The Complete Strategy to Rank in 2026",
+      "description": "",
+      "url": "https://www.youtube.com/watch?v=vugUqC8XoH0"
+    },
     "dpr": {
       "title": "Digital PR Strategy: The 5-Step System to Rank in AI Search",
       "description": "",
@@ -775,6 +780,11 @@
       "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
       "url": "https://hawkacademy.co/claude-seo-skills/restaurant-seo-audit"
     },
+    "merchant": {
+      "title": "Merchant Center Optimizer",
+      "description": "Free Google Merchant Center skill for Claude: triages disapprovals, rewrites feed titles for query matching, fills attributes and ranks fixes by revenue.",
+      "url": "https://hawkacademy.co/claude-seo-skills/merchant-center-optimizer"
+    },
     "meta title": {
       "title": "Title Tag Optimizer",
       "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
@@ -933,7 +943,12 @@
     "patent": {
       "title": "I Read Every Google Patent. Here's How They Actually Rank Websites.",
       "description": "",
-      "url": "https://www.youtube.com/watch?v=djt17f1OWtE&t=22s"
+      "url": "https://www.youtube.com/watch?v=djt17f1OWtE"
+    },
+    "patents": {
+      "title": "I Read Every Google Patent. Here's How They Actually Rank Websites.",
+      "description": "",
+      "url": "https://www.youtube.com/watch?v=djt17f1OWtE"
     },
     "performance": {
       "title": "Core Web Vitals: A Practical Optimisation Checklist",
@@ -984,6 +999,16 @@
       "title": "The SOURC-E Framework: How to Rank in AI Search",
       "description": "SOURC-E is StudioHawk's six-pillar framework for ranking in AI search: Structure, Offsite, Uniqueness, Relevance, Credibility, Evaluation. The formula, the order to run it, and the free tools for each pillar.",
       "url": "https://hawkacademy.co/seo-guides/sourc-e-framework"
+    },
+    "render me": {
+      "title": "Can AI See Your Page?",
+      "description": "Paste a URL and see in one click whether your content is visible to AI crawlers that do not run JavaScript (GPTBot, ClaudeBot, PerplexityBot). Checks the raw HTML for your heading, content, links and schema. Free, no login.",
+      "url": "https://hawkacademy.co/seo-tools/can-ai-see-your-page/"
+    },
+    "renderme": {
+      "title": "Can AI See Your Page?",
+      "description": "Paste a URL and see in one click whether your content is visible to AI crawlers that do not run JavaScript (GPTBot, ClaudeBot, PerplexityBot). Checks the raw HTML for your heading, content, links and schema. Free, no login.",
+      "url": "https://hawkacademy.co/seo-tools/can-ai-see-your-page/"
     },
     "reporting": {
       "title": "GA4 for SEO: The Metrics That Actually Matter",
@@ -1344,5 +1369,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-09T03:20:49.028Z"
+  "generatedAt": "2026-10-09T03:31:32.043Z"
 }
