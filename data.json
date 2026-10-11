@@ -185,6 +185,11 @@
       "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
       "url": "https://hawkacademy.co/claude-seo-skills/ai-visibility"
     },
+    "canadalinks": {
+      "title": "Free Canadian Backlinks and Listings",
+      "description": "65 free Canadian backlinks and listings, checked on 10 Oct 2026: federal and provincial supplier portals, Canadian directories, PR platforms and startup profiles.",
+      "url": "https://hawkacademy.co/resources/free-canadian-backlinks"
+    },
     "canibal": {
       "title": "Cannibalization Detector",
       "description": "Free keyword cannibalisation skill for Claude: finds queries where your own pages compete in Search Console, then gives one fix per query, worst first.",
@@ -1374,5 +1379,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-10T23:08:01.788Z"
+  "generatedAt": "2026-10-11T23:22:01.693Z"
 }
