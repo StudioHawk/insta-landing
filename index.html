@@ -295,6 +295,20 @@
         openYouTube(y);
       });
 
+      // ---- StudioHawk market rows --------------------------------------
+      // On a phone these navigate in this tab. A new tab either fails to
+      // open at all in the Instagram browser or strands the visitor in a
+      // second one, which matters most on the audit and contact links.
+      // Desktop keeps the new tab.
+      var IS_TOUCH = (window.matchMedia && matchMedia("(hover: none)").matches) ||
+        navigator.maxTouchPoints > 0;
+      document.addEventListener("click", function (ev) {
+        var row = ev.target.closest && ev.target.closest(".market");
+        if (!row || !IS_TOUCH || ev.defaultPrevented || ev.metaKey || ev.ctrlKey || ev.shiftKey) return;
+        ev.preventDefault();
+        window.location.href = row.href;
+      });
+
       // Tag the hard-coded links in the markup. Anything without data-utm
       // (and anything off-domain) is left exactly as authored.
       function tagStaticLinks() {
