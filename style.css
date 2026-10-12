@@ -47,12 +47,6 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
   margin: 0 auto 10px;
   color: var(--fg);
 }
-.bio-creds {
-  font-size: 13px;
-  color: var(--muted);
-  margin: 0 auto 14px;
-  max-width: 460px;
-}
 .bio-line {
   font-size: 14px;
   color: var(--fg);
@@ -60,37 +54,37 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
 }
 .bio-line a { color: var(--accent-cyan); text-decoration: none; font-weight: 500; }
 .bio-line a:hover { text-decoration: underline; }
+/* The course link reads as a link at a glance, as in the mockup. */
+.bio-line a[data-utm="bio-course"] { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 .bio-emoji { font-style: normal; margin-right: 4px; }
 .bio-geo { color: var(--muted); }
-.bio-arrow { color: var(--accent-green); font-weight: 700; margin-left: 2px; }
 
-/* ===== Social buttons ===== */
+/* ===== Social icons (beside the bio) ===== */
 .socials {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
-  margin-top: 16px;   /* sits directly under the popular chips */
+  gap: 10px;
+  margin: 2px 0 12px;
 }
 .social-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 999px;
-  font-size: 13px;
   color: var(--fg);
   text-decoration: none;
   transition: border-color 0.15s, background 0.15s, transform 0.15s;
 }
-.social-btn:hover {
+.social-btn:hover, .social-btn:focus-visible {
   border-color: var(--accent-cyan);
   background: rgba(1,255,255,0.08);
   transform: translateY(-1px);
+  outline: none;
 }
-.social-btn svg { flex-shrink: 0; }
 
 /* ===== Search ===== */
 .search { margin-top: 34px; margin-bottom: 0; text-align: center; }
@@ -149,7 +143,7 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
   overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
 }
 
-/* Tappable keyword chips: the popular row under the box, and "Did you mean" */
+/* Tappable "Did you mean" chips under a near-miss search */
 .chips {
   display: flex;
   flex-wrap: nowrap;              /* one row, always */
@@ -355,28 +349,59 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
 }
 .card-cta-free:hover { filter: brightness(1.1); transform: translateY(-1px); }
 
-/* StudioHawk — cyan border, gold badge, enterprise */
+/* StudioHawk: cyan border, gold badge, one row per market. The card is a
+   container, not a link, so only its market rows react to hover. */
 .card-studiohawk {
   background:
     radial-gradient(ellipse at top right, rgba(1,255,255,0.08), transparent 55%),
     var(--surface);
   border-color: rgba(1,255,255,0.25);
 }
-.card-studiohawk:hover {
-  border-color: rgba(1,255,255,0.5);
-  box-shadow: 0 0 0 4px rgba(1,255,255,0.06);
-}
+.card-studiohawk:hover { transform: none; }
+.card-studiohawk .card-sub { color: var(--fg); margin-bottom: 14px; }
 .card-badge-gold {
   background: rgba(255,210,122,0.12);
   color: var(--accent-gold);
   border: 1px solid rgba(255,210,122,0.3);
 }
-.card-studiohawk .stat strong { color: var(--accent-cyan); }
-.card-cta-studiohawk {
+.markets { display: flex; flex-direction: column; gap: 8px; }
+.market {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 10px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--fg);
+  transition: border-color 0.15s, background 0.15s, transform 0.15s, filter 0.15s;
+}
+.market:hover, .market:focus-visible {
+  border-color: var(--accent-cyan);
+  background: rgba(1,255,255,0.07);
+  transform: translateY(-1px);
+  outline: none;
+}
+.market-flag { font-size: 20px; line-height: 1; flex-shrink: 0; }
+.market-text { display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0; }
+.market-name { font-size: 15px; font-weight: 600; }
+.market-for { font-size: 12px; margin-top: 2px; }
+.market-cta { color: var(--accent-cyan); font-size: 14px; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
+/* The one filled button on the card: the US audit. */
+.market-primary {
   background: var(--accent-cyan);
+  border-color: var(--accent-cyan);
   color: var(--bg);
 }
-.card-cta-studiohawk:hover { filter: brightness(1.05); transform: translateY(-1px); }
+.market-primary .market-cta { color: var(--bg); }
+.market-primary:hover, .market-primary:focus-visible {
+  background: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  filter: brightness(1.06);
+}
+.card-proof { margin: 14px 0 0; font-size: 12.5px; line-height: 1.5; color: var(--muted); }
 
 /* Slim contact card — sits below the three main cards, understated */
 .card-slim {
@@ -399,107 +424,6 @@ main { max-width: 580px; margin: 0 auto; padding: 28px 20px 60px; }
 .slim-title { font-weight: 600; font-size: 14px; }
 .slim-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
 .slim-arrow { color: var(--accent-cyan); font-size: 18px; font-weight: 700; }
-
-/* ===== Region picker (opened by the StudioHawk card) ===== */
-body.modal-open {
-  position: fixed;
-  left: 0;
-  right: 0;
-  width: 100%;
-  overflow: hidden;
-}
-.modal {
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-.modal[hidden] { display: none; }
-.modal-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(3, 3, 10, 0.72);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-}
-@keyframes sheet-in {
-  from { transform: translateY(14px); opacity: 0; }
-  to { transform: none; opacity: 1; }
-}
-.modal-panel {
-  position: relative;
-  animation: sheet-in 0.18s ease-out;
-  width: 100%;
-  max-width: 400px;
-  padding: 22px 20px 20px;
-  background:
-    radial-gradient(ellipse at top right, rgba(1,255,255,0.10), transparent 60%),
-    var(--surface);
-  border: 1px solid rgba(1,255,255,0.28);
-  border-radius: 18px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.55);
-}
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 34px;
-  height: 34px;
-  font: inherit;
-  font-size: 20px;
-  line-height: 1;
-  color: var(--muted);
-  background: transparent;
-  border: 1px solid transparent;
-  border-radius: 999px;
-  cursor: pointer;
-}
-.modal-close:hover, .modal-close:focus-visible {
-  color: var(--fg);
-  border-color: var(--border);
-  outline: none;
-}
-.modal-title {
-  font-size: 19px;
-  font-weight: 800;
-  letter-spacing: -0.015em;
-  margin: 0 0 4px;
-}
-.modal-sub {
-  font-size: 13px;
-  color: var(--muted);
-  margin: 0 0 16px;
-  line-height: 1.45;
-}
-.region {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 14px;
-  margin-bottom: 8px;
-  min-height: 56px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  text-decoration: none;
-  color: var(--fg);
-  transition: border-color 0.15s, background 0.15s, transform 0.15s;
-}
-.region:last-child { margin-bottom: 0; }
-.region:hover, .region:focus-visible {
-  border-color: var(--accent-cyan);
-  background: rgba(1,255,255,0.07);
-  transform: translateY(-1px);
-  outline: none;
-}
-.region-flag { font-size: 22px; line-height: 1; flex-shrink: 0; }
-.region-text { display: flex; flex-direction: column; flex: 1 1 auto; }
-.region-name { font-size: 15px; font-weight: 600; }
-.region-host { font-size: 12px; color: var(--muted); margin-top: 2px; }
-.region-arrow { color: var(--accent-cyan); font-size: 17px; font-weight: 700; flex-shrink: 0; }
 
 /* ===== Footer ===== */
 .footer {
@@ -524,33 +448,11 @@ body.modal-open {
   .card { padding: 18px; }
   .card-title { font-size: 19px; }
   .card-stats { gap: 16px; }
-  .socials { gap: 6px; }
-  .social-btn { padding: 7px 12px; font-size: 12px; }
-
-  .modal { align-items: flex-end; padding: 0; }
-  /* Blurring a full-screen layer is expensive in an in-app browser. */
-  .modal-backdrop {
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
-    background: rgba(3, 3, 10, 0.82);
-  }
-  @keyframes sheet-in {
-    from { transform: translateY(100%); }
-    to { transform: none; }
-  }
-  .modal-panel {
-    max-width: none;
-    border-radius: 18px 18px 0 0;
-    border-bottom: none;
-    padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
-  }
-
-  /* One order everywhere now: bio, search, pills, videos, cards. */
+  .market { padding: 10px 12px; gap: 8px; }
+  .market-name { font-size: 14px; }
+  .market-cta { font-size: 13px; }
   .search { margin-top: 26px; }
   .yt-play { width: 30px; height: 30px; }
   .yt-play svg { width: 14px; height: 14px; }
   .yt-card-hero .yt-play { width: 50px; height: 50px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .modal-panel { animation: none; }
 }
