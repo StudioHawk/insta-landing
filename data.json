@@ -995,6 +995,11 @@
       "description": "Free Google Sheet that bulk-converts your keyword export into the questions people ask ChatGPT and Gemini, with persona and intent for every row.",
       "url": "https://hawkacademy.co/resources/ai-keyword-sheet"
     },
+    "proofsort": {
+      "title": "Review Proof Sorter",
+      "description": "Free Claude skill that sorts your Google reviews by service and suburb and writes a proof block for each service page: the best quotes word for word.",
+      "url": "https://hawkacademy.co/claude-seo-skills/review-proof-sorter"
+    },
     "radar": {
       "title": "How to Measure AI Search Visibility (With Free Tools)",
       "description": "AI visibility is measurable across four layers: crawl, retrieval, citation and traffic. The free measurement stack: Microsoft Clarity, Bing Citation Share, a prompt library and GA4. Set it up in an hour.",
@@ -1379,5 +1384,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-11T23:22:01.693Z"
+  "generatedAt": "2026-10-12T00:35:44.026Z"
 }
