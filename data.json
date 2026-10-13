@@ -650,6 +650,11 @@
       "description": "Why site internal structure matters and ensuring search engines efficiently discover key pages.",
       "url": "https://hawkacademy.co/seo-guides/site-architecture-crawl-budget"
     },
+    "internallinking": {
+      "title": "Site Architecture and Crawl Budget",
+      "description": "Why site internal structure matters and ensuring search engines efficiently discover key pages.",
+      "url": "https://hawkacademy.co/seo-guides/site-architecture-crawl-budget"
+    },
     "island": {
       "title": "How Google Really Ranks Websites (I Read Their Secret 182-Page Rulebook)",
       "description": "",
@@ -1349,7 +1354,7 @@
     "brief",
     "technical",
     "journo",
-    "backlink"
+    "news"
   ],
   "youtubeVideos": [
     {
@@ -1389,5 +1394,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-13T01:45:35.581Z"
+  "generatedAt": "2026-10-13T22:55:10.730Z"
 }
