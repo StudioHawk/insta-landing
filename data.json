@@ -1155,6 +1155,11 @@
       "description": "Why site internal structure matters and ensuring search engines efficiently discover key pages.",
       "url": "https://hawkacademy.co/seo-guides/site-architecture-crawl-budget"
     },
+    "skillset": {
+      "title": "12 free Claude skills every SEO should use",
+      "description": "12 free Claude skills to find what&#x27;s broken on your site, get found in AI search and win more clicks. Free downloads from Hawk Academy.",
+      "url": "https://hawkacademy.co/skillset"
+    },
     "skillz": {
       "title": "Free Claude SEO Skills",
       "description": "",
@@ -1384,5 +1389,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-12T04:07:10.972Z"
+  "generatedAt": "2026-10-13T01:20:57.580Z"
 }
