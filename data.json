@@ -1160,6 +1160,11 @@
       "description": "Why site internal structure matters and ensuring search engines efficiently discover key pages.",
       "url": "https://hawkacademy.co/seo-guides/site-architecture-crawl-budget"
     },
+    "sitecheck": {
+      "title": "Technical SEO Audit",
+      "description": "Full technical audit of your site. Checks crawlability, indexation, Core Web Vitals, schema, and internal linking with prioritised fixes.",
+      "url": "https://hawkacademy.co/claude-seo-skills/technical-seo-audit"
+    },
     "skillset": {
       "title": "12 free Claude skills every SEO should use",
       "description": "12 free Claude skills to find what&#x27;s broken on your site, get found in AI search and win more clicks. Free downloads from Hawk Academy.",
@@ -1394,5 +1399,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-14T22:55:34.361Z"
+  "generatedAt": "2026-10-14T23:44:56.733Z"
 }
