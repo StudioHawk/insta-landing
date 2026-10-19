@@ -375,6 +375,11 @@
       "description": "Find every page your website is missing. Get a prioritised 4-week content plan based on what your customers search for.",
       "url": "https://hawkacademy.co/claude-seo-skills/website-gap"
     },
+    "contenthub": {
+      "title": "Building a Content Hub: Topic Clusters That Rank",
+      "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
+      "url": "https://hawkacademy.co/seo-guides/content-hub-topic-clusters"
+    },
     "core": {
       "title": "The Core SEO Skills Pack",
       "description": "Free Core SEO Skills Pack for Claude: four skills in one download for technical audits, content briefs, data PR outreach and the 3 Ranking Laws Auditor.",
@@ -1419,5 +1424,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-19T04:46:33.297Z"
+  "generatedAt": "2026-10-19T05:15:59.337Z"
 }
