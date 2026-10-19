@@ -1051,9 +1051,9 @@
       "url": "https://hawkacademy.co/claude-seo-skills/restaurant-seo-audit"
     },
     "reviews": {
-      "title": "Restaurant SEO Audit",
-      "description": "Audit for restaurants and hospitality covering menu content, map embeds, booking flow, and review management.",
-      "url": "https://hawkacademy.co/claude-seo-skills/restaurant-seo-audit"
+      "title": "Review Proof Sorter",
+      "description": "Free Claude skill that sorts your Google reviews by service and suburb and writes a proof block for each service page: the best quotes word for word.",
+      "url": "https://hawkacademy.co/claude-seo-skills/review-proof-sorter"
     },
     "roadmap": {
       "title": "The Hawk Academy SEO Roadmap",
@@ -1404,5 +1404,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-19T02:51:29.746Z"
+  "generatedAt": "2026-10-19T04:03:49.646Z"
 }
