@@ -240,6 +240,11 @@
       "description": "Getting your brand cited by AI assistants and large language model search experiences.",
       "url": "https://hawkacademy.co/seo-guides/optimising-for-chatgpt-perplexity-llm"
     },
+    "checklist": {
+      "title": "The Website Migration Checklist",
+      "description": "A free website migration checklist for a rebuild, a new platform, a new domain or new URLs: what to do before you build, on launch day and in the months after.",
+      "url": "https://hawkacademy.co/resources/website-migration-checklist"
+    },
     "ciatation": {
       "title": "Bing Citation Share: How to See (and Grow) Your Slice of AI Answers",
       "description": "Bing Webmaster Tools now shows your Citation Share: the percentage of AI answer citations that are yours. How to find it, read Intents, Topics and Compare, and grow it. Free.",
@@ -1404,5 +1409,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-19T04:20:24.868Z"
+  "generatedAt": "2026-10-19T04:23:15.464Z"
 }
