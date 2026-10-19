@@ -1115,6 +1115,11 @@
       "description": "Everything needed for ranking in search engines, from keyword research through on-page optimization.",
       "url": "https://hawkacademy.co/seo-guides/beginners-guide-to-seo-2026"
     },
+    "seogets": {
+      "title": "Set Up SEO Gets and Run the Brand Credit Check",
+      "description": "Set up SEO Gets free, connect Google Search Console, add your brand terms, then split your clicks into branded and non-branded to see who's new.",
+      "url": "https://hawkacademy.co/resources/seo-gets-setup-guide"
+    },
     "serp": {
       "title": "Title Tag Optimizer",
       "description": "Get more clicks from the same rankings. Generates optimised title tags using 5 proven formulas.",
@@ -1300,6 +1305,11 @@
       "description": "Find where your content just repeats what Google already knows. Add the unique knowledge that only you can provide.",
       "url": "https://hawkacademy.co/claude-seo-skills/information-gain"
     },
+    "universal": {
+      "title": "Get Your Products Into Google's Universal Cart",
+      "description": "How to get your products into Google's Universal Cart and checkout inside Google if you're not on Shopify: Merchant Center, the interest form, UCP and going live.",
+      "url": "https://hawkacademy.co/resources/google-universal-cart-setup"
+    },
     "unstuck": {
       "title": "The Core SEO Skills Pack",
       "description": "Hawk Academy's core SEO Claude skills, bundled in one download.",
@@ -1409,5 +1419,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-19T04:23:15.464Z"
+  "generatedAt": "2026-10-19T04:46:33.297Z"
 }
