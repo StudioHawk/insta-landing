@@ -1200,6 +1200,16 @@
       "description": "The truth about AI content, SEO and AI search: what Google penalises and what it rewards.",
       "url": "https://www.youtube.com/watch?v=jF8auonTAEo"
     },
+    "slow work": {
+      "title": "AI made most of this an afternoon",
+      "description": "Five free Claude skills in one download that draft, check and plan your page copy, location pages, own data, topical maps and digital PR.",
+      "url": "https://hawkacademy.co/claude-seo-skills/afternoon-pack"
+    },
+    "slowwork": {
+      "title": "AI made most of this an afternoon",
+      "description": "Five free Claude skills in one download that draft, check and plan your page copy, location pages, own data, topical maps and digital PR.",
+      "url": "https://hawkacademy.co/claude-seo-skills/afternoon-pack"
+    },
     "small biz": {
       "title": "Local AI SEO: The Complete Strategy to Rank in 2026",
       "description": "",
@@ -1424,5 +1434,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-19T05:15:59.337Z"
+  "generatedAt": "2026-10-19T05:38:07.430Z"
 }
