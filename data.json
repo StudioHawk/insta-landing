@@ -560,6 +560,11 @@
       "description": "A free, vetted checklist of 123 legitimate places to earn a backlink, no spam, no paid links. Make a copy of the sheet and work it top down. From Hawk Academy by StudioHawk.",
       "url": "https://hawkacademy.co/resources/free-backlinks"
     },
+    "glossary": {
+      "title": "SEO Glossary",
+      "description": "Plain-English definitions of SEO and AI search terms, from GEO and AI crawlers to SERP. Each one checked against its primary source and linked to a free tool.",
+      "url": "https://hawkacademy.co/glossary"
+    },
     "google": {
       "title": "Google Trust Check",
       "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
@@ -1393,8 +1398,8 @@
     "digital pr",
     "backlink",
     "brief",
-    "technical",
-    "blueprint"
+    "news",
+    "technical"
   ],
   "youtubeVideos": [
     {
@@ -1434,5 +1439,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-19T23:15:09.211Z"
+  "generatedAt": "2026-10-20T01:13:13.664Z"
 }
