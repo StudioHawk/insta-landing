@@ -1403,6 +1403,15 @@
   ],
   "youtubeVideos": [
     {
+      "id": "HVh9Z-D__M4",
+      "title": "I Read Every Google Trial Document, Here's What They Admitted.",
+      "url": "https://youtu.be/HVh9Z-D__M4",
+      "thumbnails": {
+        "medium": "https://i.ytimg.com/vi/HVh9Z-D__M4/mqdefault.jpg",
+        "maxres": "https://i.ytimg.com/vi/HVh9Z-D__M4/maxresdefault.jpg"
+      }
+    },
+    {
       "id": "6_x-OsOMmFs",
       "title": "Did Claude Code Just Kill WordPress? (The Honest Answer)",
       "url": "https://youtu.be/6_x-OsOMmFs",
@@ -1428,16 +1437,7 @@
         "medium": "https://i.ytimg.com/vi/qks6Bf-N_xg/mqdefault.jpg",
         "maxres": "https://i.ytimg.com/vi/qks6Bf-N_xg/maxresdefault.jpg"
       }
-    },
-    {
-      "id": "KO1PudJpXJU",
-      "title": "The Biggest Lie in SEO: Page Speed Scores (Do This Instead)",
-      "url": "https://youtu.be/KO1PudJpXJU",
-      "thumbnails": {
-        "medium": "https://i.ytimg.com/vi/KO1PudJpXJU/mqdefault.jpg",
-        "maxres": "https://i.ytimg.com/vi/KO1PudJpXJU/maxresdefault.jpg"
-      }
     }
   ],
-  "generatedAt": "2026-10-20T22:52:50.770Z"
+  "generatedAt": "2026-10-21T22:57:49.111Z"
 }
