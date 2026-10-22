@@ -400,6 +400,11 @@
       "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
       "url": "https://hawkacademy.co/seo-tools/ad-spend-calculator"
     },
+    "court": {
+      "title": "I Read Every Google Trial Document",
+      "description": "What Google admitted about ranking in its own trial documents.",
+      "url": "https://www.youtube.com/watch?v=HVh9Z-D__M4"
+    },
     "cpc": {
       "title": "Ad Spend Calculator",
       "description": "See what Google Ads really cost you over 3 years vs the free organic traffic you could be getting. Interactive calculator with industry CPC data.",
@@ -1439,5 +1444,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-21T22:57:49.111Z"
+  "generatedAt": "2026-10-22T00:07:57.079Z"
 }
