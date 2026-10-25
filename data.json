@@ -1399,12 +1399,12 @@
   "popular": [
     "backlinks",
     "dpr",
-    "ai",
     "digital pr",
+    "ai",
+    "technical",
     "backlink",
     "brief",
-    "news",
-    "technical"
+    "news"
   ],
   "youtubeVideos": [
     {
@@ -1444,5 +1444,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-24T22:10:55.572Z"
+  "generatedAt": "2026-10-25T22:13:37.458Z"
 }
