@@ -610,6 +610,11 @@
       "description": "Set up Google Search Console in 5 minutes. Find striking distance keywords and the free traffic hiding in your data.",
       "url": "https://hawkacademy.co/claude-seo-skills/gsc-quick-start"
     },
+    "grounding": {
+      "title": "SOURCE Grounding",
+      "description": "Free Claude skill that sorts any list of SEO suggestions, from an AI agent, an audit tool or an agency, into approve, check first, park and drop, and names the one problem to fix for 90 days.",
+      "url": "https://hawkacademy.co/claude-seo-skills/source-grounding"
+    },
     "gsc": {
       "title": "Search Console Quick Start",
       "description": "Set up Google Search Console in 5 minutes. Find striking distance keywords and the free traffic hiding in your data.",
@@ -1444,5 +1449,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-26T23:30:39.319Z"
+  "generatedAt": "2026-10-27T22:51:44.270Z"
 }
