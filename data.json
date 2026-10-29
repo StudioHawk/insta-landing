@@ -5,6 +5,11 @@
       "description": "A free, vetted checklist of 123 legitimate places to earn a backlink, no spam, no paid links. Make a copy of the sheet and work it top down. From Hawk Academy by StudioHawk.",
       "url": "https://hawkacademy.co/resources/free-backlinks"
     },
+    "a2c": {
+      "title": "Add to Cart ep. 670: Cooper & Co",
+      "description": "How Cooper & Co grew AI referral traffic more than 10x with collection pages, schema and digital PR.",
+      "url": "https://addtocart.com.au/add-to-cart/ai-search-rewards-the-boring-work-ecommerce-seo-collection-pages-and-aeo-with-studiohawk-670/"
+    },
     "academy": {
       "title": "Hawk Academy",
       "description": "Hawk Academy — free SEO learning hub, courses, skills, and tools.",
@@ -1250,6 +1255,16 @@
       "description": "Set up Google Search Console in 5 minutes. Find striking distance keywords and the free traffic hiding in your data.",
       "url": "https://hawkacademy.co/claude-seo-skills/gsc-quick-start"
     },
+    "tattoo": {
+      "title": "Victims of Ink: SEO Case Study",
+      "description": "How a Chapel Street tattoo studio got 5x the organic clicks in under 12 months of SEO.",
+      "url": "https://studiohawk.com.au/case-studies/victims-of-ink/"
+    },
+    "tattoos": {
+      "title": "Victims of Ink: SEO Case Study",
+      "description": "How a Chapel Street tattoo studio got 5x the organic clicks in under 12 months of SEO.",
+      "url": "https://studiohawk.com.au/case-studies/victims-of-ink/"
+    },
     "technical": {
       "title": "Technical SEO Audit",
       "description": "Full technical audit of your site. Checks crawlability, indexation, Core Web Vitals, schema, and internal linking with prioritised fixes.",
@@ -1449,5 +1464,5 @@
       }
     }
   ],
-  "generatedAt": "2026-10-28T23:47:50.897Z"
+  "generatedAt": "2026-10-29T02:29:23.055Z"
 }
