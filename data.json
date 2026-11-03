@@ -575,6 +575,11 @@
       "description": "Plain-English definitions of SEO and AI search terms, from GEO and AI crawlers to SERP. Each one checked against its primary source and linked to a free tool.",
       "url": "https://hawkacademy.co/glossary"
     },
+    "glue": {
+      "title": "AI Visibility Check",
+      "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
+      "url": "https://hawkacademy.co/claude-seo-skills/ai-visibility"
+    },
     "google": {
       "title": "Google Trust Check",
       "description": "See what Google actually reads on your website. Get 4 trust scores and 3 fixes you can do this week.",
@@ -1464,5 +1469,5 @@
       }
     }
   ],
-  "generatedAt": "2026-11-01T23:17:06.702Z"
+  "generatedAt": "2026-11-03T01:56:38.260Z"
 }
