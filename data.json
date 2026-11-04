@@ -90,6 +90,16 @@
       "description": "The free ideation sheet we fill in before every digital PR campaign. Four angle shapes with a fill-in formula each, and a blank template with the three checks an idea has to pass.",
       "url": "https://hawkacademy.co/resources/digital-pr-ideation-sheet"
     },
+    "api leak": {
+      "title": "What Everyone Missed in the Google API Leak",
+      "description": "The 5 things everyone missed in Google's leaked ranking documents, and what to do about each one.",
+      "url": "https://yt.oia.bio/APILEAK"
+    },
+    "apileak": {
+      "title": "What Everyone Missed in the Google API Leak",
+      "description": "The 5 things everyone missed in Google's leaked ranking documents, and what to do about each one.",
+      "url": "https://yt.oia.bio/APILEAK"
+    },
     "audit": {
       "title": "Website Score Check",
       "description": "Rate your website 0-5 on the 5 features every site winning on Google has. Based on a study of 400 websites.",
@@ -1433,6 +1443,15 @@
   ],
   "youtubeVideos": [
     {
+      "id": "9V_mDZNAKak",
+      "title": "What Everyone Missed in the Google API Leak (Still Nobody Is Using It)",
+      "url": "https://youtu.be/9V_mDZNAKak",
+      "thumbnails": {
+        "medium": "https://i.ytimg.com/vi/9V_mDZNAKak/mqdefault.jpg",
+        "maxres": "https://i.ytimg.com/vi/9V_mDZNAKak/maxresdefault.jpg"
+      }
+    },
+    {
       "id": "HVh9Z-D__M4",
       "title": "Under Oath, Google Admitted How It Really Ranks Websites",
       "url": "https://youtu.be/HVh9Z-D__M4",
@@ -1458,16 +1477,7 @@
         "medium": "https://i.ytimg.com/vi/jF8auonTAEo/mqdefault.jpg",
         "maxres": "https://i.ytimg.com/vi/jF8auonTAEo/maxresdefault.jpg"
       }
-    },
-    {
-      "id": "qks6Bf-N_xg",
-      "title": "You Don't Need 1,000 Backlinks to Rank in Google (The 5 Levels of Link Building)",
-      "url": "https://youtu.be/qks6Bf-N_xg",
-      "thumbnails": {
-        "medium": "https://i.ytimg.com/vi/qks6Bf-N_xg/mqdefault.jpg",
-        "maxres": "https://i.ytimg.com/vi/qks6Bf-N_xg/maxresdefault.jpg"
-      }
     }
   ],
-  "generatedAt": "2026-11-04T00:18:47.445Z"
+  "generatedAt": "2026-11-04T03:15:13.622Z"
 }
