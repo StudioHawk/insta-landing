@@ -1260,6 +1260,16 @@
       "description": "Audit for SaaS companies covering feature pages, use-case pages, comparison pages, and product-led content.",
       "url": "https://hawkacademy.co/claude-seo-skills/saas-seo-audit"
     },
+    "source me": {
+      "title": "The SOURCE Framework: How to Rank in AI Search",
+      "description": "SOURCE is StudioHawk's six-pillar framework for ranking in AI search: Structure, Offsite, Uniqueness, Relevance, Credibility, Evaluation. The formula, the order to run it, and the free tools for each pillar.",
+      "url": "https://hawkacademy.co/seo-guides/sourc-e-framework"
+    },
+    "sourceme": {
+      "title": "The SOURCE Framework: How to Rank in AI Search",
+      "description": "SOURCE is StudioHawk's six-pillar framework for ranking in AI search: Structure, Offsite, Uniqueness, Relevance, Credibility, Evaluation. The formula, the order to run it, and the free tools for each pillar.",
+      "url": "https://hawkacademy.co/seo-guides/sourc-e-framework"
+    },
     "speedy": {
       "title": "Focusing on Page Speed Scores is Killing Your AI SEO",
       "description": "",
@@ -1479,5 +1489,5 @@
       }
     }
   ],
-  "generatedAt": "2026-11-09T04:42:57.126Z"
+  "generatedAt": "2026-11-09T05:11:57.136Z"
 }
