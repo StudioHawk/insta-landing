@@ -1275,6 +1275,11 @@
       "description": "",
       "url": "https://www.youtube.com/watch?v=KO1PudJpXJU"
     },
+    "spicy": {
+      "title": "6 Steps to Make Content Google & AI Can't Ignore",
+      "description": "Six steps to make content Google and AI can't ignore, each one something an AI writing tool can't fake for you.",
+      "url": "https://www.youtube.com/watch?v=OmVahNHLQQQ"
+    },
     "striking distance": {
       "title": "Search Console Quick Start",
       "description": "Set up Google Search Console in 5 minutes. Find striking distance keywords and the free traffic hiding in your data.",
@@ -1447,11 +1452,20 @@
     "dpr",
     "listing",
     "listings",
-    "digital pr",
     "technical",
+    "digital pr",
     "news"
   ],
   "youtubeVideos": [
+    {
+      "id": "OmVahNHLQQQ",
+      "title": "6 Steps to Make Content Google & AI Can't Ignore",
+      "url": "https://youtu.be/OmVahNHLQQQ",
+      "thumbnails": {
+        "medium": "https://i.ytimg.com/vi/OmVahNHLQQQ/mqdefault.jpg",
+        "maxres": "https://i.ytimg.com/vi/OmVahNHLQQQ/maxresdefault.jpg"
+      }
+    },
     {
       "id": "9V_mDZNAKak",
       "title": "What Everyone Missed in the Google API Leak (Still Nobody Is Using It)",
@@ -1478,16 +1492,7 @@
         "medium": "https://i.ytimg.com/vi/6_x-OsOMmFs/mqdefault.jpg",
         "maxres": "https://i.ytimg.com/vi/6_x-OsOMmFs/maxresdefault.jpg"
       }
-    },
-    {
-      "id": "jF8auonTAEo",
-      "title": "Does Google Penalise AI Content? The Truth About SEO & AI Search",
-      "url": "https://youtu.be/jF8auonTAEo",
-      "thumbnails": {
-        "medium": "https://i.ytimg.com/vi/jF8auonTAEo/mqdefault.jpg",
-        "maxres": "https://i.ytimg.com/vi/jF8auonTAEo/maxresdefault.jpg"
-      }
     }
   ],
-  "generatedAt": "2026-11-10T02:28:51.966Z"
+  "generatedAt": "2026-11-11T00:22:28.964Z"
 }
