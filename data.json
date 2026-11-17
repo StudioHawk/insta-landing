@@ -1190,6 +1190,16 @@
       "description": "Full on-page audit for online stores covering category pages, product pages, internal linking, and AI search readiness.",
       "url": "https://hawkacademy.co/claude-seo-skills/ecommerce-seo-audit"
     },
+    "show up": {
+      "title": "AI Visibility Check",
+      "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
+      "url": "https://hawkacademy.co/claude-seo-skills/ai-visibility"
+    },
+    "showup": {
+      "title": "AI Visibility Check",
+      "description": "Check if ChatGPT and Claude recommend your business. 8 real queries, score out of 8, with a 30-day action plan.",
+      "url": "https://hawkacademy.co/claude-seo-skills/ai-visibility"
+    },
     "silos": {
       "title": "Building a Content Hub: Topic Clusters That Rank",
       "description": "Structuring pillar pages and supporting content to build topical authority and dominate search results.",
@@ -1494,5 +1504,5 @@
       }
     }
   ],
-  "generatedAt": "2026-11-15T23:41:19.362Z"
+  "generatedAt": "2026-11-17T02:43:22.633Z"
 }
