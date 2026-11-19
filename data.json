@@ -280,6 +280,16 @@
       "description": "",
       "url": "https://www.youtube.com/watch?v=djt17f1OWtE"
     },
+    "claim gpt": {
+      "title": "ChatGPT business profile (OpenAI)",
+      "description": "Claim your free ChatGPT business profile and see how often ChatGPT mentions you.",
+      "url": "https://chatgpt.com/auth/login?next=%2Fbusiness-hub%3Futm_source%3Dopenai%26utm_medium%3Dweb%26utm_campaign%3Dbusiness_agents_launch%26utm_content%3Dsmb_launch_primary_cta_term%253Doaitocgpt1%26openaicom-did%3Dd01cdbda-3846-4497-8a67-2cca545ccfd8%26openaicom_referred%3Dtrue"
+    },
+    "claimgpt": {
+      "title": "ChatGPT business profile (OpenAI)",
+      "description": "Claim your free ChatGPT business profile and see how often ChatGPT mentions you.",
+      "url": "https://chatgpt.com/auth/login?next=%2Fbusiness-hub%3Futm_source%3Dopenai%26utm_medium%3Dweb%26utm_campaign%3Dbusiness_agents_launch%26utm_content%3Dsmb_launch_primary_cta_term%253Doaitocgpt1%26openaicom-did%3Dd01cdbda-3846-4497-8a67-2cca545ccfd8%26openaicom_referred%3Dtrue"
+    },
     "clairty": {
       "title": "Clarity AI Bot Auditor",
       "description": "Paste your Microsoft Clarity AI Bot Activity data. The skill diagnoses every AI bot as healthy, blocked, throttled, over-scraping, or violating your rules, then gives one decisive fix per bot to get ChatGPT, Claude, Perplexity and Gemini crawling you again.",
@@ -1504,5 +1514,5 @@
       }
     }
   ],
-  "generatedAt": "2026-11-19T01:36:23.949Z"
+  "generatedAt": "2026-11-19T07:20:46.679Z"
 }
