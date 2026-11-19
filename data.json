@@ -1065,6 +1065,11 @@
       "description": "Five live SEO sessions with Matt Diamante, 26 to 30 October. Three fix your money page live. Ten dollars.",
       "url": "https://heytony.ca/rank-week-2026/?utm_source=instagram&utm_medium=partner&utm_campaign=rw-oct26&utm_content=harry-sanders"
     },
+    "relevance": {
+      "title": "The SOURCE Framework: How to Rank in AI Search",
+      "description": "SOURCE is StudioHawk's six-pillar framework for ranking in AI search: Structure, Offsite, Uniqueness, Relevance, Credibility, Evaluation. The formula, the order to run it, and the free tools for each pillar.",
+      "url": "https://hawkacademy.co/seo-guides/sourc-e-framework"
+    },
     "render me": {
       "title": "Can AI See Your Page?",
       "description": "Paste a URL and see in one click whether your content is visible to AI crawlers that do not run JavaScript (GPTBot, ClaudeBot, PerplexityBot). Checks the raw HTML for your heading, content, links and schema. Free, no login.",
@@ -1264,6 +1269,16 @@
       "title": "SaaS SEO Audit",
       "description": "Audit for SaaS companies covering feature pages, use-case pages, comparison pages, and product-led content.",
       "url": "https://hawkacademy.co/claude-seo-skills/saas-seo-audit"
+    },
+    "source me": {
+      "title": "The SOURCE Framework: How to Rank in AI Search",
+      "description": "SOURCE is StudioHawk's six-pillar framework for ranking in AI search: Structure, Offsite, Uniqueness, Relevance, Credibility, Evaluation. The formula, the order to run it, and the free tools for each pillar.",
+      "url": "https://hawkacademy.co/seo-guides/sourc-e-framework"
+    },
+    "sourceme": {
+      "title": "The SOURCE Framework: How to Rank in AI Search",
+      "description": "SOURCE is StudioHawk's six-pillar framework for ranking in AI search: Structure, Offsite, Uniqueness, Relevance, Credibility, Evaluation. The formula, the order to run it, and the free tools for each pillar.",
+      "url": "https://hawkacademy.co/seo-guides/sourc-e-framework"
     },
     "speedy": {
       "title": "Focusing on Page Speed Scores is Killing Your AI SEO",
@@ -1489,5 +1504,5 @@
       }
     }
   ],
-  "generatedAt": "2026-11-18T01:59:00.390Z"
+  "generatedAt": "2026-11-19T01:36:23.949Z"
 }
