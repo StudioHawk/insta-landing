@@ -1472,11 +1472,20 @@
     "dpr",
     "listing",
     "listings",
-    "global",
     "news",
+    "global",
     "technical"
   ],
   "youtubeVideos": [
+    {
+      "id": "7KwayA-lQXY",
+      "title": "How to Build a Topical Authority Map for SEO (Free Tool + Real Example)",
+      "url": "https://youtu.be/7KwayA-lQXY",
+      "thumbnails": {
+        "medium": "https://i.ytimg.com/vi/7KwayA-lQXY/mqdefault.jpg",
+        "maxres": "https://i.ytimg.com/vi/7KwayA-lQXY/maxresdefault.jpg"
+      }
+    },
     {
       "id": "OmVahNHLQQQ",
       "title": "6 Steps to Make Content Google & AI Can't Ignore",
@@ -1503,16 +1512,7 @@
         "medium": "https://i.ytimg.com/vi/HVh9Z-D__M4/mqdefault.jpg",
         "maxres": "https://i.ytimg.com/vi/HVh9Z-D__M4/maxresdefault.jpg"
       }
-    },
-    {
-      "id": "6_x-OsOMmFs",
-      "title": "Did Claude Code Just Kill WordPress? (The Honest Answer)",
-      "url": "https://youtu.be/6_x-OsOMmFs",
-      "thumbnails": {
-        "medium": "https://i.ytimg.com/vi/6_x-OsOMmFs/mqdefault.jpg",
-        "maxres": "https://i.ytimg.com/vi/6_x-OsOMmFs/maxresdefault.jpg"
-      }
     }
   ],
-  "generatedAt": "2026-11-22T00:01:21.236Z"
+  "generatedAt": "2026-11-23T00:33:52.178Z"
 }
