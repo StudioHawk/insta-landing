@@ -1470,10 +1470,10 @@
     "backlinks",
     "backlink",
     "dpr",
+    "global",
     "listing",
     "listings",
     "news",
-    "global",
     "technical"
   ],
   "youtubeVideos": [
@@ -1514,5 +1514,5 @@
       }
     }
   ],
-  "generatedAt": "2026-11-24T04:32:25.688Z"
+  "generatedAt": "2026-11-25T03:17:20.954Z"
 }
